@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa | Lutfi Subekti | E-Portfolio PPG</title>
+    <meta name="description" content="Profil Mahasiswa PPG Prajabatan Semester 2 - Lutfi Subekti, dari Kediri menuju ruang kelas profesional.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ─── Reset spesifik halaman ─── */
+        .page-wrap {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ─── Back button ─── */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 500;
+            padding: 0.4rem 0;
+            transition: color 0.2s;
+            margin-bottom: 3.5rem;
+        }
+        .back-link:hover { color: var(--primary-light); }
+        .back-link i { font-size: 0.8rem; }
+
+        /* ─── Byline (label kecil atas) ─── */
+        .byline {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.2rem;
+        }
+        .byline-line {
+            height: 1px;
+            width: 32px;
+            background: var(--primary-light);
+            opacity: 0.6;
+        }
+        .byline-text {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--primary-light);
+        }
+
+        /* ─── Headline utama ─── */
+        .page-headline {
+            font-family: 'Lora', Georgia, serif;
+            font-size: clamp(2.4rem, 6vw, 3.8rem);
+            font-weight: 600;
+            line-height: 1.18;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+        html[data-theme="light"] .page-headline { color: #1e293b; }
+
+        .page-headline em {
+            font-style: italic;
+            color: var(--primary-light);
+        }
+
+        /* ─── Foto + meta kecil ─── */
+        .profile-opener {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 2.5rem;
+            align-items: start;
+            margin: 2.5rem 0 3.5rem;
+        }
+
+        .profile-photo-wrap {
+            position: relative;
+        }
+        .profile-photo {
+            width: 180px;
+            height: 230px;
+            border-radius: 16px;
+            overflow: hidden;
+            background: rgba(79,70,229,0.1);
+            border: 1px solid var(--glass-border);
+        }
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .photo-label {
+            margin-top: 0.75rem;
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            text-align: center;
+            letter-spacing: 0.04em;
+        }
+
+        .profile-meta {
+            padding-top: 0.3rem;
+        }
+        .meta-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.15rem;
+        }
+        html[data-theme="light"] .meta-name { color: #1e293b; }
+
+        .meta-role {
+            font-size: 0.88rem;
+            color: var(--primary-light);
+            font-weight: 600;
+            margin-bottom: 1.4rem;
+            letter-spacing: 0.03em;
+        }
+
+        .meta-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+        }
+        .meta-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.65rem;
+            font-size: 0.83rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        .meta-list li i {
+            width: 14px;
+            text-align: center;
+            margin-top: 0.1rem;
+            color: var(--primary-light);
+            opacity: 0.7;
+            flex-shrink: 0;
+            font-size: 0.75rem;
+        }
+        .meta-list li strong {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        /* ─── Divider halus ─── */
+        .section-divider {
+            border: none;
+            border-top: 1px solid var(--glass-border);
+            margin: 3rem 0;
+        }
+
+        /* ─── Section label kecil ─── */
+        .section-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--glass-border);
+        }
+
+        /* ─── Narasi teks ─── */
+        .narrative {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: var(--text-muted);
+            margin-bottom: 1.4rem;
+        }
+        html[data-theme="light"] .narrative { color: #475569; }
+
+        .narrative strong {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+        html[data-theme="light"] .narrative strong { color: #1e293b; }
+
+        /* ─── Highlight kata dalam teks ─── */
+        .text-accent {
+            color: var(--primary-light);
+            font-weight: 600;
+        }
+
+        /* ─── Pull quote ─── */
+        .pull-quote {
+            margin: 2.5rem 0;
+            padding: 2rem 2rem 2rem 2.5rem;
+            border-left: 3px solid var(--primary-light);
+            background: rgba(79,70,229,0.05);
+            border-radius: 0 12px 12px 0;
+        }
+        html[data-theme="light"] .pull-quote {
+            background: rgba(79,70,229,0.04);
+        }
+
+        .pull-quote p {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 1.18rem;
+            font-style: italic;
+            line-height: 1.7;
+            color: #c7d2fe;
+            margin: 0;
+        }
+        html[data-theme="light"] .pull-quote p { color: #4338ca; }
+
+        /* ─── Closing quote ─── */
+        .closing-quote-section {
+            margin-top: 3.5rem;
+            text-align: center;
+            padding: 3rem 2rem;
+            position: relative;
+        }
+        .closing-quote-mark {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 6rem;
+            line-height: 0.5;
+            color: rgba(129,140,248,0.15);
+            display: block;
+            margin-bottom: 1rem;
+            user-select: none;
+        }
+        .closing-quote-text {
+            font-family: 'Lora', Georgia, serif;
+            font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+            font-style: italic;
+            line-height: 1.7;
+            color: #e2e8f0;
+            max-width: 600px;
+            margin: 0 auto 1.2rem;
+        }
+        html[data-theme="light"] .closing-quote-text { color: #1e293b; }
+
+        .closing-quote-author {
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--primary-light);
+        }
+
+        /* ─── Chip daerah ─── */
+        .region-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1.2rem 0;
+        }
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.3rem 0.85rem;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--glass-border);
+            color: var(--text-muted);
+        }
+        html[data-theme="light"] .chip {
+            background: rgba(0,0,0,0.04);
+            color: #64748b;
+        }
+        .chip i { font-size: 0.7rem; color: var(--primary-light); }
+
+        /* ─── Tujuan cards (simple) ─── */
+        .goal-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .goal-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem 1.2rem;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.025);
+            border: 1px solid var(--glass-border);
+            transition: border-color 0.2s;
+        }
+        html[data-theme="light"] .goal-item {
+            background: rgba(0,0,0,0.02);
+        }
+        .goal-item:hover {
+            border-color: rgba(129,140,248,0.3);
+        }
+        .goal-num {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: rgba(129,140,248,0.3);
+            line-height: 1;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+        .goal-text {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+        }
+        html[data-theme="light"] .goal-text { color: #475569; }
+        .goal-text strong {
+            display: block;
+            font-size: 0.92rem;
+            color: var(--text-main);
+            font-weight: 600;
+            margin-bottom: 0.15rem;
+        }
+        html[data-theme="light"] .goal-text strong { color: #1e293b; }
+
+        /* ─── Responsive ─── */
+        @media (max-width: 600px) {
+            .profile-opener {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .profile-photo-wrap {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .profile-photo { width: 140px; height: 180px; }
+            .pull-quote { padding: 1.4rem 1.2rem 1.4rem 1.5rem; }
+            .pull-quote p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+            <div style="display: flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.95); padding: 6px 12px; border-radius: 50px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);">
+                <img src="assets/images/Logo%20Kemdikdasmen.png" alt="Kemdikdasmen" style="height: 28px; width: auto; object-fit: contain; display: block;">
+                <img src="assets/images/Logo-UM.png" alt="UM" style="height: 28px; width: auto; object-fit: contain; display: block;">
+                <img src="assets/images/Logo%20PPG.png" alt="PPG" style="height: 28px; width: auto; object-fit: contain; display: block;">
+            </div>
+            <span style="font-size: 1.25rem; font-weight: 700; color: #fff; font-family: 'Outfit', sans-serif;">E-Portfolio PPG</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="semester-1.html" class="dropbtn">Semester 1</a>
+                <ul class="dropdown-content">
+                    <li><a href="e-portfolio-1.html"><i class="fa-solid fa-folder-open" style="margin-right:6px;"></i>E-Portfolio 1</a></li>
+                    <li><a href="e-portfolio-2.html"><i class="fa-solid fa-folder-open" style="margin-right:6px;"></i>E-Portfolio 2</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="semester-2.html" class="dropbtn">Semester 2</a>
+                <ul class="dropdown-content">
+                    <li><a href="profil-mahasiswa-s2.html"><i class="fa-solid fa-user" style="margin-right:6px;"></i>Profil Mahasiswa</a></li>
+                    <li><a href="uts-ppl.html"><i class="fa-solid fa-file-pen" style="margin-right:6px;"></i>UTS PPL</a></li>
+                    <li><a href="uas-ppl.html"><i class="fa-solid fa-file-circle-check" style="margin-right:6px;"></i>UAS PPL</a></li>
+                    <li><a href="seminar.html"><i class="fa-solid fa-chalkboard-user" style="margin-right:6px;"></i>Seminar</a></li>
+                </ul>
+            </li>
+            <li><a href="e-portfolio-2.html#dokumentasi">Dokumentasi</a></li>
+            <li>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </li>
+        </ul>
+        <!-- Hamburger Button -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Buka Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-overlay"></div>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-drawer">
+        <a href="index.html"><i class="fa-solid fa-house" style="margin-right:0.5rem; color:var(--primary-light);"></i> Home</a>
+        <div class="mobile-nav-divider"></div>
+        <button class="mobile-dropdown-toggle" data-target="mob-sub-semester1" onclick="window.location.href='semester-1.html'">
+            <span><i class="fa-solid fa-folder-open" style="margin-right:0.5rem; color:var(--secondary);"></i> Semester 1</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="mobile-submenu" id="mob-sub-semester1">
+            <a href="e-portfolio-1.html">E-Portfolio 1</a>
+            <a href="e-portfolio-2.html">E-Portfolio 2</a>
+        </div>
+        <button class="mobile-dropdown-toggle" data-target="mob-sub-semester2" onclick="window.location.href='semester-2.html'">
+            <span><i class="fa-solid fa-folder" style="margin-right:0.5rem; color:#10b981;"></i> Semester 2</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="mobile-submenu" id="mob-sub-semester2">
+            <a href="profil-mahasiswa-s2.html"><i class="fa-solid fa-user" style="margin-right:6px;"></i> Profil Mahasiswa</a>
+            <a href="uts-ppl.html"><i class="fa-solid fa-file-pen" style="margin-right:6px;"></i> UTS PPL</a>
+            <a href="uas-ppl.html"><i class="fa-solid fa-file-circle-check" style="margin-right:6px;"></i> UAS PPL</a>
+            <a href="seminar.html"><i class="fa-solid fa-chalkboard-user" style="margin-right:6px;"></i> Seminar</a>
+        </div>
+        <a href="e-portfolio-2.html#dokumentasi"><i class="fa-solid fa-images" style="margin-right:0.5rem; color:var(--warning);"></i> Dokumentasi</a>
+        <div class="mobile-nav-divider"></div>
+        <div class="mobile-theme-row">
+            <span><i class="fa-solid fa-circle-half-stroke" style="margin-right:0.5rem;"></i> Mode Tampilan</span>
+            <button id="theme-toggle-mobile" class="theme-toggle-btn" aria-label="Toggle Theme Mobile">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- ===================== MAIN CONTENT ===================== -->
+    <div style="margin-top: 130px; margin-bottom: 6rem;">
+        <div class="page-wrap">
+
+            <!-- Tombol Kembali -->
+            <a href="semester-2.html" class="back-link">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Semester 2
+            </a>
+
+            <!-- Byline -->
+            <div class="byline">
+                <span class="byline-line"></span>
+                <span class="byline-text">Semester 2 &nbsp;·&nbsp; PPG Prajabatan &nbsp;·&nbsp; 2026</span>
+            </div>
+
+            <!-- Judul utama -->
+            <h1 class="page-headline">
+                Mengenal <em>Lutfi Subekti</em>,<br>
+                dari Kediri menuju<br>ruang kelas profesional.
+            </h1>
+
+            <!-- ── BAGIAN 1: FOTO + META ── -->
+            <div class="profile-opener">
+                <div class="profile-photo-wrap">
+                    <div class="profile-photo">
+                        <img src="assets/images/Pas%20Foto_Merah_jaz.jpg" alt="Lutfi Subekti">
+                    </div>
+                    <p class="photo-label">Lutfi Subekti — 2026</p>
+                </div>
+                <div class="profile-meta">
+                    <div class="meta-name">Lutfi Subekti</div>
+                    <div class="meta-role">Mahasiswa PPG Prajabatan · Pendidikan Informatika</div>
+                    <ul class="meta-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Kediri, Jawa Timur</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-university"></i>
+                            <span><strong>LPTK:</strong> Universitas Negeri Malang</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-school"></i>
+                            <span><strong>Sekolah Mitra:</strong> SMP Negeri 8 Malang</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-chalkboard-teacher"></i>
+                            <span><strong>DPL:</strong> Dr. Hary Suswanto, S.T., M.T.</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-user-tie"></i>
+                            <span><strong>Guru Pamong:</strong> Ir. Rahchman Kurniawan</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <span><strong>Bidang:</strong> Informatika &amp; Robotika</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- ── BAGIAN 2: ASAL DAN IDENTITAS ── -->
+            <div class="section-label">Siapa saya</div>
+
+            <p class="narrative">
+                Nama saya <strong>Lutfi Subekti</strong>. Saya lahir dan tumbuh di <strong>Kediri</strong>, sebuah kota di jantung Jawa Timur yang menyimpan kisah panjang jauh sebelum Indonesia ada. Kediri bukan sekadar tempat lahir bagi saya — ia adalah tempat pertama saya belajar bahwa pengetahuan bisa datang dari mana saja: dari percakapan di warung tahu, dari gerak kaki yang belajar pencak silat di halaman masjid, dari guratan batik yang sabar dikerjakan tangan-tangan terampil.
+            </p>
+
+            <div class="region-chips">
+                <span class="chip"><i class="fa-solid fa-landmark"></i> Kota Tahu — Kediri</span>
+                <span class="chip"><i class="fa-solid fa-mountain-sun"></i> Kaki Gunung Kelud</span>
+                <span class="chip"><i class="fa-solid fa-scroll"></i> Bekas Kerajaan Kediri</span>
+                <span class="chip"><i class="fa-solid fa-users"></i> Budaya Jawa Timur</span>
+            </div>
+
+            <p class="narrative">
+                Keunikan Kediri terletak pada kontrasnya — kota yang terasa dekat dengan tradisi, namun juga cepat bergerak ke arah modernitas. Di situlah rasa ingin tahu saya terhadap teknologi pertama kali tumbuh. Saya melihat bagaimana tangan-tangan petani di sekitar rumah bisa terbantu oleh alat-alat baru, bagaimana anak-anak di kampung bisa belajar lebih banyak jika ada yang mau menunjukkan caranya. Dan saya ingin menjadi orang yang menunjukkan itu.
+            </p>
+
+            <hr class="section-divider">
+
+            <!-- ── BAGIAN 3: INSPIRASI ── -->
+            <div class="section-label">Inspirasi</div>
+
+            <p class="narrative">
+                Perjalanan saya ke dunia pendidikan tidak terjadi dalam semalam. Selama kuliah S1 di <span class="text-accent">Universitas Negeri Malang</span>, saya menjalani peran ganda: mahasiswa di siang hari, dan <strong>instruktur coding &amp; robotika</strong> di sore hingga malam hari. Tiga tahun mengajar anak-anak tentang pemrograman dan robot mengubah cara saya memandang profesi guru.
+            </p>
+
+            <div class="pull-quote">
+                <p>"Setiap kali seorang anak berhasil menjalankan program pertamanya — matanya menyala. Itulah saat saya tahu, inilah yang ingin saya lakukan seumur hidup."</p>
+            </div>
+
+            <p class="narrative">
+                Mengajar bukan sekadar transfer informasi. Saya belajar bahwa proses mengajar yang sesungguhnya adalah ketika kita hadir penuh — mendengar kebingungan murid, menemukan analogi yang tepat, lalu melihat momen "aha!" terjadi di wajah mereka. Pengalaman inilah yang mendorong saya untuk masuk <strong>PPG Prajabatan Gelombang 1</strong>, memperdalam kompetensi sebagai pendidik yang tidak hanya paham materi, tetapi juga paham manusia.
+            </p>
+
+            <hr class="section-divider">
+
+            <!-- ── BAGIAN 4: TUJUAN ── -->
+            <div class="section-label">Tujuan menjadi guru profesional</div>
+
+            <p class="narrative">
+                Ada tiga hal yang ingin saya wujudkan melalui perjalanan PPG ini — bukan sebagai daftar impian abstrak, melainkan sebagai komitmen nyata yang saya bawa ke setiap kelas:
+            </p>
+
+            <div class="goal-list">
+                <div class="goal-item">
+                    <span class="goal-num">01</span>
+                    <div class="goal-text">
+                        <strong>Menjadikan Informatika relevan untuk semua siswa</strong>
+                        Saya percaya setiap anak bisa belajar berpikir komputasional — bukan untuk jadi programmer, tapi untuk jadi pemikir yang sistematis. Saya ingin merancang pembelajaran yang membuat konsep abstrak terasa nyata dan menyenangkan.
+                    </div>
+                </div>
+                <div class="goal-item">
+                    <span class="goal-num">02</span>
+                    <div class="goal-text">
+                        <strong>Membangun hubungan yang tulus dengan peserta didik</strong>
+                        Guru terbaik yang saya ingat bukan karena materi yang mereka ajarkan, melainkan karena cara mereka memperlakukan saya sebagai manusia. Saya ingin menjadi guru yang diingat karena itu.
+                    </div>
+                </div>
+                <div class="goal-item">
+                    <span class="goal-num">03</span>
+                    <div class="goal-text">
+                        <strong>Terus tumbuh bersama perubahan</strong>
+                        Dunia teknologi bergerak cepat. Seorang guru informatika yang berhenti belajar akan tertinggal. Saya berkomitmen untuk terus meningkatkan diri — bukan karena tuntutan, tapi karena saya menikmati proses belajar itu sendiri.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── BAGIAN 5: CLOSING QUOTE ── -->
+            <div class="closing-quote-section">
+                <span class="closing-quote-mark">"</span>
+                <p class="closing-quote-text">
+                    Pendidikan adalah seni membaca potensi yang belum terlihat. Saya tidak datang ke kelas untuk mengisi kepala yang kosong — saya datang untuk menyalakan api yang sudah ada di sana.
+                </p>
+                <div class="closing-quote-author">— Lutfi Subekti</div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.5rem; margin-bottom: 1rem;">E-Portfolio Pendidikan Profesi Guru</h3>
+            <p>&copy; 2026 Disusun untuk memenuhi komponen penilaian PPL.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.3);">
+                Lutfi Subekti · PPG Prajabatan Gelombang 1 · Universitas Negeri Malang
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+        const icon = themeToggle.querySelector('i');
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            htmlElement.setAttribute('data-theme', 'light');
+            icon.classList.replace('fa-moon', 'fa-sun');
+        }
+        themeToggle.addEventListener('click', () => {
+            if (htmlElement.getAttribute('data-theme') === 'light') {
+                htmlElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'dark');
+                icon.classList.replace('fa-sun', 'fa-moon');
+            } else {
+                htmlElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                icon.classList.replace('fa-moon', 'fa-sun');
+            }
+        });
+
+        // Navbar Scroll
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile Menu
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+        const openDrawer = () => { hamburgerBtn.classList.add('open'); hamburgerBtn.setAttribute('aria-expanded','true'); mobileDrawer.classList.add('open'); mobileOverlay.classList.add('active'); document.body.style.overflow='hidden'; };
+        const closeDrawer = () => { hamburgerBtn.classList.remove('open'); hamburgerBtn.setAttribute('aria-expanded','false'); mobileDrawer.classList.remove('open'); mobileOverlay.classList.remove('active'); document.body.style.overflow=''; };
+        hamburgerBtn.addEventListener('click', () => mobileDrawer.classList.contains('open') ? closeDrawer() : openDrawer());
+        mobileOverlay.addEventListener('click', closeDrawer);
+        document.querySelectorAll('.mobile-dropdown-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.dataset.target;
+                const submenu = document.getElementById(targetId);
+                const isOpen = btn.classList.contains('open');
+                document.querySelectorAll('.mobile-dropdown-toggle').forEach(b => b.classList.remove('open'));
+                document.querySelectorAll('.mobile-submenu').forEach(m => m.classList.remove('open'));
+                if (!isOpen) { btn.classList.add('open'); submenu.classList.add('open'); }
+            });
+        });
+        mobileDrawer.querySelectorAll('a').forEach(link => link.addEventListener('click', closeDrawer));
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+        if (themeToggleMobile) {
+            const mobileIcon = themeToggleMobile.querySelector('i');
+            if (savedTheme === 'light') mobileIcon.classList.replace('fa-moon', 'fa-sun');
+            themeToggleMobile.addEventListener('click', () => {
+                themeToggle.click();
+                const isDark = !htmlElement.hasAttribute('data-theme');
+                mobileIcon.classList.toggle('fa-moon', isDark);
+                mobileIcon.classList.toggle('fa-sun', !isDark);
+            });
+        }
+    </script>
+    <script src="dropdown.js"></script>
+</body>
+</html>

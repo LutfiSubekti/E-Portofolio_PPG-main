@@ -1,0 +1,517 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAS PPL | Semester 2 | E-Portfolio PPG</title>
+    <meta name="description" content="UAS PPL Semester 2 - Ujian Akhir Semester Praktek Pengalaman Lapangan PPG Prajabatan">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .ppl-hero {
+            background: linear-gradient(135deg, rgba(16,185,129,0.12) 0%, rgba(5,150,105,0.07) 100%);
+            border: 1px solid rgba(16,185,129,0.2);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .ppl-hero::before {
+            content: 'UAS';
+            position: absolute;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'Outfit', sans-serif;
+            font-size: 8rem;
+            font-weight: 800;
+            color: rgba(16,185,129,0.06);
+            pointer-events: none;
+            user-select: none;
+        }
+        .section-card {
+            background: rgba(15,23,42,0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .section-card:hover {
+            border-color: rgba(16,185,129,0.25);
+            box-shadow: 0 8px 30px rgba(16,185,129,0.1);
+        }
+        .section-card .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+        .card-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        .doc-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(0,0,0,0.2);
+            border-radius: 10px;
+            padding: 1rem 1.2rem;
+            margin-bottom: 0.8rem;
+            border: 1px solid rgba(255,255,255,0.04);
+            transition: all 0.3s ease;
+        }
+        .doc-row:hover { background: rgba(16,185,129,0.06); border-color: rgba(16,185,129,0.18); }
+        .doc-row:last-child { margin-bottom: 0; }
+        .doc-info { display: flex; align-items: center; gap: 0.8rem; }
+        .doc-meta { display: flex; flex-direction: column; }
+        .doc-name { font-size: 0.9rem; color: #fff; font-weight: 500; }
+        .doc-type { font-size: 0.75rem; color: var(--text-muted); }
+        .btn-view {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-decoration: none;
+            background: rgba(16,185,129,0.12);
+            border: 1px solid rgba(16,185,129,0.3);
+            color: #10b981;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        .btn-view:hover { background: #10b981; color: #fff; border-color: #10b981; box-shadow: 0 4px 12px rgba(16,185,129,0.35); }
+        .info-banner {
+            display: flex; align-items: flex-start; gap: 1rem;
+            background: rgba(16,185,129,0.07); border: 1px solid rgba(16,185,129,0.18);
+            border-radius: 14px; padding: 1.2rem 1.5rem; margin-bottom: 2rem;
+        }
+        .info-banner i { color: #10b981; font-size: 1.2rem; margin-top: 0.1rem; flex-shrink: 0; }
+        .info-banner p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; }
+        .summary-stat {
+            background: rgba(15,23,42,0.5);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .summary-stat:hover { border-color: rgba(16,185,129,0.3); transform: translateY(-3px); }
+        .summary-stat .stat-num { font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 700; }
+        .summary-stat .stat-label { color: var(--text-muted); font-size: 0.85rem; margin-top: 0.3rem; }
+    </style>
+</head>
+<body>
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+            <div style="display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.95); padding: 6px 12px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                <img src="assets/images/Logo%20Kemdikdasmen.png" alt="Kemdikdasmen" style="height: 28px; width: auto; object-fit: contain; display: block;">
+                <img src="assets/images/Logo-UM.png" alt="UM" style="height: 28px; width: auto; object-fit: contain; display: block;">
+                <img src="assets/images/Logo%20PPG.png" alt="PPG" style="height: 28px; width: auto; object-fit: contain; display: block;">
+            </div>
+            <span style="font-size: 1.25rem; font-weight: 700; color: #fff; font-family: 'Outfit', sans-serif;">E-Portfolio PPG</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="semester-1.html" class="dropbtn">Semester 1</a>
+                <ul class="dropdown-content">
+                    <li><a href="e-portfolio-1.html">E-Portfolio 1</a></li>
+                    <li><a href="e-portfolio-2.html">E-Portfolio 2</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="semester-2.html" class="dropbtn">Semester 2</a>
+                <ul class="dropdown-content">
+                    <li><a href="profil-mahasiswa-s2.html"><i class="fa-solid fa-user" style="margin-right:6px;"></i>Profil Mahasiswa</a></li>
+                    <li><a href="uts-ppl.html"><i class="fa-solid fa-file-pen" style="margin-right:6px;"></i>UTS PPL</a></li>
+                    <li><a href="uas-ppl.html"><i class="fa-solid fa-file-circle-check" style="margin-right:6px;"></i>UAS PPL</a></li>
+                    <li><a href="seminar.html"><i class="fa-solid fa-chalkboard-user" style="margin-right:6px;"></i>Seminar</a></li>
+                </ul>
+            </li>
+            <li><a href="e-portfolio-2.html#dokumentasi">Dokumentasi</a></li>
+            <li>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </li>
+        </ul>
+        <button class="hamburger" id="hamburger-btn" aria-label="Buka Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <div class="mobile-nav-overlay" id="mobile-overlay"></div>
+    <div class="mobile-nav-drawer" id="mobile-drawer">
+        <a href="index.html"><i class="fa-solid fa-house" style="margin-right:0.5rem; color:var(--primary-light);"></i> Home</a>
+        <div class="mobile-nav-divider"></div>
+        <button class="mobile-dropdown-toggle" data-target="mob-sub-semester1" onclick="window.location.href='semester-1.html'">
+            <span><i class="fa-solid fa-folder-open" style="margin-right:0.5rem; color:var(--secondary);"></i> Semester 1</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="mobile-submenu" id="mob-sub-semester1">
+            <a href="e-portfolio-1.html">E-Portfolio 1</a>
+            <a href="e-portfolio-2.html">E-Portfolio 2</a>
+        </div>
+        <button class="mobile-dropdown-toggle" data-target="mob-sub-semester2" onclick="window.location.href='semester-2.html'">
+            <span><i class="fa-solid fa-folder" style="margin-right:0.5rem; color:#10b981;"></i> Semester 2</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="mobile-submenu" id="mob-sub-semester2">
+            <a href="profil-mahasiswa-s2.html"><i class="fa-solid fa-user" style="margin-right:6px;"></i> Profil Mahasiswa</a>
+            <a href="uts-ppl.html"><i class="fa-solid fa-file-pen" style="margin-right:6px;"></i> UTS PPL</a>
+            <a href="uas-ppl.html"><i class="fa-solid fa-file-circle-check" style="margin-right:6px;"></i> UAS PPL</a>
+            <a href="seminar.html"><i class="fa-solid fa-chalkboard-user" style="margin-right:6px;"></i> Seminar</a>
+        </div>
+        <a href="e-portfolio-2.html#dokumentasi"><i class="fa-solid fa-images" style="margin-right:0.5rem; color:var(--warning);"></i> Dokumentasi</a>
+        <div class="mobile-nav-divider"></div>
+        <div class="mobile-theme-row">
+            <span><i class="fa-solid fa-circle-half-stroke" style="margin-right:0.5rem;"></i> Mode Tampilan</span>
+            <button id="theme-toggle-mobile" class="theme-toggle-btn" aria-label="Toggle Theme Mobile">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container" style="margin-top: 150px; margin-bottom: 5rem;">
+
+        <a href="semester-2.html" class="btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.2rem; border-radius: 50px; text-decoration: none; margin-bottom: 2rem; font-size: 0.9rem;">
+            <i class="fa-solid fa-arrow-left"></i> Kembali ke Semester 2
+        </a>
+
+        <!-- Hero -->
+        <div class="ppl-hero">
+            <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); color: #10b981; padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem;">
+                <i class="fa-solid fa-file-circle-check"></i> Ujian Akhir Semester
+            </span>
+            <h1 style="font-size: 2.5rem; color: #fff; margin-bottom: 0.5rem;">UAS PPL</h1>
+            <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 600px; line-height: 1.6;">
+                Ujian Akhir Semester Praktik Pengalaman Lapangan — dokumentasi komprehensif, artefak final, dan penilaian kinerja mahasiswa pada akhir semester PPG Prajabatan.
+            </p>
+            <div style="display: flex; gap: 1.5rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">
+                    <i class="fa-solid fa-calendar" style="color: #10b981;"></i> Semester 2 · 2026
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">
+                    <i class="fa-solid fa-school" style="color: #10b981;"></i> SMP Negeri 8 Malang
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">
+                    <i class="fa-solid fa-book" style="color: #10b981;"></i> Informatika
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistik Ringkasan -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 2.5rem;">
+            <div class="summary-stat">
+                <div class="stat-num" style="color: #10b981;">6</div>
+                <div class="stat-label">Mata Kuliah</div>
+            </div>
+            <div class="summary-stat">
+                <div class="stat-num" style="color: var(--primary-light);">7</div>
+                <div class="stat-label">Artefak per MK</div>
+            </div>
+            <div class="summary-stat">
+                <div class="stat-num" style="color: var(--secondary);">2</div>
+                <div class="stat-label">Penilai (DPL & GP)</div>
+            </div>
+            <div class="summary-stat">
+                <div class="stat-num" style="color: var(--warning);">A</div>
+                <div class="stat-label">Target Nilai</div>
+            </div>
+        </div>
+
+        <!-- Info Banner -->
+        <div class="info-banner">
+            <i class="fa-solid fa-circle-info"></i>
+            <p>Halaman ini memuat seluruh dokumen final dan artefak yang dikumpulkan untuk Ujian Akhir Semester (UAS) Praktik Pengalaman Lapangan (PPL) Semester 2. Ini merupakan puncak dari seluruh proses pembelajaran dan praktik mengajar mandiri selama semester berjalan.</p>
+        </div>
+
+        <!-- Section 1: Perencanaan Final -->
+        <div class="section-card">
+            <div class="card-header">
+                <div class="card-icon" style="background: rgba(16,185,129,0.12); color: #10b981;">
+                    <i class="fa-solid fa-file-contract"></i>
+                </div>
+                <div>
+                    <h3 style="color: #fff; font-size: 1.2rem; margin: 0;">Perencanaan Pembelajaran Final (UAS)</h3>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0.2rem 0 0;">Modul ajar final dan rencana pembelajaran komprehensif untuk UAS</p>
+                </div>
+            </div>
+            <div class="doc-row">
+                <div class="doc-info">
+                    <i class="fa-solid fa-file-pdf" style="color: #e2574c; font-size: 1.3rem;"></i>
+                    <div class="doc-meta">
+                        <span class="doc-name">Modul Ajar UAS — Informatika Kelas 7 & 8</span>
+                        <span class="doc-type">PDF Document · Perencanaan Mengajar Final</span>
+                    </div>
+                </div>
+                <a href="#" target="_blank" class="btn-view"><i class="fa-solid fa-eye"></i> Lihat</a>
+            </div>
+            <div class="doc-row">
+                <div class="doc-info">
+                    <i class="fa-solid fa-file-pdf" style="color: #e2574c; font-size: 1.3rem;"></i>
+                    <div class="doc-meta">
+                        <span class="doc-name">Analisis Perencanaan Mengajar Mandiri</span>
+                        <span class="doc-type">PDF Document · Analisis Perencanaan</span>
+                    </div>
+                </div>
+                <a href="#" target="_blank" class="btn-view"><i class="fa-solid fa-eye"></i> Lihat</a>
+            </div>
+            <div class="doc-row">
+                <div class="doc-info">
+                    <i class="fa-solid fa-file-pdf" style="color: #e2574c; font-size: 1.3rem;"></i>
+                    <div class="doc-meta">
+                        <span class="doc-name">Analisis Materi Pembelajaran UAS</span>
+                        <span class="doc-type">PDF Document · Materi Pembelajaran</span>
+                    </div>
+                </div>
+                <a href="#" target="_blank" class="btn-view"><i class="fa-solid fa-eye"></i> Lihat</a>
+            </div>
+        </div>
+
+        <!-- Section 2: Media & LKPD Final -->
+        <div class="section-card">
+            <div class="card-header">
+                <div class="card-icon" style="background: rgba(79,70,229,0.15); color: var(--primary-light);">
+                    <i class="fa-solid fa-desktop"></i>
+                </div>
+                <div>
+                    <h3 style="color: #fff; font-size: 1.2rem; margin: 0;">Media & LKPD Final (UAS)</h3>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0.2rem 0 0;">Analisis media pembelajaran dan LKPD yang digunakan pada UAS</p>
+                </div>
+            </div>
+            <div class="doc-row">
+                <div class="doc-info">
+                    <i class="fa-solid fa-file-pdf" style="color: #e2574c; font-size: 1.3rem;"></i>
+                    <div class="doc-meta">
+                        <span class="doc-name">Analisis Media Pembelajaran UAS</span>
+                        <span class="doc-type">PDF Document · Analisis Media</span>
+                    </div>
+                </div>
+                <a href="#" target="_blank" class="btn-view"><i class="fa-solid fa-eye"></i> Lihat</a>
+            </div>
+            <div class="doc-row">
+                <div class="doc-info">
+                    <i class="fa-solid fa-file-pdf" style="color: #e2574c; font-size: 1.3rem;"></i>
+                    <div class="doc-meta">
+                        <span class="doc-name">LKPD Final — Berbasis Proyek Informatika</span>
+                        <span class="doc-type">PDF Document · LKPD</span>
+                    </div>
+                </div>
+                <a href="#" target="_blank" class="btn-view"><i class="fa-solid fa-eye"></i> Lihat</a>
+            </div>
+        </div>
+
+        <!-- Section 3: Video Praktik & Nonmengajar -->
+        <div class="section-card">
+            <div class="card-header">
+                <div class="card-icon" style="background: rgba(236,72,153,0.12); color: var(--secondary);">
+                    <i class="fa-solid fa-video"></i>
+                </div>
+                <div>
+                    <h3 style="color: #fff; font-size: 1.2rem; margin: 0;">Video Praktik Mengajar & Kegiatan Nonmengajar</h3>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0.2rem 0 0;">Dokumentasi video pelaksanaan mengajar dan kegiatan nonmengajar</p>
+                </div>
+            </div>
+            <div class="doc-row">
+                <div class="doc-info">
+                    <i class="fa-brands fa-youtube" style="color: #ff0000; font-size: 1.3rem;"></i>
+                    <div class="doc-meta">
+                        <span class="doc-name">Analisis Video Praktik Mengajar Mandiri UAS</span>
+                        <span class="doc-type">Video · Praktik Mengajar</span>
+                    </div>
+                </div>
+                <a href="#" target="_blank" class="btn-view"><i class="fa-solid fa-play"></i> Putar</a>
+            </div>
+            <div class="doc-row">
+                <div class="doc-info">
+                    <i class="fa-solid fa-file-pdf" style="color: #e2574c; font-size: 1.3rem;"></i>
+                    <div class="doc-meta">
+                        <span class="doc-name">Analisis Kegiatan Nonmengajar (UAS)</span>
+                        <span class="doc-type">PDF Document · Kegiatan Nonmengajar</span>
+                    </div>
+                </div>
+                <a href="#" target="_blank" class="btn-view"><i class="fa-solid fa-eye"></i> Lihat</a>
+            </div>
+        </div>
+
+        <!-- Section 4: Instrumen Penilaian Final -->
+        <div class="section-card">
+            <div class="card-header">
+                <div class="card-icon" style="background: rgba(245,158,11,0.12); color: var(--warning);">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                </div>
+                <div>
+                    <h3 style="color: #fff; font-size: 1.2rem; margin: 0;">Instrumen Penilaian & Analisis Final (UAS)</h3>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0.2rem 0 0;">Instrumen penilaian lengkap beserta analisis hasil akhir</p>
+                </div>
+            </div>
+            <div class="doc-row">
+                <div class="doc-info">
+                    <i class="fa-solid fa-file-pdf" style="color: #e2574c; font-size: 1.3rem;"></i>
+                    <div class="doc-meta">
+                        <span class="doc-name">Instrumen Penilaian & Analisis Akhir Semester</span>
+                        <span class="doc-type">PDF Document · Instrumen Penilaian</span>
+                    </div>
+                </div>
+                <a href="#" target="_blank" class="btn-view"><i class="fa-solid fa-eye"></i> Lihat</a>
+            </div>
+            <div class="doc-row">
+                <div class="doc-info">
+                    <i class="fa-solid fa-file-pdf" style="color: #e2574c; font-size: 1.3rem;"></i>
+                    <div class="doc-meta">
+                        <span class="doc-name">Kumpulan Artefak Final Semester 2</span>
+                        <span class="doc-type">PDF Document · Kumpulan Artefak</span>
+                    </div>
+                </div>
+                <a href="#" target="_blank" class="btn-view"><i class="fa-solid fa-eye"></i> Lihat</a>
+            </div>
+        </div>
+
+        <!-- Section 5: Penilaian DPL & GP -->
+        <div class="section-card">
+            <div class="card-header">
+                <div class="card-icon" style="background: rgba(16,185,129,0.12); color: #10b981;">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+                <div>
+                    <h3 style="color: #fff; font-size: 1.2rem; margin: 0;">Penilaian DPL & Guru Pamong UAS</h3>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0.2rem 0 0;">Hasil penilaian akhir dari Dosen Pembimbing Lapangan dan Guru Pamong</p>
+                </div>
+            </div>
+            <div class="doc-row">
+                <div class="doc-info">
+                    <i class="fa-solid fa-file-pdf" style="color: #e2574c; font-size: 1.3rem;"></i>
+                    <div class="doc-meta">
+                        <span class="doc-name">Form Penilaian DPL — UAS PPL</span>
+                        <span class="doc-type">PDF Document · Penilaian DPL</span>
+                    </div>
+                </div>
+                <a href="#" target="_blank" class="btn-view"><i class="fa-solid fa-eye"></i> Lihat</a>
+            </div>
+            <div class="doc-row">
+                <div class="doc-info">
+                    <i class="fa-solid fa-file-pdf" style="color: #e2574c; font-size: 1.3rem;"></i>
+                    <div class="doc-meta">
+                        <span class="doc-name">Form Penilaian Guru Pamong — UAS PPL</span>
+                        <span class="doc-type">PDF Document · Penilaian GP</span>
+                    </div>
+                </div>
+                <a href="#" target="_blank" class="btn-view"><i class="fa-solid fa-eye"></i> Lihat</a>
+            </div>
+        </div>
+
+        <!-- Refleksi Akhir Semester -->
+        <div class="glass-card" style="margin-top: 2.5rem; background: linear-gradient(135deg, rgba(16,185,129,0.08), rgba(5,150,105,0.04));">
+            <h3 style="color: #fff; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.7rem;">
+                <i class="fa-solid fa-star" style="color: #fbbf24;"></i> Refleksi Akhir Semester — Catatan Pertumbuhan
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.8rem;">Perjalanan dan pencapaian selama satu semester penuh praktik mengajar mandiri di SMP Negeri 8 Malang.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+                <div style="background: rgba(16,185,129,0.07); border: 1px solid rgba(16,185,129,0.18); border-radius: 14px; padding: 1.2rem;">
+                    <div style="color: #10b981; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-seedling"></i> Pertumbuhan Profesional</div>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.5;">Berkembangnya kemampuan merancang dan melaksanakan pembelajaran yang berpusat pada peserta didik secara konsisten.</p>
+                </div>
+                <div style="background: rgba(79,70,229,0.08); border: 1px solid rgba(79,70,229,0.18); border-radius: 14px; padding: 1.2rem;">
+                    <div style="color: var(--primary-light); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-wand-magic-sparkles"></i> Inovasi Pembelajaran</div>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.5;">Penerapan model PjBL berbasis teknologi yang berhasil meningkatkan keterlibatan dan motivasi belajar peserta didik.</p>
+                </div>
+                <div style="background: rgba(236,72,153,0.07); border: 1px solid rgba(236,72,153,0.18); border-radius: 14px; padding: 1.2rem;">
+                    <div style="color: var(--secondary); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-handshake"></i> Kolaborasi</div>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.5;">Terbangunnya kerja sama yang solid dengan rekan mahasiswa PPG, guru pamong, DPL, dan komunitas sekolah.</p>
+                </div>
+                <div style="background: rgba(245,158,11,0.07); border: 1px solid rgba(245,158,11,0.18); border-radius: 14px; padding: 1.2rem;">
+                    <div style="color: var(--warning); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-forward"></i> Rencana Ke Depan</div>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.5;">Terus mengembangkan kompetensi pedagogik dan digital sebagai guru Informatika yang adaptif dan reflektif.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigasi ke Seminar -->
+        <div style="margin-top: 2.5rem; background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(236,72,153,0.06)); border: 1px solid rgba(129,140,248,0.2); border-radius: 20px; padding: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+            <div>
+                <h4 style="color: #fff; margin-bottom: 0.4rem;"><i class="fa-solid fa-chalkboard-user" style="color: var(--primary-light); margin-right: 0.5rem;"></i>Lihat Seminar PPL</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Kunjungi halaman Seminar untuk melihat seluruh mata kuliah dan artefak Semester 2 dalam satu tampilan terpadu.</p>
+            </div>
+            <a href="seminar.html" class="btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.7rem 1.5rem; border-radius: 50px; text-decoration: none; font-size: 0.9rem; white-space: nowrap;">
+                Buka Seminar <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.5rem; margin-bottom: 1rem;">E-Portfolio Pendidikan Profesi Guru</h3>
+            <p>&copy; 2026 Disusun untuk memenuhi komponen penilaian PPL.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.3);">Menampilkan Profil Guru, Kedalaman Analisis, Refleksi Diri, dan Navigasi UI/UX Modern.</p>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+        const icon = themeToggle.querySelector('i');
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') { htmlElement.setAttribute('data-theme','light'); icon.classList.replace('fa-moon','fa-sun'); }
+        themeToggle.addEventListener('click', () => {
+            if (htmlElement.getAttribute('data-theme') === 'light') { htmlElement.removeAttribute('data-theme'); localStorage.setItem('theme','dark'); icon.classList.replace('fa-sun','fa-moon'); }
+            else { htmlElement.setAttribute('data-theme','light'); localStorage.setItem('theme','light'); icon.classList.replace('fa-moon','fa-sun'); }
+        });
+        window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50); });
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+        const openDrawer = () => { hamburgerBtn.classList.add('open'); hamburgerBtn.setAttribute('aria-expanded','true'); mobileDrawer.classList.add('open'); mobileOverlay.classList.add('active'); document.body.style.overflow='hidden'; };
+        const closeDrawer = () => { hamburgerBtn.classList.remove('open'); hamburgerBtn.setAttribute('aria-expanded','false'); mobileDrawer.classList.remove('open'); mobileOverlay.classList.remove('active'); document.body.style.overflow=''; };
+        hamburgerBtn.addEventListener('click', () => mobileDrawer.classList.contains('open') ? closeDrawer() : openDrawer());
+        mobileOverlay.addEventListener('click', closeDrawer);
+        document.querySelectorAll('.mobile-dropdown-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.dataset.target; const submenu = document.getElementById(targetId); const isOpen = btn.classList.contains('open');
+                document.querySelectorAll('.mobile-dropdown-toggle').forEach(b => b.classList.remove('open'));
+                document.querySelectorAll('.mobile-submenu').forEach(m => m.classList.remove('open'));
+                if (!isOpen) { btn.classList.add('open'); submenu.classList.add('open'); }
+            });
+        });
+        mobileDrawer.querySelectorAll('a').forEach(link => link.addEventListener('click', closeDrawer));
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+        if (themeToggleMobile) {
+            const mobileIcon = themeToggleMobile.querySelector('i');
+            if (savedTheme === 'light') mobileIcon.classList.replace('fa-moon','fa-sun');
+            themeToggleMobile.addEventListener('click', () => {
+                themeToggle.click(); const isDark = !htmlElement.hasAttribute('data-theme');
+                mobileIcon.classList.toggle('fa-moon', isDark); mobileIcon.classList.toggle('fa-sun', !isDark);
+            });
+        }
+    </script>
+    <script src="dropdown.js"></script></body>
+</html>
