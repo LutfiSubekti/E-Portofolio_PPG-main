@@ -1,12 +1,13 @@
 :root {
-    --primary: #4F46E5;
-    --primary-light: #818CF8;
-    --secondary: #ec4899;
-    --dark: #0f172a;
-    --darker: #020617;
+    --primary: #086288;
+    --primary-light: #4D8DBA;
+    --secondary: #97D7FF;
+    --accent: #FFEFC4;
+    --dark: #0a1926;
+    --darker: #050d15;
     --light: #f8fafc;
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.05);
+    --glass-bg: rgba(255, 255, 255, 0.04);
+    --glass-border: rgba(151, 215, 255, 0.12);
     --text-main: #e2e8f0;
     --text-muted: #94a3b8;
     --success: #10b981;
@@ -15,17 +16,18 @@
 
 /* Simple, easy-on-eyes overrides for Semester 2 */
 body.simple {
-    --primary: #2563eb;
-    --primary-light: #60a5fa;
-    --secondary: #2f855a;
-    --dark: #f6f8fb;
-    --darker: #f6f8fb;
-    --light: #0f172a;
-    --glass-bg: rgba(255,255,255,0.85);
-    --glass-border: rgba(15,23,42,0.06);
-    --text-main: #0f172a;
-    --text-muted: #556b6b;
-    --success: #2f855a;
+    --primary: #086288;
+    --primary-light: #4D8DBA;
+    --secondary: #086288;
+    --accent: #FFEFC4;
+    --dark: #f0f7fb;
+    --darker: #e8f3f9;
+    --light: #050d15;
+    --glass-bg: rgba(255,255,255,0.92);
+    --glass-border: rgba(8, 98, 136, 0.12);
+    --text-main: #0a1926;
+    --text-muted: #475569;
+    --success: #0d9488;
     --warning: #d97706;
 }
 
@@ -95,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
     left: -10%;
     width: 50vw;
     height: 50vw;
-    background: radial-gradient(circle, rgba(79,70,229,0.3) 0%, rgba(0,0,0,0) 70%);
+    background: radial-gradient(circle, rgba(8, 98, 136, 0.45) 0%, rgba(0,0,0,0) 70%);
 }
 
 .blob-2 {
@@ -103,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
     right: -10%;
     width: 60vw;
     height: 60vw;
-    background: radial-gradient(circle, rgba(236,72,153,0.2) 0%, rgba(0,0,0,0) 70%);
+    background: radial-gradient(circle, rgba(77, 141, 186, 0.35) 0%, rgba(0,0,0,0) 70%);
     animation-delay: -5s;
 }
 
@@ -113,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 40vw;
     height: 40vw;
     transform: translate(-50%, -50%);
-    background: radial-gradient(circle, rgba(16,185,129,0.15) 0%, rgba(0,0,0,0) 70%);
+    background: radial-gradient(circle, rgba(151, 215, 255, 0.25) 0%, rgba(0,0,0,0) 70%);
     animation-delay: -10s;
 }
 
@@ -1619,15 +1621,16 @@ html[data-theme="light"] .mobile-nav-drawer .mobile-dropdown-toggle:hover {
    Light Theme Overrides
    =============================== */
 html[data-theme="light"] {
-    --primary: #4F46E5;
-    --primary-light: #6366f1;
-    --secondary: #e11d48;
-    --dark: #f8fafc;
-    --darker: #f1f5f9;
-    --light: #0f172a;
-    --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-border: rgba(0, 0, 0, 0.1);
-    --text-main: #1e293b;
+    --primary: #086288;
+    --primary-light: #4D8DBA;
+    --secondary: #086288;
+    --accent: #FFEFC4;
+    --dark: #f0f7fb;
+    --darker: #e8f3f9;
+    --light: #050d15;
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(8, 98, 136, 0.15);
+    --text-main: #0a1926;
     --text-muted: #475569;
 }
 

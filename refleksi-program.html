@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refleksi Program PPG Secara Keseluruhan - Seminar PPL | E-Portfolio PPG</title>
+    <meta name="description" content="Refleksi Program PPG Secara Keseluruhan mencakup transformasi pola pikir, penguasaan pedagogik dan teknologi, integrasi nilai filosofis Ki Hadjar Dewantara, serta komitmen guru profesional masa depan.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ══════ MODERN PAGE THEME & BACKGROUND ══════ */
+        body {
+            background-color: #050d15;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(8, 98, 136, 0.4) 0%, transparent 60%),
+                radial-gradient(circle at 10% 40%, rgba(77, 141, 186, 0.2) 0%, transparent 45%),
+                radial-gradient(circle at 90% 70%, rgba(151, 215, 255, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 50% 80%, rgba(255, 239, 196, 0.05) 0%, transparent 50%),
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+            background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+            color: #e2e8f0;
+            min-height: 100vh;
+        }
+
+        html[data-theme="light"] body {
+            background-color: #f0f7fb;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(151, 215, 255, 0.25) 0%, transparent 60%),
+                radial-gradient(circle at 80% 30%, rgba(255, 239, 196, 0.4) 0%, transparent 50%),
+                linear-gradient(rgba(8, 98, 136, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(8, 98, 136, 0.04) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+            color: #0a1926;
+        }
+
+        .refleksi-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ─── Back to Seminar ─── */
+        .back-nav-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(151, 215, 255, 0.15);
+            margin-bottom: 2.2rem;
+            transition: all 0.25s ease;
+        }
+        .back-nav-link:hover {
+            color: #fff;
+            background: rgba(8, 98, 136, 0.25);
+            border-color: rgba(151, 215, 255, 0.4);
+            transform: translateX(-3px);
+        }
+        html[data-theme="light"] .back-nav-link {
+            background: rgba(255, 255, 255, 0.85);
+            border-color: rgba(8, 98, 136, 0.15);
+            color: #475569;
+        }
+        html[data-theme="light"] .back-nav-link:hover {
+            background: rgba(8, 98, 136, 0.1);
+            color: #086288;
+        }
+
+        /* ─── Hero Header ─── */
+        .refleksi-hero {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        .refleksi-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #97D7FF;
+            background: rgba(8, 98, 136, 0.25);
+            border: 1px solid rgba(151, 215, 255, 0.3);
+            padding: 0.4rem 1.1rem;
+            border-radius: 50px;
+            margin-bottom: 1rem;
+        }
+        html[data-theme="light"] .refleksi-eyebrow {
+            color: #086288;
+            background: rgba(8, 98, 136, 0.08);
+            border-color: rgba(8, 98, 136, 0.2);
+        }
+        .refleksi-title {
+            font-family: 'Lora', Georgia, serif;
+            font-size: clamp(2.2rem, 4.8vw, 3.4rem);
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #FFEFC4 0%, #97D7FF 50%, #4D8DBA 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        html[data-theme="light"] .refleksi-title {
+            background: linear-gradient(135deg, #086288 0%, #4D8DBA 60%, #03425e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .refleksi-subtitle {
+            max-width: 820px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+            line-height: 1.75;
+            color: rgba(255, 255, 255, 0.72);
+        }
+        html[data-theme="light"] .refleksi-subtitle {
+            color: #475569;
+        }
+        .refleksi-hero-line {
+            width: 90px;
+            height: 3px;
+            background: linear-gradient(90deg, #086288, #4D8DBA, #97D7FF, #FFEFC4);
+            border-radius: 4px;
+            margin: 1.6rem auto 0;
+        }
+
+        /* ─── Stats Bar ─── */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.2rem;
+            margin-bottom: 3rem;
+        }
+        .stat-card {
+            background: rgba(10, 25, 38, 0.65);
+            border: 1px solid rgba(151, 215, 255, 0.15);
+            border-radius: 16px;
+            padding: 1.4rem;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(151, 215, 255, 0.4);
+            box-shadow: 0 10px 30px rgba(8, 98, 136, 0.2);
+        }
+        html[data-theme="light"] .stat-card {
+            background: rgba(255, 255, 255, 0.85);
+            border-color: rgba(8, 98, 136, 0.15);
+            box-shadow: 0 4px 20px rgba(8, 98, 136, 0.06);
+        }
+        .stat-num {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #97D7FF;
+            line-height: 1.1;
+            margin-bottom: 0.3rem;
+        }
+        html[data-theme="light"] .stat-num { color: #086288; }
+        .stat-label {
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+        html[data-theme="light"] .stat-label { color: #64748b; }
+
+        /* ─── Content Blocks ─── */
+        .refleksi-section {
+            background: rgba(10, 25, 38, 0.6);
+            border: 1px solid rgba(151, 215, 255, 0.14);
+            border-radius: 20px;
+            padding: 2.2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(12px);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .refleksi-section:hover {
+            border-color: rgba(151, 215, 255, 0.35);
+            box-shadow: 0 16px 40px rgba(8, 98, 136, 0.15);
+        }
+        html[data-theme="light"] .refleksi-section {
+            background: rgba(255, 255, 255, 0.9);
+            border-color: rgba(8, 98, 136, 0.14);
+            box-shadow: 0 8px 30px rgba(8, 98, 136, 0.05);
+        }
+        .section-header-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.35rem 0.9rem;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            background: rgba(8, 98, 136, 0.25);
+            border: 1px solid rgba(151, 215, 255, 0.3);
+            color: #97D7FF;
+            margin-bottom: 1.2rem;
+        }
+        html[data-theme="light"] .section-header-pill {
+            background: rgba(8, 98, 136, 0.08);
+            border-color: rgba(8, 98, 136, 0.25);
+            color: #086288;
+        }
+        .section-heading {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        html[data-theme="light"] .section-heading { color: #0a1926; }
+        .section-heading i { color: #4D8DBA; }
+
+        .lead-quote {
+            padding: 1.4rem 1.8rem;
+            margin: 1.2rem 0 1.8rem;
+            border-left: 4px solid #4D8DBA;
+            background: rgba(8, 98, 136, 0.12);
+            border-radius: 0 14px 14px 0;
+            font-family: 'Lora', Georgia, serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #FFEFC4;
+        }
+        html[data-theme="light"] .lead-quote {
+            background: rgba(8, 98, 136, 0.05);
+            border-color: #086288;
+            color: #086288;
+        }
+
+        .refleksi-body-text {
+            font-size: 0.98rem;
+            line-height: 1.95;
+            color: rgba(255, 255, 255, 0.8);
+            text-align: justify;
+        }
+        html[data-theme="light"] .refleksi-body-text {
+            color: #334155;
+        }
+        .refleksi-body-text p {
+            margin-bottom: 1.2rem;
+        }
+        .refleksi-body-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ─── 4 Pillars of Transformation Grid ─── */
+        .pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.2rem;
+            margin: 1.8rem 0;
+        }
+        .pillar-box {
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(151, 215, 255, 0.12);
+            border-radius: 14px;
+            padding: 1.4rem;
+            transition: all 0.25s ease;
+        }
+        .pillar-box:hover {
+            border-color: rgba(151, 215, 255, 0.4);
+            transform: translateY(-3px);
+            background: rgba(8, 98, 136, 0.1);
+        }
+        html[data-theme="light"] .pillar-box {
+            background: rgba(255, 255, 255, 0.8);
+            border-color: rgba(8, 98, 136, 0.15);
+        }
+        .pillar-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: rgba(8, 98, 136, 0.3);
+            color: #97D7FF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            margin-bottom: 0.9rem;
+        }
+        html[data-theme="light"] .pillar-icon {
+            background: rgba(8, 98, 136, 0.1);
+            color: #086288;
+        }
+        .pillar-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.4rem;
+        }
+        html[data-theme="light"] .pillar-title { color: #0a1926; }
+        .pillar-desc {
+            font-size: 0.88rem;
+            line-height: 1.65;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        html[data-theme="light"] .pillar-desc { color: #475569; }
+
+        /* ─── Action Plan List ─── */
+        .plan-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.2rem;
+        }
+        .plan-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            padding: 1.1rem 1.3rem;
+            transition: all 0.2s ease;
+        }
+        .plan-item:hover {
+            background: rgba(8, 98, 136, 0.1);
+            border-color: rgba(151, 215, 255, 0.25);
+        }
+        html[data-theme="light"] .plan-item {
+            background: rgba(255, 255, 255, 0.85);
+            border-color: rgba(8, 98, 136, 0.1);
+        }
+        .plan-badge {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #086288, #4D8DBA);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+            margin-top: 0.15rem;
+        }
+        .plan-text {
+            font-size: 0.92rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        html[data-theme="light"] .plan-text { color: #334155; }
+        .plan-text strong { color: #FFEFC4; }
+        html[data-theme="light"] .plan-text strong { color: #086288; }
+    </style>
+</head>
+<body>
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+            <div style="display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.95); padding: 6px 12px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                <img src="assets/images/Logo%20Kemdikdasmen.png" alt="Kemdikdasmen" style="height: 28px; width: auto; object-fit: contain; display: block;">
+                <img src="assets/images/Logo-UM.png" alt="UM" style="height: 28px; width: auto; object-fit: contain; display: block;">
+                <img src="assets/images/Logo%20PPG.png" alt="PPG" style="height: 28px; width: auto; object-fit: contain; display: block;">
+            </div>
+            <span style="font-size: 1.25rem; font-weight: 700; color: #fff; font-family: 'Outfit', sans-serif;">E-Portfolio PPG</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="semester-1.html" class="dropbtn">Semester 1</a>
+                <ul class="dropdown-content">
+                    <li><a href="e-portfolio-1.html">E-Portfolio 1</a></li>
+                    <li><a href="e-portfolio-2.html">E-Portfolio 2</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="semester-2.html" class="dropbtn">Semester 2</a>
+                <ul class="dropdown-content">
+                    <li><a href="profil-mahasiswa-s2.html"><i class="fa-solid fa-user" style="margin-right:6px;"></i>Profil Mahasiswa</a></li>
+                    <li><a href="uts-ppl.html"><i class="fa-solid fa-file-pen" style="margin-right:6px;"></i>UTS PPL</a></li>
+                    <li><a href="uas-ppl.html"><i class="fa-solid fa-file-circle-check" style="margin-right:6px;"></i>UAS PPL</a></li>
+                    <li><a href="seminar.html"><i class="fa-solid fa-chalkboard-user" style="margin-right:6px;"></i>Seminar</a></li>
+                </ul>
+            </li>
+            <li><a href="e-portfolio-2.html#dokumentasi">Dokumentasi</a></li>
+            <li>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </li>
+        </ul>
+        <button class="hamburger" id="hamburger-btn" aria-label="Buka Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <div class="mobile-nav-overlay" id="mobile-overlay"></div>
+    <div class="mobile-nav-drawer" id="mobile-drawer">
+        <a href="index.html"><i class="fa-solid fa-house" style="margin-right:0.5rem; color:var(--primary-light);"></i> Home</a>
+        <div class="mobile-nav-divider"></div>
+        <button class="mobile-dropdown-toggle" data-target="mob-sub-semester1" onclick="window.location.href='semester-1.html'">
+            <span><i class="fa-solid fa-folder-open" style="margin-right:0.5rem; color:var(--secondary);"></i> Semester 1</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="mobile-submenu" id="mob-sub-semester1">
+            <a href="e-portfolio-1.html">E-Portfolio 1</a>
+            <a href="e-portfolio-2.html">E-Portfolio 2</a>
+        </div>
+        <button class="mobile-dropdown-toggle" data-target="mob-sub-semester2" onclick="window.location.href='semester-2.html'">
+            <span><i class="fa-solid fa-folder" style="margin-right:0.5rem; color:#10b981;"></i> Semester 2</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="mobile-submenu" id="mob-sub-semester2">
+            <a href="profil-mahasiswa-s2.html"><i class="fa-solid fa-user" style="margin-right:6px;"></i> Profil Mahasiswa</a>
+            <a href="uts-ppl.html"><i class="fa-solid fa-file-pen" style="margin-right:6px;"></i> UTS PPL</a>
+            <a href="uas-ppl.html"><i class="fa-solid fa-file-circle-check" style="margin-right:6px;"></i> UAS PPL</a>
+            <a href="seminar.html"><i class="fa-solid fa-chalkboard-user" style="margin-right:6px;"></i> Seminar</a>
+        </div>
+        <a href="e-portfolio-2.html#dokumentasi"><i class="fa-solid fa-images" style="margin-right:0.5rem; color:var(--warning);"></i> Dokumentasi</a>
+        <div class="mobile-nav-divider"></div>
+        <div class="mobile-theme-row">
+            <span><i class="fa-solid fa-circle-half-stroke" style="margin-right:0.5rem;"></i> Mode Tampilan</span>
+            <button id="theme-toggle-mobile" class="theme-toggle-btn" aria-label="Toggle Theme Mobile">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- ======================= MAIN CONTENT ======================= -->
+    <main class="refleksi-container" style="margin-top: 150px; margin-bottom: 5rem;">
+
+        <!-- Back to Seminar Button -->
+        <a href="seminar.html" class="back-nav-link">
+            <i class="fa-solid fa-arrow-left"></i> Kembali ke Seminar PPL
+        </a>
+
+        <!-- Hero Section -->
+        <header class="refleksi-hero">
+            <div class="refleksi-eyebrow">
+                <i class="fa-solid fa-graduation-cap"></i> Sintesis Menyeluruh Program PPG Prajabatan
+            </div>
+            <h1 class="refleksi-title">Refleksi Program PPG<br>Secara Keseluruhan</h1>
+            <p class="refleksi-subtitle">
+                Sebuah perenungan reflektif atas perjalanan transformasi diri dari seorang sarjana Teknik Informatika menjadi guru profesional sejati yang berpusat pada peserta didik, adaptif terhadap teknologi digital, dan memegang teguh marwah pendidik nilai.
+            </p>
+            <div class="refleksi-hero-line"></div>
+        </header>
+
+        <!-- Stats Bar -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-num">2</div>
+                <div class="stat-label">Semester Perkuliahan &amp; PPL</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">8+</div>
+                <div class="stat-label">Mata Kuliah Inti &amp; Elektif</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">SMPN 8</div>
+                <div class="stat-label">Sekolah Laboratorium Mitra</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">100%</div>
+                <div class="stat-label">Komitmen Pendidik Bermakna</div>
+            </div>
+        </div>
+
+        <!-- Section 1: Titik Berangkat & Transformasi Paradigma -->
+        <section class="refleksi-section">
+            <div class="section-header-pill">
+                <i class="fa-solid fa-compass"></i> Bagian 1 · Titik Awal &amp; Pergeseran Paradigma
+            </div>
+            <h2 class="section-heading">
+                <i class="fa-solid fa-seedling"></i> Dari Keterampilan Teknis Menuju Spirit Pedagogis
+            </h2>
+
+            <div class="lead-quote">
+                "Sebelum menempuh PPG, saya memandang pendidikan semata-mata sebagai transmisi logika dan sintaks coding. Kini saya menyadari: teknologi hanyalah jembatan, sedangkan jiwa dari mengajar adalah menumbuhkan manusia seutuhnya (Humanizing Education)."
+            </div>
+
+            <div class="refleksi-body-text">
+                <p>
+                    Sebagai lulusan berlatar belakang murni Teknik Informatika tanpa riwayat pendidikan keguruan sebelumnya, langkah awal memasuki Program Pendidikan Profesi Guru (PPG) Prajabatan di Universitas Negeri Malang dipenuhi keraguan sekaligus rasa ingin tahu yang besar. Paradigma awal saya memandang pengajaran Informatika sebagai aktivitas teknis yang kaku: mendikte materi sintaks pemrograman, memberikan latihan praktikum, dan mengukur keberhasilan melalui program yang <em>error-free</em>.
+                </p>
+                <p>
+                    Melalui mata kuliah <strong>Filosofi Pendidikan dan Pendidikan Nilai</strong> serta <strong>Pemahaman Tentang Peserta Didik dan Pembelajaran</strong>, paradigma mekanistik tersebut mengalami pergeseran mendasar. Konsep <em>Sistem Among</em> Ki Hadjar Dewantara ("Ing Ngarso Sung Tulodo, Ing Madyo Mangun Karso, Tut Wuri Handayani") membuka kesadaran bahwa kodrat alam dan kodrat zaman peserta didik adalah dasar utama perancangan pembelajaran. Mengajar bukan sekadar menuangkan air ke dalam bejana kosong, melainkan menuntun benih kodrat yang telah dimiliki setiap anak agar mencapai keselamatan dan kebahagiaan setinggi-tingginya sebagai manusia dan anggota masyarakat.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 2: Empat Pilar Pengalaman Belajar PPG -->
+        <section class="refleksi-section">
+            <div class="section-header-pill">
+                <i class="fa-solid fa-cubes"></i> Bagian 2 · Integrasi Keilmuan
+            </div>
+            <h2 class="section-heading">
+                <i class="fa-solid fa-layer-group"></i> Empat Pilar Transformasi Pengalaman Belajar
+            </h2>
+            <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:1.5rem;">
+                Keterkaitan holistik antara seluruh mata kuliah yang telah dipelajari dan diimplementasikan secara nyata selama Praktik Pengalaman Lapangan (PPL):
+            </p>
+
+            <div class="pillar-grid">
+                <div class="pillar-box">
+                    <div class="pillar-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <div class="pillar-title">Computational Thinking</div>
+                    <div class="pillar-desc">
+                        Menanamkan pola pikir pemecahan masalah (dekomposisi, pengenalan pola, abstraksi, dan algoritma) bukan hanya untuk koding, tetapi sebagai kecakapan hidup bernalar kritis peserta didik.
+                    </div>
+                </div>
+                <div class="pillar-box">
+                    <div class="pillar-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="pillar-title">Pembelajaran Mendalam &amp; Asesmen</div>
+                    <div class="pillar-desc">
+                        Penerapan prinsip <em>Teaching at the Right Level (TaRL)</em>, diferensiasi konten/proses/produk, serta desain asesmen autentik formatif dan sumatif yang mengukur kompetensi nyata.
+                    </div>
+                </div>
+                <div class="pillar-box">
+                    <div class="pillar-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <div class="pillar-title">Sosial Emosional &amp; Mindset</div>
+                    <div class="pillar-desc">
+                        Membangun iklim kelas yang aman secara psikologis melalui <em>Social Emotional Learning (SEL)</em> dan <em>Growth Mindset</em>, mengubah kesalahan belajar (eror kode) menjadi kesempatan bertumbuh.
+                    </div>
+                </div>
+                <div class="pillar-box">
+                    <div class="pillar-icon"><i class="fa-solid fa-user-shield"></i></div>
+                    <div class="pillar-title">Etika &amp; Keteladanan Profesi</div>
+                    <div class="pillar-desc">
+                        Menginternalisasi standar etika profesi keguruan, integritas intelektual, tanggung jawab sosial, dan empati tanpa batas kepada setiap peserta didik di sekolah mitra.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Pengalaman Nyata di Lapangan (PPL di SMP Negeri 8 Malang) -->
+        <section class="refleksi-section">
+            <div class="section-header-pill">
+                <i class="fa-solid fa-school"></i> Bagian 3 · Praksis Lapangan
+            </div>
+            <h2 class="section-heading">
+                <i class="fa-solid fa-chalkboard-user"></i> Praksis di Sekolah Mitra: Menguji Teori Menjadi Aksi Nyata
+            </h2>
+
+            <div class="refleksi-body-text">
+                <p>
+                    Ujian sesungguhnya dari teori-teori perkuliahan terjadi ketika melangkah ke dalam ruang kelas nyata di <strong>SMP Negeri 8 Malang</strong>. Menghadapi peserta didik jenjang SMP Kelas IX dengan rentang karakteristik yang sangat majemuk menyadarkan saya bahwa diferensiasi bukan sekadar pilihan dokumen administratif, melainkan sebuah keharusan pedagogis.
+                </p>
+                <p>
+                    Ketika peserta didik mengalami <em>coding anxiety</em> saat transisi dari pemrograman blok Scratch ke teks Python, konsep perkuliahan memandu saya untuk berinovasi merancang <strong>TGT-CodeArena Digital</strong>. Dengan memadukan model kooperatif Teams-Games-Tournament, pembagian peran ala industri perangkat lunak, dan kartu tantangan berjenjang 3 level (Hijau, Kuning, Merah), suasana kelas yang mulanya hening penuh keraguan berubah menjadi arena kolaborasi yang penuh semangat, suportif, dan bebas dari fenomena <em>free-rider</em>.
+                </p>
+                <p>
+                    Umpan balik yang konstruktif dari Guru Pamong dan Dosen Pembimbing Lapangan (DPL) selama Siklus 1 (UTS) dan Siklus 2 (UAS) mengajarkan pentingnya <em>Reflective Practice</em>: seorang pendidik unggul tidak pernah puas dengan satu metode, melainkan terus mengevaluasi efektivitas rancangan pembelajaran berbasis data respon siswa.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 4: Makna Guru Profesional & Rencana Tindak Lanjut -->
+        <section class="refleksi-section">
+            <div class="section-header-pill">
+                <i class="fa-solid fa-award"></i> Bagian 4 · Komitmen Masa Depan
+            </div>
+            <h2 class="section-heading">
+                <i class="fa-solid fa-hand-holding-heart"></i> Definisi Pribadi Guru Profesional &amp; Rencana Aksi Nyata
+            </h2>
+
+            <div class="lead-quote">
+                "Guru profesional bukanlah sosok yang serba tahu segala jawaban, melainkan arsitek pengalaman belajar yang mampu menyalakan api rasa ingin tahu, membimbing karakter welas asih, dan menjadi pembelajar abadi (Lifelong Learner) di tengah derasnya arus zaman."
+            </div>
+
+            <div class="refleksi-body-text">
+                <p>
+                    Menyelesaikan seluruh rangkaian Program PPG Prajabatan bukanlah akhir dari perjuangan, melainkan garis awal pengabdian sesungguhnya di dunia pendidikan Indonesia. Sebagai wujud tanggung jawab profesional ke depan, saya merumuskan komitmen dan rencana aksi konkret:
+                </p>
+            </div>
+
+            <div class="plan-list">
+                <div class="plan-item">
+                    <div class="plan-badge">1</div>
+                    <div class="plan-text">
+                        <strong>Konsistensi Pembelajaran Berpihak pada Murid:</strong> Selalu mengawali perancangan modul ajar dengan asesmen diagnostik kognitif dan non-kognitif, memastikan setiap anak mendapatkan perlakuan pedagogis yang sesuai dengan kesiapannya (*Differentiated Instruction*).
+                    </div>
+                </div>
+                <div class="plan-item">
+                    <div class="plan-badge">2</div>
+                    <div class="plan-text">
+                        <strong>Inovasi Pedagogi Digital Berkelanjutan:</strong> Mengembangkan media interaktif, gamifikasi, dan integrasi Artificial Intelligence (AI) secara etis dalam mata pelajaran Informatika guna mempersiapkan generasi muda yang melek komputasi dan beretika siber.
+                    </div>
+                </div>
+                <div class="plan-item">
+                    <div class="plan-badge">3</div>
+                    <div class="plan-text">
+                        <strong>Budaya Refleksi dan Kolaborasi Komunitas Praktisi:</strong> Aktif berbagi praktik baik di forum Musyawarah Guru Mata Pelajaran (MGMP), menulis artikel ilmiah reflektif, serta terus terbuka terhadap kritik dan evaluasi demi penyempurnaan mutu pembelajaran.
+                    </div>
+                </div>
+                <div class="plan-item">
+                    <div class="plan-badge">4</div>
+                    <div class="plan-text">
+                        <strong>Keteladanan Budi Pekerti dan Pendidikan Nilai:</strong> Menjadikan ruang kelas sebagai lingkungan yang sarat akan nilai integritas, empati, saling menghargai keberagaman, dan ketahanan mental menghadapi kegagalan (*Growth Mindset*).
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Footnote -->
+        <div style="text-align:center; margin-top:3.5rem;">
+            <a href="seminar.html" class="btn-primary" style="display:inline-flex; align-items:center; gap:0.6rem; padding:0.8rem 1.8rem; border-radius:50px; text-decoration:none; font-weight:700; font-size:0.95rem; background:linear-gradient(135deg, #086288, #4D8DBA); color:#fff; box-shadow:0 6px 25px rgba(8,98,136,0.35);">
+                <i class="fa-solid fa-chalkboard-user"></i> Kembali ke Dashboard Seminar PPL
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.5rem; margin-bottom: 1rem;">E-Portfolio Pendidikan Profesi Guru</h3>
+            <p>&copy; 2026 Disusun untuk memenuhi komponen penilaian Seminar PPL PPG Prajabatan Gelombang 1.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.4);">
+                Program Studi Pendidikan Profesi Guru · Universitas Negeri Malang
+            </p>
+        </div>
+    </footer>
+
+    <script>
+    /* ==================== THEME TOGGLE ==================== */
+    const themeToggle = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+    const icon = themeToggle.querySelector('i');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') { htmlElement.setAttribute('data-theme','light'); icon.classList.replace('fa-moon','fa-sun'); }
+    themeToggle.addEventListener('click', () => {
+        if (htmlElement.getAttribute('data-theme') === 'light') { htmlElement.removeAttribute('data-theme'); localStorage.setItem('theme','dark'); icon.classList.replace('fa-sun','fa-moon'); }
+        else { htmlElement.setAttribute('data-theme','light'); localStorage.setItem('theme','light'); icon.classList.replace('fa-moon','fa-sun'); }
+    });
+
+    /* ==================== NAVBAR SCROLL ==================== */
+    window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50); });
+
+    /* ==================== MOBILE MENU ==================== */
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    const mobileOverlay = document.getElementById('mobile-overlay');
+    const openDrawer = () => { hamburgerBtn.classList.add('open'); hamburgerBtn.setAttribute('aria-expanded','true'); mobileDrawer.classList.add('open'); mobileOverlay.classList.add('active'); document.body.style.overflow='hidden'; };
+    const closeDrawer = () => { hamburgerBtn.classList.remove('open'); hamburgerBtn.setAttribute('aria-expanded','false'); mobileDrawer.classList.remove('open'); mobileOverlay.classList.remove('active'); document.body.style.overflow=''; };
+    hamburgerBtn.addEventListener('click', () => mobileDrawer.classList.contains('open') ? closeDrawer() : openDrawer());
+    mobileOverlay.addEventListener('click', closeDrawer);
+    document.querySelectorAll('.mobile-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetId = btn.dataset.target; const submenu = document.getElementById(targetId); const isOpen = btn.classList.contains('open');
+            document.querySelectorAll('.mobile-dropdown-toggle').forEach(b => b.classList.remove('open'));
+            document.querySelectorAll('.mobile-submenu').forEach(m => m.classList.remove('open'));
+            if (!isOpen) { btn.classList.add('open'); submenu.classList.add('open'); }
+        });
+    });
+    mobileDrawer.querySelectorAll('a').forEach(link => link.addEventListener('click', closeDrawer));
+    const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+    if (themeToggleMobile) {
+        const mobileIcon = themeToggleMobile.querySelector('i');
+        if (savedTheme === 'light') mobileIcon.classList.replace('fa-moon','fa-sun');
+        themeToggleMobile.addEventListener('click', () => {
+            themeToggle.click(); const isDark = !htmlElement.hasAttribute('data-theme');
+            mobileIcon.classList.toggle('fa-moon', isDark); mobileIcon.classList.toggle('fa-sun', !isDark);
+        });
+    }
+    </script>
+    <script src="dropdown.js"></script>
+</body>
+</html>
+

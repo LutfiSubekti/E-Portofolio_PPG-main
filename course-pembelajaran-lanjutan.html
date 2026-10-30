@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembelajaran Mendalam dan Asesmen Lanjutan | Refleksi &amp; Tugas Perkuliahan | E-Portfolio PPG</title>
+    <meta name="description" content="Refleksi 4C, Analisis Artefak, Hasil Refleksi, Lembar Refleksi, dan Kumpulan Tugas Perkuliahan mata kuliah Pembelajaran Mendalam dan Asesmen Lanjutan - PPG Prajabatan Lutfi Subekti">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ══════ MODERN PAGE THEME & BACKGROUND ══════ */
+        body {
+            background-color: #050d15;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(8, 98, 136, 0.35) 0%, transparent 60%),
+                radial-gradient(circle at 10% 40%, rgba(77, 141, 186, 0.18) 0%, transparent 45%),
+                radial-gradient(circle at 90% 70%, rgba(151, 215, 255, 0.12) 0%, transparent 45%),
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+            background-position: 0 0, 0 0, 0 0, 0 0, 0 0;
+            color: #e2e8f0;
+            min-height: 100vh;
+        }
+
+        html[data-theme="light"] body {
+            background-color: #f0f7fb;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(151, 215, 255, 0.25) 0%, transparent 60%),
+                linear-gradient(rgba(8, 98, 136, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(8, 98, 136, 0.04) 1px, transparent 1px);
+            background-size: 100% 100%, 36px 36px, 36px 36px;
+            color: #0a1926;
+        }
+
+        .course-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ─── Back to Seminar ─── */
+        .back-nav-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(151, 215, 255, 0.15);
+            margin-bottom: 2.2rem;
+            transition: all 0.25s ease;
+        }
+        .back-nav-link:hover {
+            color: #fff;
+            background: rgba(8, 98, 136, 0.25);
+            border-color: rgba(151, 215, 255, 0.4);
+            transform: translateX(-3px);
+        }
+        html[data-theme="light"] .back-nav-link {
+            background: rgba(255, 255, 255, 0.85);
+            border-color: rgba(8, 98, 136, 0.15);
+            color: #475569;
+        }
+        html[data-theme="light"] .back-nav-link:hover {
+            background: rgba(8, 98, 136, 0.1);
+            color: #086288;
+        }
+
+        /* ─── Course Header Banner ─── */
+        .course-hero {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+        .course-eyebrow {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #97D7FF;
+            margin-bottom: 0.75rem;
+        }
+        html[data-theme="light"] .course-eyebrow {
+            color: #086288;
+        }
+        .course-main-title {
+            font-family: 'Lora', Georgia, serif;
+            font-size: clamp(2rem, 4.5vw, 3.1rem);
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #818cf8, #6366f1, #4f46e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .course-main-subtitle {
+            max-width: 780px;
+            margin: 0 auto;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.65);
+        }
+        html[data-theme="light"] .course-main-subtitle {
+            color: #64748b;
+        }
+        .course-hero-line {
+            width: 70px;
+            height: 3px;
+            background: linear-gradient(90deg, #4D8DBA, #97D7FF, #FFEFC4);
+            border-radius: 4px;
+            margin: 1.5rem auto 0;
+        }
+
+        /* ─── SEGMENTED PILL TABS ─── */
+        .course-tabs-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2.8rem;
+            overflow-x: auto;
+            padding: 0.5rem 0;
+            scrollbar-width: none;
+        }
+        .course-tabs-wrapper::-webkit-scrollbar { display: none; }
+        .course-tabs-nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: rgba(10, 25, 38, 0.75);
+            backdrop-filter: blur(12px);
+            padding: 0.45rem;
+            border-radius: 18px;
+            border: 1px solid rgba(151, 215, 255, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+        html[data-theme="light"] .course-tabs-nav {
+            background: rgba(255, 255, 255, 0.9);
+            border-color: rgba(8, 98, 136, 0.15);
+            box-shadow: 0 8px 24px rgba(8, 98, 136, 0.08);
+        }
+        .tab-btn-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            padding: 0.65rem 1.35rem;
+            border-radius: 14px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.68);
+            background: transparent;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all 0.22s ease;
+            white-space: nowrap;
+        }
+        .tab-btn-pill:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.06);
+        }
+        .tab-btn-pill.active {
+            background: rgba(8, 98, 136, 0.35);
+            border-color: rgba(151, 215, 255, 0.5);
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(8, 98, 136, 0.3);
+        }
+        html[data-theme="light"] .tab-btn-pill {
+            color: #475569;
+        }
+        html[data-theme="light"] .tab-btn-pill:hover {
+            color: #0a1926;
+            background: rgba(8, 98, 136, 0.05);
+        }
+        html[data-theme="light"] .tab-btn-pill.active {
+            background: #fff;
+            border-color: rgba(8, 98, 136, 0.35);
+            color: #086288;
+            box-shadow: 0 4px 16px rgba(8, 98, 136, 0.12);
+        }
+
+        /* ─── TAB CONTENT PANELS ─── */
+        .tab-panel-section {
+            display: none;
+            animation: fadeInPanel 0.28s ease forwards;
+        }
+        .tab-panel-section.active {
+            display: block;
+        }
+        @keyframes fadeInPanel {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ─── CARD BASES ─── */
+        .content-card-box {
+            background: rgba(15, 23, 42, 0.65);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 22px;
+            padding: 2.2rem;
+            backdrop-filter: blur(14px);
+            margin-bottom: 2.5rem;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+        }
+        html[data-theme="light"] .content-card-box {
+            background: rgba(255, 255, 255, 0.95);
+            border-color: rgba(0, 0, 0, 0.08);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 0.35rem 0.95rem;
+            border-radius: 50px;
+            margin-bottom: 1rem;
+        }
+        .badge-green {
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #10b981;
+        }
+        .badge-purple {
+            background: rgba(129, 140, 248, 0.15);
+            border: 1px solid rgba(129, 140, 248, 0.3);
+            color: #818cf8;
+        }
+        .badge-amber {
+            background: rgba(245, 158, 11, 0.15);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            color: #fbbf24;
+        }
+
+        .card-header-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.4rem;
+        }
+        .card-header-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            flex-shrink: 0;
+        }
+        .card-header-title {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 1.55rem;
+            font-weight: 600;
+            color: #fff;
+            margin: 0;
+        }
+        html[data-theme="light"] .card-header-title {
+            color: #1e293b;
+        }
+
+        /* ─── 4C GRID ─── */
+        .grid-4c {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.4rem;
+        }
+        @media(max-width: 768px) {
+            .grid-4c { grid-template-columns: 1fr; }
+        }
+        .c4-box {
+            padding: 1.6rem;
+            border-radius: 16px;
+            border-left: 4px solid;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+        .c4-box:hover {
+            transform: translateY(-2px);
+        }
+        .c4-box.conn {
+            background: rgba(99, 102, 241, 0.08);
+            border-color: #818cf8;
+        }
+        .c4-box.chal {
+            background: rgba(236, 72, 153, 0.08);
+            border-color: #f472b6;
+        }
+        .c4-box.conc {
+            background: rgba(16, 185, 129, 0.08);
+            border-color: #34d399;
+        }
+        .c4-box.chan {
+            background: rgba(245, 158, 11, 0.08);
+            border-color: #fbbf24;
+        }
+        html[data-theme="light"] .c4-box.conn { background: rgba(99, 102, 241, 0.05); }
+        html[data-theme="light"] .c4-box.chal { background: rgba(236, 72, 153, 0.05); }
+        html[data-theme="light"] .c4-box.conc { background: rgba(16, 185, 129, 0.05); }
+        html[data-theme="light"] .c4-box.chan { background: rgba(245, 158, 11, 0.05); }
+
+        .c4-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.6rem;
+        }
+        .c4-box.conn .c4-tag { color: #818cf8; }
+        .c4-box.chal .c4-tag { color: #f472b6; }
+        .c4-box.conc .c4-tag { color: #34d399; }
+        .c4-box.chan .c4-tag { color: #fbbf24; }
+
+        .c4-question {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.8rem;
+            line-height: 1.45;
+        }
+        html[data-theme="light"] .c4-question { color: #0f172a; }
+        .c4-text {
+            font-size: 0.92rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.75);
+            margin: 0;
+        }
+        html[data-theme="light"] .c4-text { color: #475569; }
+
+        /* ─── ARTEFAK LIST & CARDS ─── */
+        .artefak-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+        .artefak-card {
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(0, 0, 0, 0.22);
+            padding: 1.4rem;
+            transition: all 0.22s ease;
+        }
+        .artefak-card:hover {
+            border-color: rgba(129, 140, 248, 0.35);
+            background: rgba(0, 0, 0, 0.3);
+        }
+        html[data-theme="light"] .artefak-card {
+            background: rgba(0, 0, 0, 0.02);
+            border-color: rgba(0, 0, 0, 0.08);
+        }
+        .artefak-card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.8rem;
+        }
+        .artefak-card-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+        }
+        .artefak-card-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        html[data-theme="light"] .artefak-card-title { color: #1e293b; }
+        .artefak-card-type {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .artefak-card-desc {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1.2rem;
+        }
+        html[data-theme="light"] .artefak-card-desc { color: #475569; }
+
+        .artefak-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        html[data-theme="light"] .artefak-card-footer {
+            border-top-color: rgba(0, 0, 0, 0.06);
+        }
+        .artefak-card-file {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+        }
+        .artefak-card-filename {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #fff;
+        }
+        html[data-theme="light"] .artefak-card-filename { color: #1e293b; }
+        .artefak-card-filesize {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+        }
+
+        .artefak-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .btn-action-view, .btn-action-dl {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.45rem 0.95rem;
+            border-radius: 9px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .btn-action-view {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #fff;
+        }
+        .btn-action-view:hover {
+            background: #818cf8;
+            border-color: #818cf8;
+            color: #fff;
+        }
+        .btn-action-dl {
+            background: #10b981;
+            border: 1px solid transparent;
+            color: #fff;
+        }
+        .btn-action-dl:hover {
+            filter: brightness(1.15);
+        }
+        html[data-theme="light"] .btn-action-view {
+            background: rgba(0, 0, 0, 0.05);
+            border-color: rgba(0, 0, 0, 0.1);
+            color: #334155;
+        }
+        html[data-theme="light"] .btn-action-view:hover {
+            background: #4f46e5;
+            color: #fff;
+        }
+
+        /* ─── HASIL REFLEKSI SECTION ─── */
+        .hasil-refleksi-text {
+            font-size: 0.98rem;
+            line-height: 1.95;
+            color: rgba(255, 255, 255, 0.82);
+            text-align: justify;
+        }
+        html[data-theme="light"] .hasil-refleksi-text { color: #334155; }
+        .quote-box {
+            margin: 1.5rem 0;
+            padding: 1.4rem 1.8rem;
+            border-radius: 14px;
+            background: rgba(99, 102, 241, 0.08);
+            border-left: 4px solid #818cf8;
+            font-family: 'Lora', Georgia, serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            color: #e0e7ff;
+            line-height: 1.7;
+        }
+        html[data-theme="light"] .quote-box {
+            background: rgba(99, 102, 241, 0.06);
+            color: #312e81;
+        }
+
+        /* ─── LEMBAR REFLEKSI (PDF PREVIEW) ─── */
+        .pdf-viewer-frame {
+            width: 100%;
+            height: 750px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            background: #fff;
+            margin-top: 1.5rem;
+        }
+
+        /* ══════ TAB 5: TUGAS PERKULIAHAN (MATCHES USER SCREENSHOT) ══════ */
+        .tugas-layout-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 1.6rem;
+            align-items: start;
+        }
+        @media(max-width: 900px) {
+            .tugas-layout-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Left Sidebar: DAFTAR ISI */
+        .sidebar-daftar-isi {
+            background: rgba(15, 23, 42, 0.65);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 1.4rem;
+            backdrop-filter: blur(14px);
+            position: sticky;
+            top: 100px;
+        }
+        html[data-theme="light"] .sidebar-daftar-isi {
+            background: rgba(255, 255, 255, 0.95);
+            border-color: rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        }
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        html[data-theme="light"] .sidebar-header {
+            border-bottom-color: rgba(0, 0, 0, 0.06);
+        }
+        .sidebar-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+        .sidebar-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.65rem 1rem;
+            border-radius: 12px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.65);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            border: 1px solid transparent;
+        }
+        .sidebar-item:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.04);
+        }
+        .sidebar-item.active {
+            background: rgba(99, 102, 241, 0.18);
+            border-color: rgba(129, 140, 248, 0.4);
+            color: #fff;
+            font-weight: 600;
+        }
+        html[data-theme="light"] .sidebar-item {
+            color: #64748b;
+        }
+        html[data-theme="light"] .sidebar-item:hover {
+            background: rgba(0, 0, 0, 0.03);
+            color: #1e293b;
+        }
+        html[data-theme="light"] .sidebar-item.active {
+            background: rgba(99, 102, 241, 0.1);
+            border-color: rgba(99, 102, 241, 0.25);
+            color: #4338ca;
+        }
+
+        /* Right Panel: Content */
+        .topic-section-box {
+            margin-bottom: 2.2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .topic-section-box:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .topic-section-header {
+            margin-bottom: 1.4rem;
+        }
+        .topic-num-badge {
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            color: #10b981;
+            text-transform: uppercase;
+            margin-bottom: 0.35rem;
+        }
+        .topic-section-title {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.4rem;
+        }
+        html[data-theme="light"] .topic-section-title { color: #1e293b; }
+        .topic-section-desc {
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .tasks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1rem;
+        }
+        .task-card {
+            background: rgba(0, 0, 0, 0.22);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 14px;
+            padding: 1.15rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.2s ease;
+        }
+        .task-card:hover {
+            background: rgba(0, 0, 0, 0.35);
+            border-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+        }
+        html[data-theme="light"] .task-card {
+            background: rgba(0, 0, 0, 0.02);
+            border-color: rgba(0, 0, 0, 0.07);
+        }
+        .task-card-badge {
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #818cf8;
+            margin-bottom: 0.5rem;
+        }
+        html[data-theme="light"] .task-card-badge { color: #4f46e5; }
+        .task-card-title {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+        html[data-theme="light"] .task-card-title { color: #1e293b; }
+        .task-card-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 0.75rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .task-status-pill {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #10b981;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .btn-task-preview {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 0.3rem 0.65rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.18s ease;
+        }
+        .btn-task-preview:hover {
+            background: #818cf8;
+            border-color: #818cf8;
+            color: #fff;
+        }
+        html[data-theme="light"] .btn-task-preview {
+            border-color: rgba(0, 0, 0, 0.15);
+            color: #475569;
+        }
+
+        /* ─── PDF MODAL FULL SCREEN ─── */
+        .pdf-modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(8px);
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+        .pdf-modal-overlay.open { display: flex; }
+        .pdf-modal-card {
+            background: #0f172a;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 18px;
+            width: 100%;
+            max-width: 960px;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6);
+        }
+        html[data-theme="light"] .pdf-modal-card {
+            background: #f8fafc;
+            border-color: rgba(0, 0, 0, 0.15);
+        }
+        .pdf-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.4rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        html[data-theme="light"] .pdf-modal-header {
+            border-bottom-color: rgba(0, 0, 0, 0.08);
+        }
+        .pdf-modal-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        html[data-theme="light"] .pdf-modal-title { color: #1e293b; }
+        .btn-modal-close {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.08);
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-modal-close:hover { background: rgba(239, 68, 68, 0.3); color: #f87171; }
+        .pdf-modal-body {
+            flex: 1;
+            position: relative;
+        }
+        .pdf-modal-body iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- ══════ NAVIGATION BAR ══════ -->
+    <nav id="navbar">
+        <a href="index.html" class="logo" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+            <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.95);padding:6px 12px;border-radius:50px;border:1px solid rgba(255,255,255,.2);box-shadow:0 4px 15px rgba(0,0,0,.15);">
+                <img src="assets/images/Logo%20Kemdikdasmen.png" alt="Kemdikdasmen" style="height:28px;width:auto;object-fit:contain;display:block;">
+                <img src="assets/images/Logo-UM.png" alt="UM" style="height:28px;width:auto;object-fit:contain;display:block;">
+                <img src="assets/images/Logo%20PPG.png" alt="PPG" style="height:28px;width:auto;object-fit:contain;display:block;">
+            </div>
+            <span style="font-size:1.25rem;font-weight:700;color:#fff;font-family:'Outfit',sans-serif;">E-Portfolio PPG</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li class="dropdown">
+                <a href="semester-1.html" class="dropbtn">Semester 1</a>
+                <ul class="dropdown-content">
+                    <li><a href="e-portfolio-1.html"><i class="fa-solid fa-folder-open" style="margin-right:6px;"></i>E-Portfolio 1</a></li>
+                    <li><a href="e-portfolio-2.html"><i class="fa-solid fa-folder-open" style="margin-right:6px;"></i>E-Portfolio 2</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="semester-2.html" class="dropbtn">Semester 2</a>
+                <ul class="dropdown-content">
+                    <li><a href="profil-mahasiswa-s2.html"><i class="fa-solid fa-user" style="margin-right:6px;"></i>Profil Mahasiswa</a></li>
+                    <li><a href="uts-ppl.html"><i class="fa-solid fa-file-pen" style="margin-right:6px;"></i>UTS PPL</a></li>
+                    <li><a href="uas-ppl.html"><i class="fa-solid fa-file-circle-check" style="margin-right:6px;"></i>UAS PPL</a></li>
+                    <li><a href="seminar.html"><i class="fa-solid fa-chalkboard-user" style="margin-right:6px;"></i>Seminar</a></li>
+                </ul>
+            </li>
+            <li><a href="e-portfolio-2.html#dokumentasi">Dokumentasi</a></li>
+            <li><button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme"><i class="fa-solid fa-moon"></i></button></li>
+        </ul>
+        <button class="hamburger" id="hamburger-btn" aria-label="Buka Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-overlay" id="mobile-overlay"></div>
+    <div class="mobile-nav-drawer" id="mobile-drawer">
+        <a href="index.html"><i class="fa-solid fa-house" style="margin-right:.5rem;color:var(--primary-light);"></i> Beranda</a>
+        <div class="mobile-nav-divider"></div>
+        <button class="mobile-dropdown-toggle" data-target="mob-s1" onclick="window.location.href='semester-1.html'">
+            <span><i class="fa-solid fa-folder-open" style="margin-right:.5rem;color:var(--secondary);"></i> Semester 1</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="mobile-submenu" id="mob-s1">
+            <a href="e-portfolio-1.html">E-Portfolio 1</a>
+            <a href="e-portfolio-2.html">E-Portfolio 2</a>
+        </div>
+        <button class="mobile-dropdown-toggle" data-target="mob-s2" onclick="window.location.href='semester-2.html'">
+            <span><i class="fa-solid fa-folder" style="margin-right:.5rem;color:#10b981;"></i> Semester 2</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="mobile-submenu" id="mob-s2">
+            <a href="profil-mahasiswa-s2.html"><i class="fa-solid fa-user" style="margin-right:6px;"></i> Profil Mahasiswa</a>
+            <a href="uts-ppl.html"><i class="fa-solid fa-file-pen" style="margin-right:6px;"></i> UTS PPL</a>
+            <a href="uas-ppl.html"><i class="fa-solid fa-file-circle-check" style="margin-right:6px;"></i> UAS PPL</a>
+            <a href="seminar.html"><i class="fa-solid fa-chalkboard-user" style="margin-right:6px;"></i> Seminar</a>
+        </div>
+        <a href="e-portfolio-2.html#dokumentasi"><i class="fa-solid fa-images" style="margin-right:.5rem;color:var(--warning);"></i> Dokumentasi</a>
+        <div class="mobile-nav-divider"></div>
+        <div class="mobile-theme-row">
+            <span><i class="fa-solid fa-circle-half-stroke" style="margin-right:.5rem;"></i> Mode Tampilan</span>
+            <button id="theme-toggle-mobile" class="theme-toggle-btn" aria-label="Toggle Theme Mobile"><i class="fa-solid fa-moon"></i></button>
+        </div>
+    </div>
+
+    <!-- ══════ MAIN CONTAINER ══════ -->
+    <div style="margin-top: 120px; margin-bottom: 6rem;">
+        <div class="course-container">
+
+            <!-- Back Link -->
+            <a href="seminar.html" class="back-nav-link">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Seminar PPL
+            </a>
+
+            <!-- Header Hero -->
+            <div class="course-hero">
+                <span class="course-eyebrow">REFLEKSI PENGALAMAN BELAJAR</span>
+                <h1 class="course-main-title">Pembelajaran Mendalam dan Asesmen Lanjutan</h1>
+                <p class="course-main-subtitle">Refleksi pengalaman belajar mata kuliah Pembelajaran Mendalam dan Asesmen Lanjutan (PMA Lanjutan) melalui kerangka 4C, analisis artefak pembelajaran, serta perumusan hasil refleksi.</p>
+                <div class="course-hero-line"></div>
+            </div>
+
+            <!-- Segmented Pill Tabs Navigation (MATCHES SCREENSHOT) -->
+            <div class="course-tabs-wrapper">
+                <div class="course-tabs-nav" role="tablist">
+                    <button class="tab-btn-pill active" data-tab="tab-4c" onclick="switchMainTab('tab-4c', this)">
+                        <i class="fa-solid fa-book-open"></i> Refleksi 4C
+                    </button>
+                    <button class="tab-btn-pill" data-tab="tab-artefak" onclick="switchMainTab('tab-artefak', this)">
+                        <i class="fa-solid fa-magnifying-glass"></i> Analisis Artefak
+                    </button>
+                    <button class="tab-btn-pill" data-tab="tab-hasil" onclick="switchMainTab('tab-hasil', this)">
+                        <i class="fa-solid fa-compass"></i> Kaitan Praktis
+                    </button>
+                    <button class="tab-btn-pill" data-tab="tab-lembar" onclick="switchMainTab('tab-lembar', this)">
+                        <i class="fa-solid fa-file-arrow-down"></i> Lembar Refleksi
+                    </button>
+                    <button class="tab-btn-pill" data-tab="tab-tugas" onclick="switchMainTab('tab-tugas', this)">
+                        <i class="fa-solid fa-folder"></i> Tugas Perkuliahan
+                    </button>
+                </div>
+            </div>
+
+            <!-- ════════ TAB 1: REFLEKSI 4C ════════ -->
+            <div class="tab-panel-section active" id="tab-4c">
+                <div class="content-card-box">
+                    <div class="section-badge badge-purple">Bagian 1</div>
+                    <div class="card-header-row">
+                        <div class="card-header-icon" style="background:rgba(8,98,136,0.22); color:#97D7FF;">
+                            <i class="fa-solid fa-rotate"></i>
+                        </div>
+                        <div>
+                            <h2 class="card-header-title">Refleksi 4C</h2>
+                            <p style="color:var(--text-muted);font-size:0.88rem;margin:0.2rem 0 0;">Uraian mengenai connection, challenge, concept, dan change terkait peran Bapak/Ibu sebagai pendidik.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid-4c">
+                        <!-- Connection -->
+                        <div class="c4-box conn">
+                            <span class="c4-tag"><i class="fa-solid fa-link"></i> Connection</span>
+                            <div class="c4-question">1. Apa keterkaitan materi perkuliahan dengan peran saya sebagai calon guru?</div>
+                            <p class="c4-text">Materi ini berkaitan langsung dengan peran guru, karena guru perlu mengenali kemampuan, minat, gaya belajar, dan latar belakang murid sebelum merancang pembelajaran. Sebagai calon guru Informatika, pemetaan kebutuhan belajar membantu saya menyesuaikan pembelajaran logika dan pemrograman dengan kondisi nyata murid, bukan menyamaratakan semua murid.</p>
+                        </div>
+
+                        <!-- Challenge -->
+                        <div class="c4-box chal">
+                            <span class="c4-tag"><i class="fa-solid fa-bolt"></i> Challenge</span>
+                            <div class="c4-question">2. Apa saja materi perkuliahan yang berbeda dari praktik yang saya lakukan selama ini?</div>
+                            <p class="c4-text">Selama ini saya cenderung langsung mengajarkan materi tanpa memetakan kondisi murid terlebih dahulu. Materi ini berbeda karena: a. asesmen awal tidak hanya mengukur kognitif, tetapi juga aspek non-kognitif (bakat, minat, motivasi, budaya, kondisi ekonomi, dan keluarga melalui tes, observasi, dan wawancara; b. hasil asesmen dipakai untuk profiling dan pemetaan kebutuhan belajar, bukan hanya untuk memberi nilai; c. pembelajaran dirancang berdiferensiasi berdasarkan hasil profiling.</p>
+                        </div>
+
+                        <!-- Concept -->
+                        <div class="c4-box conc">
+                            <span class="c4-tag"><i class="fa-solid fa-lightbulb"></i> Concept</span>
+                            <div class="c4-question">3. Apa saja konsep utama dan penting yang telah saya pelajari sebagai calon guru?</div>
+                            <p class="c4-text">a. Asesmen awal kognitif dan non-kognitif dengan tiga instrumen utama: tes diagnostik, pedoman observasi perilaku, dan wawancara eksploratif.<br>b. Profiling komprehensif peserta didik untuk memetakan kesiapan belajar (readiness), gaya belajar, dan minat spesifik siswa.<br>c. Perancangan diferensiasi instruksional berkelanjutan untuk memastikan perlakuan pedagogis yang tepat sasaran.</p>
+                        </div>
+
+                        <!-- Change -->
+                        <div class="c4-box chan">
+                            <span class="c4-tag"><i class="fa-solid fa-seedling"></i> Change</span>
+                            <div class="c4-question">4. Apa saja perubahan yang ingin saya lakukan setelah mendapatkan materi perkuliahan ini?</div>
+                            <p class="c4-text">a. Memulai pembelajaran dengan asesmen awal sebelum merancang kegiatan. b. Menganalisis pola kesalahan murid untuk menemukan miskonsepsi, misalnya antara = dan ==. c. Memakai contoh kontekstual yang dekat dengan bahasa dan kehidupan murid. d. Membentuk kelompok heterogen, memakai aktivitas unplugged dan gerak, serta mengajarkan penggunaan AI secara bertanggung jawab. e. Menyesuaikan strategi untuk murid yang mahir maupun yang perlu bimbingan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ════════ TAB 2: ANALISIS ARTEFAK ════════ -->
+            <div class="tab-panel-section" id="tab-artefak">
+                <div class="content-card-box">
+                    <div class="section-badge badge-green">Bagian 2</div>
+                    <div class="card-header-row">
+                        <div class="card-header-icon" style="background:rgba(8,98,136,0.22); color:#97D7FF;">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div>
+                            <h2 class="card-header-title">Analisis Artefak</h2>
+                            <p style="color:var(--text-muted);font-size:0.88rem;margin:0.2rem 0 0;">Identifikasi artefak pembelajaran yang menjadi bukti dukung hasil refleksi Anda beserta alasannya.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3 Pertanyaan Analisis Artefak -->
+                    <div style="display:flex;flex-direction:column;gap:1.2rem;margin-bottom:2rem;">
+                        <div style="background:rgba(0,0,0,0.2);padding:1.4rem;border-radius:14px;border:1px solid rgba(255,255,255,0.06);">
+                            <div style="font-weight:700;color:#fff;margin-bottom:0.4rem;font-size:0.95rem;">
+                                <i class="fa-solid fa-circle-question" style="color:#10b981;margin-right:6px;"></i> 1. Mana saja artefak pembelajaran yang dapat saya jadikan bukti dukung hasil refleksi ini?
+                            </div>
+                            <p style="font-size:0.9rem;line-height:1.75;color:rgba(255,255,255,0.75);margin:0;">Artefak yang saya pilih adalah yang saya kerjakan bersama kelompok PPL, berisi instrumen asesmen awal, profiling murid kelas 9D, dan rekomendasi desain pembelajaran.</p>
+                        </div>
+
+                        <div style="background:rgba(0,0,0,0.2);padding:1.4rem;border-radius:14px;border:1px solid rgba(255,255,255,0.06);">
+                            <div style="font-weight:700;color:#fff;margin-bottom:0.4rem;font-size:0.95rem;">
+                                <i class="fa-solid fa-circle-question" style="color:#10b981;margin-right:6px;"></i> 2. Mengapa artefak tersebut yang saya pilih?
+                            </div>
+                            <p style="font-size:0.9rem;line-height:1.75;color:rgba(255,255,255,0.75);margin:0;">Saya memilih artefak ini karena: a. memuat alur lengkap dari asesmen awal, profiling, pemetaan kebutuhan, sampai desain pembelajaran; b. berisi data nyata dari murid, sehingga menunjukkan penerapan konsep, bukan hanya teori; c. dapat saya gunakan kembali sebagai contoh saat mengajar.</p>
+                        </div>
+
+                        <div style="background:rgba(0,0,0,0.2);padding:1.4rem;border-radius:14px;border:1px solid rgba(255,255,255,0.06);">
+                            <div style="font-weight:700;color:#fff;margin-bottom:0.4rem;font-size:0.95rem;">
+                                <i class="fa-solid fa-circle-question" style="color:#10b981;margin-right:6px;"></i> 3. Bagian mana dari artefak ini yang mendukung hasil refleksi saya?
+                            </div>
+                            <p style="font-size:0.9rem;line-height:1.75;color:rgba(255,255,255,0.75);margin:0;">a. Instrumen tes, observasi, dan wawancara mendukung jawaban tentang konsep asesmen awal. b. Profiling hasil pretest dan pola kesalahan (= dan ==, AND/OR mendukung jawaban tentang konsep profiling. c. Tabel pemetaan kebutuhan belajar dan strategi adaptif mendukung jawaban tentang diferensiasi. d. Rekomendasi tindak lanjut dan desain pembelajaran mendukung rencana perubahan saya.</p>
+                        </div>
+                    </div>
+
+                    <h3 style="font-family:'Lora',serif;font-size:1.25rem;color:#fff;margin-bottom:1rem;">Daftar Berkas Artefak Pembelajaran</h3>
+                    <div class="artefak-grid">
+                        
+        <div class="artefak-card">
+            <div class="artefak-card-header">
+                <div class="artefak-card-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">
+                    <i class="fa-solid fa-file-shield"></i>
+                </div>
+                <div style="flex:1;">
+                    <div class="artefak-card-title">Paket Lembar Kerja LK 1C: Asesmen Awal & Profiling Siswa</div>
+                    <div class="artefak-card-type">Perangkat Asesmen Autentik Kelompok</div>
+                </div>
+            </div>
+            <p class="artefak-card-desc">Instrumen asesmen awal diagnostik, pemetaan kebutuhan belajar, dan pengelompokan tingkat pemahaman siswa kelas PPL di SMPN 8 Malang.</p>
+            <div class="artefak-card-footer">
+                <div class="artefak-card-file">
+                    <i class="fa-solid fa-file-pdf" style="color:#ef4444; font-size:1.15rem;"></i>
+                    <div>
+                        <div class="artefak-card-filename">Paket Lembar Kerja LK 1C: Asesmen Awal & Profiling Siswa.pdf</div>
+                        <div class="artefak-card-filesize">Dokumen Autentik Portofolio</div>
+                    </div>
+                </div>
+                <div class="artefak-actions">
+                    <button class="btn-action-view" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Paket Lembar Kerja LK 1C: Asesmen Awal & Profiling Siswa')" title="Lihat Pratinjau Dokumen">
+                        <i class="fa-solid fa-eye"></i> <span>Lihat</span>
+                    </button>
+                    <a class="btn-action-dl" href="assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf" download="Paket Lembar Kerja LK 1C: Asesmen Awal & Profiling Siswa.pdf" title="Unduh Berkas PDF">
+                        <i class="fa-solid fa-download"></i> <span>Unduh</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="artefak-card">
+            <div class="artefak-card-header">
+                <div class="artefak-card-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">
+                    <i class="fa-solid fa-file-shield"></i>
+                </div>
+                <div style="flex:1;">
+                    <div class="artefak-card-title">Panduan Wawancara & Observasi Karakteristik Siswa</div>
+                    <div class="artefak-card-type">Instrumen Observasi Lapangan</div>
+                </div>
+            </div>
+            <p class="artefak-card-desc">Pedoman pengumpulan data kualitatif minat dan hambatan belajar siswa untuk mendukung perancangan diferensiasi proses.</p>
+            <div class="artefak-card-footer">
+                <div class="artefak-card-file">
+                    <i class="fa-solid fa-file-pdf" style="color:#ef4444; font-size:1.15rem;"></i>
+                    <div>
+                        <div class="artefak-card-filename">Panduan Wawancara & Observasi Karakteristik Siswa.pdf</div>
+                        <div class="artefak-card-filesize">Dokumen Autentik Portofolio</div>
+                    </div>
+                </div>
+                <div class="artefak-actions">
+                    <button class="btn-action-view" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Panduan Wawancara & Observasi Karakteristik Siswa')" title="Lihat Pratinjau Dokumen">
+                        <i class="fa-solid fa-eye"></i> <span>Lihat</span>
+                    </button>
+                    <a class="btn-action-dl" href="assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf" download="Panduan Wawancara & Observasi Karakteristik Siswa.pdf" title="Unduh Berkas PDF">
+                        <i class="fa-solid fa-download"></i> <span>Unduh</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="artefak-card">
+            <div class="artefak-card-header">
+                <div class="artefak-card-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">
+                    <i class="fa-solid fa-file-shield"></i>
+                </div>
+                <div style="flex:1;">
+                    <div class="artefak-card-title">Modul Ajar Pembelajaran Mendalam Lanjutan (Siklus 2)</div>
+                    <div class="artefak-card-type">Modul Pembelajaran Lanjutan</div>
+                </div>
+            </div>
+            <p class="artefak-card-desc">Modul ajar yang mengintegrasikan hasil analisis error siswa siklus 1 ke dalam scaffolding bertahap tugas praktikum Informatika.</p>
+            <div class="artefak-card-footer">
+                <div class="artefak-card-file">
+                    <i class="fa-solid fa-file-pdf" style="color:#ef4444; font-size:1.15rem;"></i>
+                    <div>
+                        <div class="artefak-card-filename">Modul Ajar Pembelajaran Mendalam Lanjutan (Siklus 2).pdf</div>
+                        <div class="artefak-card-filesize">Dokumen Autentik Portofolio</div>
+                    </div>
+                </div>
+                <div class="artefak-actions">
+                    <button class="btn-action-view" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Modul Ajar Pembelajaran Mendalam Lanjutan (Siklus 2)')" title="Lihat Pratinjau Dokumen">
+                        <i class="fa-solid fa-eye"></i> <span>Lihat</span>
+                    </button>
+                    <a class="btn-action-dl" href="assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf" download="Modul Ajar Pembelajaran Mendalam Lanjutan (Siklus 2).pdf" title="Unduh Berkas PDF">
+                        <i class="fa-solid fa-download"></i> <span>Unduh</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+                    </div>
+                </div>
+            </div>
+
+            <!-- ════════ TAB 3: KAITAN PRAKTIS ════════ -->
+            <div class="tab-panel-section" id="tab-hasil">
+                <div class="content-card-box">
+                    <div class="section-badge badge-amber">Bagian 3</div>
+                    <div class="card-header-row">
+                        <div class="card-header-icon" style="background:rgba(8,98,136,0.22); color:#97D7FF;">
+                            <i class="fa-solid fa-compass"></i>
+                        </div>
+                        <div>
+                            <h2 class="card-header-title">Kaitan Praktis</h2>
+                            <p style="color:var(--text-muted);font-size:0.88rem;margin:0.2rem 0 0;">Penjelasan mengenai konsep utama yang dipelajari serta perubahan yang ingin dilakukan di masa depan</p>
+                        </div>
+                    </div>
+
+                    <div class="quote-box">
+                        "Kesiapan menjadi seorang guru tidak hanya ditentukan oleh penguasaan materi teknis, tetapi oleh kesediaan untuk terus belajar, memahami karakteristik peserta didik, menjadi teladan, serta berkomitmen menjalankan peran sebagai pendidik nilai."
+                    </div>
+
+                    <div class="hasil-refleksi-text">
+                        <p>Refleksi setelah mata kuliah Pembelajaran Mendalam dan Asesmen Lanjutan (Topik 1: Melalui LK 1C bersama kelompok PPL, saya menyadari bahwa murid dalam satu kelas memiliki kemampuan, minat, gaya belajar, dan latar belakang yang berbeda. Dari pretest, banyak murid kelas 9D masih lemah pada logika boolean, terutama perbedaan = dan == serta kombinasi AND/OR, sementara sebagian lainnya sudah mahir. Temuan ini membuat saya memahami bahwa asesmen awal penting untuk mengetahui kebutuhan murid sebelum pembelajaran dimulai, sehingga pembelajaran tidak disamaratakan. Tantangan bagi saya adalah mengolah data asesmen yang banyak menjadi profil yang jelas dan strategi yang benar-benar bisa dilaksanakan di kelas. Ke depan, sebagai calon guru Informatika, saya ingin selalu memulai pembelajaran dengan asesmen awal, memakai hasilnya untuk membentuk kelompok heterogen dan strategi berdiferensiasi, serta mengaitkan materi dengan konteks kehidupan murid. LK 1C menjadi bukti dan pegangan saya dalam menerapkan hal tersebut. AdobeUCS,19=?AFRVYary</p>
+                    </div>
+
+                    <div style="margin-top:2.5rem;padding:1.6rem;border-radius:16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);">
+                        <h4 style="color:#fff;font-size:1.05rem;margin-bottom:0.8rem;display:flex;align-items:center;gap:0.5rem;">
+                            <i class="fa-solid fa-lightbulb" style="color:#97D7FF;"></i> Rencana Perubahan &amp; Implementasi Nyata di Masa Depan
+                        </h4>
+                        <ul style="color:rgba(255,255,255,0.75);font-size:0.92rem;line-height:1.8;padding-left:1.4rem;margin:0;">
+                            <li>Menerapkan paradigma berpusat pada peserta didik di sekolah dengan menghargai keunikan latar belakang dan gaya belajar setiap anak.</li>
+                            <li>Mengintegrasikan asesmen diagnostik dan formatif berkelanjutan untuk memandu proses belajar, bukan sekadar vonis nilai akhir.</li>
+                            <li>Menumbuhkan iklim kelas aman, terbuka, dan ramah kesalahan melalui pembiasaan pola pikir bertumbuh (Growth Mindset).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ════════ TAB 4: LEMBAR REFLEKSI (PDF ASLI) ════════ -->
+            <div class="tab-panel-section" id="tab-lembar">
+                <div class="content-card-box">
+                    <div class="section-badge badge-purple">Bagian 4</div>
+                    <div class="card-header-row">
+                        <div class="card-header-icon" style="background:rgba(99,102,241,0.18); color:#818cf8;">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <div style="flex:1;">
+                            <h2 class="card-header-title">Dokumen Lembar Kerja Refleksi (LK 2)</h2>
+                            <p style="color:var(--text-muted);font-size:0.88rem;margin:0.2rem 0 0;">Pratinjau dokumen asli LK 2 Refleksi Pengalaman Belajar Mahasiswa PPG Prajabatan</p>
+                        </div>
+                        <div style="display:flex;gap:0.6rem;">
+                            <a href="assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf" target="_blank" class="btn-action-view" style="padding:0.55rem 1.1rem;">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Tab Baru
+                            </a>
+                            <a href="assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf" download class="btn-action-dl" style="padding:0.55rem 1.1rem;">
+                                <i class="fa-solid fa-download"></i> Unduh PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Embed Iframe -->
+                    <iframe class="pdf-viewer-frame" src="assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf#toolbar=1&navpanes=1&scrollbar=1" title="Dokumen Refleksi PDF"></iframe>
+                </div>
+            </div>
+
+            <!-- ════════ TAB 5: TUGAS PERKULIAHAN (MATCHES SCREENSHOT) ════════ -->
+            <div class="tab-panel-section" id="tab-tugas">
+                <div class="tugas-layout-grid">
+
+                    <!-- Kolom Kiri: DAFTAR ISI (Sticky Sidebar) -->
+                    <aside class="sidebar-daftar-isi">
+                        <div class="sidebar-header">
+                            <i class="fa-solid fa-list-ul"></i>
+                            <span>Daftar Isi</span>
+                        </div>
+                        <div class="sidebar-menu">
+                            
+    <div class="sidebar-item active" data-topic="all" onclick="switchTopic('all', this)">
+        <i class="fa-regular fa-folder-open"></i>
+        <span>Tugas Perkuliahan</span>
+    </div>
+    
+        <div class="sidebar-item" data-topic="topik-1" onclick="switchTopic('topik-1', this)">
+            <i class="fa-regular fa-folder"></i>
+            <span>Topik 1</span>
+        </div>
+        
+        <div class="sidebar-item" data-topic="topik-2" onclick="switchTopic('topik-2', this)">
+            <i class="fa-regular fa-folder"></i>
+            <span>Topik 2</span>
+        </div>
+        
+        <div class="sidebar-item" data-topic="topik-3" onclick="switchTopic('topik-3', this)">
+            <i class="fa-regular fa-folder"></i>
+            <span>Topik 3</span>
+        </div>
+        
+        <div class="sidebar-item" data-topic="topik-4" onclick="switchTopic('topik-4', this)">
+            <i class="fa-regular fa-folder"></i>
+            <span>Topik 4</span>
+        </div>
+        
+        <div class="sidebar-item" data-topic="topik-5" onclick="switchTopic('topik-5', this)">
+            <i class="fa-regular fa-folder"></i>
+            <span>Topik 5</span>
+        </div>
+        
+                        </div>
+                    </aside>
+
+                    <!-- Kolom Kanan: Main Content (BAGIAN 5) -->
+                    <main class="content-card-box" style="margin-bottom:0;">
+                        <div class="section-badge badge-green">Bagian 5</div>
+                        <div class="card-header-row">
+                            <div class="card-header-icon" style="background:rgba(16,185,129,0.18); color:#10b981;">
+                                <i class="fa-solid fa-folder-open"></i>
+                            </div>
+                            <div>
+                                <h2 class="card-header-title">Tugas Pembelajaran Mendalam dan Asesmen Lanjutan</h2>
+                            </div>
+                        </div>
+
+                        <p style="font-size:0.92rem;line-height:1.75;color:rgba(255,255,255,0.7);margin-bottom:2rem;">
+                            Berikut adalah kumpulan berkas tugas yang telah dikerjakan selama mengikuti perkuliahan Pembelajaran Mendalam dan Asesmen Lanjutan, dikelompokkan berdasarkan topik pembelajaran:
+                        </p>
+
+                        <!-- Topic List & Tasks -->
+                        <div id="topicsContainer">
+                            
+        <div class="topic-section-box" id="section-topik-1">
+            <div class="topic-section-header">
+                <div class="topic-num-badge">TOPIK 1</div>
+                <h3 class="topic-section-title">Pendalaman Asesmen Awal Kognitif & Non-Kognitif</h3>
+                <p class="topic-section-desc">Menguasai perancangan dan validasi instrumen asesmen diagnostik terstandar untuk memetakan titik mula belajar murid.</p>
+            </div>
+            <div class="tasks-grid">
+                
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Mulai dari Diri</div>
+                <div class="task-card-title">Refleksi urgensi data asesmen awal sebelum melangkah ke perencanaan kurikulum</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Pendalaman Asesmen Awal Kognitif & Non-Kognitif - Mulai dari Diri')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Eksplorasi Konsep</div>
+                <div class="task-card-title">Kajian instrumen tes, lembar observasi partisipatif, dan protokol wawancara</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Pendalaman Asesmen Awal Kognitif & Non-Kognitif - Eksplorasi Konsep')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Ruang Kolaborasi</div>
+                <div class="task-card-title">Penyusunan instrumen gabungan asesmen awal kelompok mahasiswa PPL</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Pendalaman Asesmen Awal Kognitif & Non-Kognitif - Ruang Kolaborasi')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Demonstrasi Kontekstual</div>
+                <div class="task-card-title">Uji coba instrumen profiling pada sampel peserta didik di SMPN 8 Malang</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Pendalaman Asesmen Awal Kognitif & Non-Kognitif - Demonstrasi Kontekstual')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Aksi Nyata</div>
+                <div class="task-card-title">Laporan pemetaan kesiapan belajar dan tindak lanjut instruksional</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Pendalaman Asesmen Awal Kognitif & Non-Kognitif - Aksi Nyata')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+        
+        <div class="topic-section-box" id="section-topik-2">
+            <div class="topic-section-header">
+                <div class="topic-num-badge">TOPIK 2</div>
+                <h3 class="topic-section-title">Profiling Karakteristik & Pemetaan Kebutuhan Belajar</h3>
+                <p class="topic-section-desc">Menganalisis hasil profiling secara kuantitatif dan kualitatif untuk mengelompokkan siswa ke dalam zona perkembangan proksimal.</p>
+            </div>
+            <div class="tasks-grid">
+                
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Mulai dari Diri</div>
+                <div class="task-card-title">Audit tantangan mengolah data profiling 32 siswa dalam satu rombel</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Profiling Karakteristik & Pemetaan Kebutuhan Belajar - Mulai dari Diri')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Eksplorasi Konsep</div>
+                <div class="task-card-title">Metode triangulasi data hasil tes, angket minat, dan observasi pamong</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Profiling Karakteristik & Pemetaan Kebutuhan Belajar - Eksplorasi Konsep')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Ruang Kolaborasi</div>
+                <div class="task-card-title">Penyusunan matriks diferensiasi berdasarkan kesiapan belajar siswa</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Profiling Karakteristik & Pemetaan Kebutuhan Belajar - Ruang Kolaborasi')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Demonstrasi Kontekstual</div>
+                <div class="task-card-title">Dashboard visual profil belajar siswa berbasis spreadsheet</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Profiling Karakteristik & Pemetaan Kebutuhan Belajar - Demonstrasi Kontekstual')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Aksi Nyata</div>
+                <div class="task-card-title">Penerapan kelompok heterogen terarah pada pembelajaran praktikum</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Profiling Karakteristik & Pemetaan Kebutuhan Belajar - Aksi Nyata')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+        
+        <div class="topic-section-box" id="section-topik-3">
+            <div class="topic-section-header">
+                <div class="topic-num-badge">TOPIK 3</div>
+                <h3 class="topic-section-title">Perancangan Modul Ajar Berdiferensiasi Lanjutan</h3>
+                <p class="topic-section-desc">Mengembangkan modul ajar dengan variasi penugasan bertingkat dan diferensiasi produk akhir proyek informatika.</p>
+            </div>
+            <div class="tasks-grid">
+                
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Mulai dari Diri</div>
+                <div class="task-card-title">Refleksi kelemahan tugas seragam yang membuat siswa mahir bosan dan siswa lemah frustrasi</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Perancangan Modul Ajar Berdiferensiasi Lanjutan - Mulai dari Diri')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Eksplorasi Konsep</div>
+                <div class="task-card-title">Strategi diferensiasi konten (bahan bacaan/video), proses (bimbingan langsung), dan produk</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Perancangan Modul Ajar Berdiferensiasi Lanjutan - Eksplorasi Konsep')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Ruang Kolaborasi</div>
+                <div class="task-card-title">Perancangan lembar kerja berjenjang (Tiered Worksheet) topik algoritma</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Perancangan Modul Ajar Berdiferensiasi Lanjutan - Ruang Kolaborasi')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Demonstrasi Kontekstual</div>
+                <div class="task-card-title">Simulasi pembelajaran berdiferensiasi di ruang multimedia</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Perancangan Modul Ajar Berdiferensiasi Lanjutan - Demonstrasi Kontekstual')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Aksi Nyata</div>
+                <div class="task-card-title">Praktik mengajar mandiri siklus lanjutan berlandaskan profiling</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Perancangan Modul Ajar Berdiferensiasi Lanjutan - Aksi Nyata')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+        
+        <div class="topic-section-box" id="section-topik-4">
+            <div class="topic-section-header">
+                <div class="topic-num-badge">TOPIK 4</div>
+                <h3 class="topic-section-title">Pelaksanaan Asesmen Formatif Autentik & Rubrik Berbasis Kriteria</h3>
+                <p class="topic-section-desc">Menerapkan rubrik analitik untuk memantau kemajuan berpikir komputasional siswa secara berkala.</p>
+            </div>
+            <div class="tasks-grid">
+                
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Mulai dari Diri</div>
+                <div class="task-card-title">Identifikasi kendala pemberian umpan balik cepat saat siswa sedang praktik</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Pelaksanaan Asesmen Formatif Autentik & Rubrik Berbasis Kriteria - Mulai dari Diri')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Eksplorasi Konsep</div>
+                <div class="task-card-title">Konstruksi rubrik analitik: kriteria unjuk kerja, deskriptor level, dan skala nilai</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Pelaksanaan Asesmen Formatif Autentik & Rubrik Berbasis Kriteria - Eksplorasi Konsep')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Ruang Kolaborasi</div>
+                <div class="task-card-title">Kalibrasi penilaian antar guru pamong dan mahasiswa PPL</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Pelaksanaan Asesmen Formatif Autentik & Rubrik Berbasis Kriteria - Ruang Kolaborasi')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Demonstrasi Kontekstual</div>
+                <div class="task-card-title">Pemberian umpan balik formatif tertulis berbasis prinsip Growth Mindset</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Pelaksanaan Asesmen Formatif Autentik & Rubrik Berbasis Kriteria - Demonstrasi Kontekstual')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Aksi Nyata</div>
+                <div class="task-card-title">Penerapan asesmen diri (self-assessment) oleh siswa sebelum pengumpulan tugas</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Pelaksanaan Asesmen Formatif Autentik & Rubrik Berbasis Kriteria - Aksi Nyata')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+        
+        <div class="topic-section-box" id="section-topik-5">
+            <div class="topic-section-header">
+                <div class="topic-num-badge">TOPIK 5</div>
+                <h3 class="topic-section-title">Analisis Pola Kesalahan (Error Analysis) & Tindak Lanjut</h3>
+                <p class="topic-section-desc">Mendekomposisi kesalahan konseptual siswa untuk merumuskan intervensi remedial terfokus.</p>
+            </div>
+            <div class="tasks-grid">
+                
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Mulai dari Diri</div>
+                <div class="task-card-title">Refleksi pandangan terhadap eror dalam coding: kegagalan vs peluang belajar</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Analisis Pola Kesalahan (Error Analysis) & Tindak Lanjut - Mulai dari Diri')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Eksplorasi Konsep</div>
+                <div class="task-card-title">Teknik analisis kesalahan logis rumus spreadsheet dan sintaks algoritma</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Analisis Pola Kesalahan (Error Analysis) & Tindak Lanjut - Eksplorasi Konsep')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Ruang Kolaborasi</div>
+                <div class="task-card-title">Penyusunan modul mini remedial untuk konsep fungsi logika bersyarat</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Analisis Pola Kesalahan (Error Analysis) & Tindak Lanjut - Ruang Kolaborasi')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Demonstrasi Kontekstual</div>
+                <div class="task-card-title">Laporan evaluasi kemajuan belajar pasca kegiatan pengayaan dan remedial</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Analisis Pola Kesalahan (Error Analysis) & Tindak Lanjut - Demonstrasi Kontekstual')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            <div class="task-card">
+                <div class="task-card-badge"><i class="fa-solid fa-circle-check"></i> Aksi Nyata</div>
+                <div class="task-card-title">Penyusunan rekomendasi perbaikan pembelajaran berkelanjutan</div>
+                <div class="task-card-bottom">
+                    <span class="task-status-pill"><i class="fa-solid fa-check"></i> Selesai</span>
+                    <button class="btn-task-preview" onclick="openPdfModalDirect('assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf', 'Analisis Pola Kesalahan (Error Analysis) & Tindak Lanjut - Aksi Nyata')">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Detail
+                    </button>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+        
+                        </div>
+                    </main>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ══════ PDF MODAL PREVIEW POPUP ══════ -->
+    <div class="pdf-modal-overlay" id="pdfModalOverlay" onclick="handlePdfOverlayClick(event)">
+        <div class="pdf-modal-card">
+            <div class="pdf-modal-header">
+                <div class="pdf-modal-title">
+                    <i class="fa-solid fa-file-pdf" style="color:#ef4444;"></i>
+                    <span id="pdfModalTitleText">Dokumen Tugas</span>
+                </div>
+                <div style="display:flex;gap:0.5rem;align-items:center;">
+                    <a id="pdfModalDlBtn" href="#" download class="btn-action-dl" style="padding:0.4rem 0.85rem;font-size:0.8rem;">
+                        <i class="fa-solid fa-download"></i> Unduh
+                    </a>
+                    <button class="btn-modal-close" onclick="closePdfModal()"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            <div class="pdf-modal-body">
+                <iframe id="pdfModalIframe" src="" title="PDF Viewer"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════ FOOTER ══════ -->
+    <footer>
+        <div class="container">
+            <h3 style="font-family:'Outfit',sans-serif;font-size:1.5rem;margin-bottom:1rem;">E-Portfolio Pendidikan Profesi Guru</h3>
+            <p>&copy; 2026 Disusun untuk memenuhi komponen penilaian Seminar PPL.</p>
+            <p style="margin-top:0.5rem;font-size:0.9rem;color:rgba(255,255,255,0.4);">
+                Lutfi Subekti &nbsp;·&nbsp; PPG Prajabatan Gelombang 1 &nbsp;·&nbsp; Universitas Negeri Malang
+            </p>
+        </div>
+    </footer>
+
+    <!-- ══════ JAVASCRIPT CONTROLLERS ══════ -->
+    <script>
+        function switchMainTab(tabId, el) {
+            document.querySelectorAll('.tab-btn-pill').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-panel-section').forEach(p => p.classList.remove('active'));
+
+            if (el) el.classList.add('active');
+            const target = document.getElementById(tabId);
+            if (target) {
+                target.classList.add('active');
+            }
+
+            history.replaceState(null, null, '#' + tabId);
+        }
+
+        function switchTopic(topicId, el) {
+            document.querySelectorAll('.sidebar-item').forEach(item => item.classList.remove('active'));
+            if (el) el.classList.add('active');
+
+            const allSections = document.querySelectorAll('.topic-section-box');
+            if (topicId === 'all') {
+                allSections.forEach(sec => sec.style.display = 'block');
+            } else {
+                allSections.forEach(sec => {
+                    if (sec.id === 'section-' + topicId) {
+                        sec.style.display = 'block';
+                        sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    } else {
+                        sec.style.display = 'none';
+                    }
+                });
+            }
+        }
+
+        function openPdfModalDirect(pdfUrl, title) {
+            const overlay = document.getElementById('pdfModalOverlay');
+            const iframe = document.getElementById('pdfModalIframe');
+            const titleEl = document.getElementById('pdfModalTitleText');
+            const dlBtn = document.getElementById('pdfModalDlBtn');
+
+            titleEl.textContent = title || 'Dokumen';
+            iframe.src = pdfUrl;
+            dlBtn.href = pdfUrl;
+            dlBtn.download = (title || 'Dokumen') + '.pdf';
+            overlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePdfModal() {
+            const overlay = document.getElementById('pdfModalOverlay');
+            const iframe = document.getElementById('pdfModalIframe');
+            overlay.classList.remove('open');
+            iframe.src = '';
+            document.body.style.overflow = '';
+        }
+
+        function handlePdfOverlayClick(e) {
+            if (e.target.id === 'pdfModalOverlay') closePdfModal();
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.replace('#', '');
+            if (hash) {
+                if (hash.startsWith('topik-')) {
+                    const tabTugasBtn = document.querySelector(`.tab-btn-pill[data-tab="tab-tugas"]`);
+                    if (tabTugasBtn) switchMainTab('tab-tugas', tabTugasBtn);
+                    const topicBtn = document.querySelector(`.sidebar-item[data-topic="${hash}"]`);
+                    if (topicBtn) switchTopic(hash, topicBtn);
+                } else {
+                    const targetBtn = document.querySelector(`.tab-btn-pill[data-tab="${hash}"]`);
+                    if (targetBtn) {
+                        switchMainTab(hash, targetBtn);
+                    }
+                }
+            }
+        });
+
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlEl = document.documentElement;
+        const icon = themeToggle ? themeToggle.querySelector('i') : null;
+        const savedTheme = localStorage.getItem('theme');
+
+        function applyTheme(t) {
+            if (t === 'light') {
+                htmlEl.setAttribute('data-theme', 'light');
+                if (icon) icon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                htmlEl.removeAttribute('data-theme');
+                if (icon) icon.classList.replace('fa-sun', 'fa-moon');
+            }
+        }
+        applyTheme(savedTheme || 'dark');
+
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const newT = htmlEl.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+                localStorage.setItem('theme', newT);
+                applyTheme(newT);
+            });
+        }
+
+        const tmMobile = document.getElementById('theme-toggle-mobile');
+        if (tmMobile) {
+            const mi = tmMobile.querySelector('i');
+            if (savedTheme === 'light' && mi) mi.classList.replace('fa-moon', 'fa-sun');
+            tmMobile.addEventListener('click', () => {
+                if (themeToggle) themeToggle.click();
+                const isDark = !htmlEl.hasAttribute('data-theme');
+                if (mi) {
+                    mi.classList.toggle('fa-moon', isDark);
+                    mi.classList.toggle('fa-sun', !isDark);
+                }
+            });
+        }
+
+        const hBtn = document.getElementById('hamburger-btn');
+        const mDrawer = document.getElementById('mobile-drawer');
+        const mOverlay = document.getElementById('mobile-overlay');
+
+        if (hBtn && mDrawer && mOverlay) {
+            const openD = () => {
+                hBtn.classList.add('open');
+                mDrawer.classList.add('open');
+                mOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            };
+            const closeD = () => {
+                hBtn.classList.remove('open');
+                mDrawer.classList.remove('open');
+                mOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            };
+            hBtn.addEventListener('click', () => mDrawer.classList.contains('open') ? closeD() : openD());
+            mOverlay.addEventListener('click', closeD);
+            mDrawer.querySelectorAll('a').forEach(l => l.addEventListener('click', closeD));
+        }
+    </script>
+    <script src="dropdown.js"></script>
+</body>
+</html>

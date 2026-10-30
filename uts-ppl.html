@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -15,8 +15,8 @@
     <style>
         /* ---- Hero ---- */
         .uts-hero {
-            background: linear-gradient(135deg, rgba(37,99,235,0.14) 0%, rgba(79,70,229,0.08) 60%, rgba(16,185,129,0.05) 100%);
-            border: 1px solid rgba(37,99,235,0.22);
+            background: linear-gradient(135deg, rgba(8,98,136,0.2) 0%, rgba(77,141,186,0.12) 60%, rgba(151,215,255,0.06) 100%);
+            border: 1px solid rgba(151,215,255,0.25);
             border-radius: 24px;
             padding: 3rem;
             margin-bottom: 2.5rem;
@@ -27,7 +27,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse 60% 80% at 90% 50%, rgba(37,99,235,0.1) 0%, transparent 70%);
+            background: radial-gradient(ellipse 60% 80% at 90% 50%, rgba(8,98,136,0.15) 0%, transparent 70%);
             pointer-events: none;
         }
         .hero-deco {
@@ -38,7 +38,7 @@
             font-family: 'Outfit', sans-serif;
             font-size: 7rem;
             font-weight: 800;
-            color: rgba(37,99,235,0.06);
+            color: rgba(151,215,255,0.06);
             pointer-events: none;
             user-select: none;
             line-height: 1;
@@ -49,8 +49,8 @@
             display: inline-flex;
             align-items: center;
             gap: 0.6rem;
-            background: linear-gradient(135deg, rgba(37,99,235,0.2), rgba(79,70,229,0.15));
-            border: 1px solid rgba(37,99,235,0.35);
+            background: linear-gradient(135deg, rgba(8,98,136,0.25), rgba(77,141,186,0.18));
+            border: 1px solid rgba(151,215,255,0.35);
             padding: 0.7rem 1.4rem;
             border-radius: 14px;
             margin-bottom: 2rem;
@@ -59,14 +59,14 @@
             font-family: 'Outfit', sans-serif;
             font-size: 1.5rem;
             font-weight: 800;
-            color: #60a5fa;
+            color: #97D7FF;
             line-height: 1;
         }
         .siklus-label .siklus-text {
             font-size: 0.9rem;
             font-weight: 600;
-            color: rgba(255,255,255,0.7);
-            border-left: 1px solid rgba(37,99,235,0.35);
+            color: rgba(255,255,255,0.78);
+            border-left: 1px solid rgba(151,215,255,0.35);
             padding-left: 0.8rem;
         }
 
@@ -407,9 +407,9 @@
         </div>
 
         <!-- INFO BANNER -->
-        <div class="info-banner">
-            <i class="fa-solid fa-circle-info"></i>
-            <p>Halaman ini menampilkan <strong style="color:#fff;">Siklus 1</strong> — seluruh artefak yang disusun selama praktik mengajar mandiri pada periode UTS. Klik tombol <strong style="color:#fff;">Lihat</strong> pada setiap artefak untuk membuka dokumen PDF.</p>
+        <div class="info-banner" style="background: rgba(8,98,136,0.18); border-color: rgba(151,215,255,0.3);">
+            <i class="fa-solid fa-circle-info" style="color: #97D7FF;"></i>
+            <p>Halaman ini menampilkan dokumentasi <strong style="color:#fff;">UTS PPL Siklus 1</strong> — produk rancangan/perencanaan pembelajaran lengkap yang terbaik serta video pelaksanaan praktik mengajar mandiri.</p>
         </div>
 
         <!-- ====== SIKLUS 1 ====== -->
@@ -420,152 +420,55 @@
 
         <div class="artefak-list">
 
-            <!-- Artefak 1 -->
-            <div class="artefak-card">
-                <div class="artefak-num">01</div>
+            <!-- Artefak 1: Produk Perencanaan Pembelajaran Lengkap Terbaik -->
+            <div class="artefak-card" style="border-color: rgba(151,215,255,0.25);">
+                <div class="artefak-num" style="background: linear-gradient(180deg, rgba(8,98,136,0.35), rgba(77,141,186,0.2)); color:#97D7FF; font-weight:800; font-size:1.3rem;">01</div>
                 <div class="artefak-body">
-                    <div class="artefak-icon-wrap">
-                        <i class="fa-solid fa-file-contract"></i>
+                    <div class="artefak-icon-wrap" style="background: rgba(8,98,136,0.2); border-color: rgba(151,215,255,0.3); color: #97D7FF;">
+                        <i class="fa-solid fa-file-signature"></i>
                     </div>
                     <div class="artefak-info">
-                        <div class="artefak-title">Analisis Produk Rancangan / Perencanaan Pembelajaran</div>
-                        <div class="artefak-desc">Analisis produk rancangan dan perencanaan pembelajaran untuk praktik mengajar mandiri — mencakup tujuan pembelajaran, alur kegiatan, strategi diferensiasi, dan keterkaitan dengan capaian pembelajaran.</div>
+                        <div class="artefak-title" style="font-size:1.15rem; color:#fff; font-weight:700;">Produk Rancangan / Perencanaan Pembelajaran Lengkap yang Terbaik dari Praktik Mengajar Mandiri Siklus 1</div>
+                        <div class="artefak-desc">Rancangan dan modul ajar komprehensif terbaik yang disusun dan diimplementasikan pada praktik mengajar mandiri Siklus 1 di SMP Negeri 8 Malang — mengintegrasikan capaian pembelajaran, diferensiasi konten & proses, Computational Thinking, LKPD interaktif, instrumen asesmen diagnostik, formatif, dan sumatif.</div>
                     </div>
                 </div>
                 <div class="artefak-action">
-                    <div class="doc-pill">
-                        <i class="fa-solid fa-file-pdf" style="color:#e2574c; font-size:1.1rem;"></i>
+                    <div class="doc-pill" style="border-color: rgba(151,215,255,0.2); background: rgba(0,0,0,0.3);">
+                        <i class="fa-solid fa-file-pdf" style="color:#e2574c; font-size:1.2rem;"></i>
                         <div>
-                            <div class="pill-name">Artefak 1 — Perencanaan.pdf</div>
-                            <div class="pill-ext">PDF Document</div>
+                            <div class="pill-name">MODUL AJAR ANALISIS DATA.pdf</div>
+                            <div class="pill-ext">Perencanaan Siklus 1 · PDF Document</div>
                         </div>
                     </div>
-                    <a href="#" target="_blank" class="btn-lihat"><i class="fa-solid fa-eye"></i> Lihat</a>
+                    <div style="display:flex; gap:0.5rem;">
+                        <a href="assets/docs/MODUL AJAR ANALISIS DATA.pdf" target="_blank" class="btn-lihat" style="background: linear-gradient(135deg, #086288, #4D8DBA); color:#fff; border:none; box-shadow:0 4px 15px rgba(8,98,136,0.35);"><i class="fa-solid fa-eye"></i> Buka Dokumen</a>
+                        <a href="assets/docs/MODUL AJAR ANALISIS DATA.pdf" download class="btn-lihat" style="background: rgba(151,215,255,0.12); color:#97D7FF; border:1px solid rgba(151,215,255,0.25);"><i class="fa-solid fa-download"></i></a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Artefak 2 -->
-            <div class="artefak-card">
-                <div class="artefak-num">02</div>
+            <!-- Artefak 2: Produk Video Pelaksanaan Praktik Mengajar Mandiri -->
+            <div class="artefak-card" style="border-color: rgba(151,215,255,0.25);">
+                <div class="artefak-num" style="background: linear-gradient(180deg, rgba(8,98,136,0.35), rgba(77,141,186,0.2)); color:#97D7FF; font-weight:800; font-size:1.3rem;">02</div>
                 <div class="artefak-body">
-                    <div class="artefak-icon-wrap">
-                        <i class="fa-solid fa-book-open"></i>
-                    </div>
-                    <div class="artefak-info">
-                        <div class="artefak-title">Analisis Materi Pembelajaran</div>
-                        <div class="artefak-desc">Analisis materi pembelajaran yang sudah disusun dan diterapkan dalam praktik mengajar mandiri — mencakup kedalaman konsep, kesesuaian dengan tingkat perkembangan peserta didik, dan relevansi dengan dunia nyata.</div>
-                    </div>
-                </div>
-                <div class="artefak-action">
-                    <div class="doc-pill">
-                        <i class="fa-solid fa-file-pdf" style="color:#e2574c; font-size:1.1rem;"></i>
-                        <div>
-                            <div class="pill-name">Artefak 2 — Materi.pdf</div>
-                            <div class="pill-ext">PDF Document</div>
-                        </div>
-                    </div>
-                    <a href="#" target="_blank" class="btn-lihat"><i class="fa-solid fa-eye"></i> Lihat</a>
-                </div>
-            </div>
-
-            <!-- Artefak 3 -->
-            <div class="artefak-card">
-                <div class="artefak-num">03</div>
-                <div class="artefak-body">
-                    <div class="artefak-icon-wrap">
-                        <i class="fa-solid fa-desktop"></i>
-                    </div>
-                    <div class="artefak-info">
-                        <div class="artefak-title">Analisis Media Pembelajaran</div>
-                        <div class="artefak-desc">Analisis media pembelajaran yang dipergunakan dalam praktik mengajar mandiri — mencakup ketepatan pemilihan media, tingkat interaktivitas, kemudahan akses, dan efektivitasnya dalam mendukung ketercapaian tujuan pembelajaran.</div>
-                    </div>
-                </div>
-                <div class="artefak-action">
-                    <div class="doc-pill">
-                        <i class="fa-solid fa-file-pdf" style="color:#e2574c; font-size:1.1rem;"></i>
-                        <div>
-                            <div class="pill-name">Artefak 3 — Media.pdf</div>
-                            <div class="pill-ext">PDF Document</div>
-                        </div>
-                    </div>
-                    <a href="#" target="_blank" class="btn-lihat"><i class="fa-solid fa-eye"></i> Lihat</a>
-                </div>
-            </div>
-
-            <!-- Artefak 4 -->
-            <div class="artefak-card">
-                <div class="artefak-num">04</div>
-                <div class="artefak-body">
-                    <div class="artefak-icon-wrap" style="background: rgba(236,72,153,0.1); border-color: rgba(236,72,153,0.2); color: var(--secondary);">
+                    <div class="artefak-icon-wrap" style="background: rgba(239,68,68,0.15); border-color: rgba(239,68,68,0.3); color: #f87171;">
                         <i class="fa-solid fa-video"></i>
                     </div>
                     <div class="artefak-info">
-                        <div class="artefak-title">Analisis Video Pelaksanaan Praktik Mengajar Mandiri</div>
-                        <div class="artefak-desc">Analisis mendalam terhadap video pelaksanaan praktik mengajar mandiri — mencakup pengelolaan kelas, teknik bertanya, keterlibatan peserta didik, penggunaan bahasa, serta identifikasi kekuatan dan area perbaikan.</div>
+                        <div class="artefak-title" style="font-size:1.15rem; color:#fff; font-weight:700;">Produk Video Pelaksanaan Praktik Mengajar Mandiri dari Rancangan atau Perencanaan Pembelajaran yang Dipilih</div>
+                        <div class="artefak-desc">Dokumentasi video rekaman utuh dan teredit dari pelaksanaan pembelajaran mandiri Siklus 1 di kelas nyata SMP Negeri 8 Malang — menampilkan tahapan pendahuluan (apersepsi & asesmen awal), kegiatan inti (kolaborasi kelompok, scaffolding, pemanfaatan media), hingga penutup (refleksi dan evaluasi formatif).</div>
                     </div>
                 </div>
                 <div class="artefak-action">
-                    <div class="doc-pill">
-                        <i class="fa-brands fa-youtube" style="color:#ff0000; font-size:1.1rem;"></i>
+                    <div class="doc-pill" style="border-color: rgba(239,68,68,0.2); background: rgba(0,0,0,0.3);">
+                        <i class="fa-brands fa-youtube" style="color:#ff0000; font-size:1.25rem;"></i>
                         <div>
-                            <div class="pill-name">Video Praktik Mengajar</div>
-                            <div class="pill-ext">YouTube / Google Drive</div>
+                            <div class="pill-name">Video Praktik Siklus 1 UTS</div>
+                            <div class="pill-ext">Dokumentasi Video Pembelajaran</div>
                         </div>
                     </div>
-                    <a href="#" target="_blank" class="btn-lihat" style="background: rgba(236,72,153,0.12); border-color: rgba(236,72,153,0.3); color: var(--secondary);">
-                        <i class="fa-solid fa-play"></i> Putar
-                    </a>
-                </div>
-            </div>
-
-            <!-- Artefak 5 -->
-            <div class="artefak-card">
-                <div class="artefak-num">05</div>
-                <div class="artefak-body">
-                    <div class="artefak-icon-wrap" style="background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.2); color: #10b981;">
-                        <i class="fa-solid fa-users-gear"></i>
-                    </div>
-                    <div class="artefak-info">
-                        <div class="artefak-title">Analisis Kegiatan Nonmengajar</div>
-                        <div class="artefak-desc">Analisis kegiatan nonmengajar yang dilaksanakan di sekolah mitra selama periode UTS — mencakup kegiatan administratif, pendampingan ekstrakurikuler, piket, dan kegiatan penunjang lainnya.</div>
-                    </div>
-                </div>
-                <div class="artefak-action">
-                    <div class="doc-pill">
-                        <i class="fa-solid fa-file-pdf" style="color:#e2574c; font-size:1.1rem;"></i>
-                        <div>
-                            <div class="pill-name">Artefak 5 — Nonmengajar.pdf</div>
-                            <div class="pill-ext">PDF Document</div>
-                        </div>
-                    </div>
-                    <a href="#" target="_blank" class="btn-lihat" style="background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.3); color: #10b981;">
-                        <i class="fa-solid fa-eye"></i> Lihat
-                    </a>
-                </div>
-            </div>
-
-            <!-- Artefak 6 -->
-            <div class="artefak-card">
-                <div class="artefak-num">06</div>
-                <div class="artefak-body">
-                    <div class="artefak-icon-wrap" style="background: rgba(245,158,11,0.1); border-color: rgba(245,158,11,0.2); color: var(--warning);">
-                        <i class="fa-solid fa-clipboard-check"></i>
-                    </div>
-                    <div class="artefak-info">
-                        <div class="artefak-title">Instrumen Penilaian yang Dirancang Beserta Analisisnya</div>
-                        <div class="artefak-desc">Instrumen penilaian yang dirancang untuk mengukur ketercapaian tujuan pembelajaran, beserta analisis hasil pelaksanaannya — mencakup penilaian formatif, sumatif, sikap, dan keterampilan peserta didik.</div>
-                    </div>
-                </div>
-                <div class="artefak-action">
-                    <div class="doc-pill">
-                        <i class="fa-solid fa-file-pdf" style="color:#e2574c; font-size:1.1rem;"></i>
-                        <div>
-                            <div class="pill-name">Artefak 6 — Penilaian.pdf</div>
-                            <div class="pill-ext">PDF Document</div>
-                        </div>
-                    </div>
-                    <a href="#" target="_blank" class="btn-lihat" style="background: rgba(245,158,11,0.1); border-color: rgba(245,158,11,0.3); color: var(--warning);">
-                        <i class="fa-solid fa-eye"></i> Lihat
+                    <a href="https://youtu.be/p60a3X5d2lE" target="_blank" class="btn-lihat" style="background: linear-gradient(135deg, #e11d48, #be123c); color:#fff; border:none; box-shadow:0 4px 15px rgba(225,29,72,0.35);">
+                        <i class="fa-solid fa-play"></i> Putar Video
                     </a>
                 </div>
             </div>
@@ -574,34 +477,34 @@
         <!-- /artefak-list -->
 
         <!-- RINGKASAN SIKLUS 1 -->
-        <div class="glass-card" style="margin-top: 2.5rem; background: linear-gradient(135deg, rgba(37,99,235,0.08), rgba(79,70,229,0.04));">
+        <div class="glass-card" style="margin-top: 2.5rem; background: linear-gradient(135deg, rgba(8,98,136,0.12), rgba(77,141,186,0.06)); border: 1px solid rgba(151,215,255,0.2);">
             <h3 style="color: #fff; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.7rem; font-size: 1.2rem;">
-                <i class="fa-solid fa-lightbulb" style="color: #fbbf24;"></i> Refleksi Siklus 1 — UTS PPL
+                <i class="fa-solid fa-lightbulb" style="color: #FFEFC4;"></i> Refleksi Siklus 1 — UTS PPL
             </h3>
             <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.2rem; line-height: 1.6;">
                 Catatan refleksi diri selama pelaksanaan Siklus 1 praktik mengajar mandiri berdasarkan 4 komponen utama.
             </p>
             <div class="refleksi-grid">
-                <div class="refleksi-item" style="background: rgba(236,72,153,0.07); border: 1px solid rgba(236,72,153,0.18);">
-                    <div class="refleksi-label" style="color: var(--secondary);">
+                <div class="refleksi-item" style="background: rgba(239,68,68,0.07); border: 1px solid rgba(239,68,68,0.2);">
+                    <div class="refleksi-label" style="color: #f87171;">
                         <i class="fa-solid fa-triangle-exclamation"></i> Kendala
                     </div>
                     <p>Manajemen waktu dalam pelaksanaan kegiatan pembelajaran masih perlu ditingkatkan agar seluruh tahapan dapat terselesaikan dengan optimal.</p>
                 </div>
-                <div class="refleksi-item" style="background: rgba(129,140,248,0.07); border: 1px solid rgba(129,140,248,0.18);">
-                    <div class="refleksi-label" style="color: var(--primary-light);">
+                <div class="refleksi-item" style="background: rgba(8,98,136,0.12); border: 1px solid rgba(151,215,255,0.25);">
+                    <div class="refleksi-label" style="color: #97D7FF;">
                         <i class="fa-solid fa-book"></i> Teori Relevan
                     </div>
                     <p>Penerapan model PjBL berbasis Computational Thinking yang selaras dengan prinsip pembelajaran mendalam dan scaffolding Vygotsky.</p>
                 </div>
-                <div class="refleksi-item" style="background: rgba(16,185,129,0.07); border: 1px solid rgba(16,185,129,0.18);">
+                <div class="refleksi-item" style="background: rgba(16,185,129,0.07); border: 1px solid rgba(16,185,129,0.2);">
                     <div class="refleksi-label" style="color: #10b981;">
                         <i class="fa-solid fa-check-circle"></i> Keberhasilan
                     </div>
                     <p>Peserta didik aktif terlibat dalam proses diskusi berbasis proyek dan capaian rata-rata kelas berhasil melampaui KKM yang ditetapkan.</p>
                 </div>
-                <div class="refleksi-item" style="background: rgba(245,158,11,0.07); border: 1px solid rgba(245,158,11,0.18);">
-                    <div class="refleksi-label" style="color: var(--warning);">
+                <div class="refleksi-item" style="background: rgba(245,158,11,0.07); border: 1px solid rgba(245,158,11,0.2);">
+                    <div class="refleksi-label" style="color: #fbbf24;">
                         <i class="fa-solid fa-arrows-rotate"></i> Adaptasi
                     </div>
                     <p>Menyesuaikan media dan strategi diferensiasi untuk mengakomodasi berbagai gaya belajar serta kondisi kelas yang beragam.</p>

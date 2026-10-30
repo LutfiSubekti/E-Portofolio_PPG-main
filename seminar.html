@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -178,6 +178,86 @@
         .c-pmbj   { --cc: #1a3799; --cc-light: rgba(26,55,153,0.15); --cc-border: rgba(26,55,153,0.3); }
         .c-growth { --cc: #0b8004; --cc-light: rgba(11,128,4,0.12); --cc-border: rgba(11,128,4,0.3); }
         .c-slek   { --cc: #d17c14; --cc-light: rgba(209,124,20,0.12); --cc-border: rgba(209,124,20,0.3); }
+        .c-inov   { --cc: #7c3aed; --cc-light: rgba(124,58,237,0.15); --cc-border: rgba(124,58,237,0.3); }
+
+        /* ---- Inovasi Cards ---- */
+        .inovasi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+        .inovasi-card {
+            background: rgba(15,23,42,0.6);
+            border: 1px solid rgba(124,58,237,0.2);
+            border-radius: 18px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .inovasi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 40px rgba(124,58,237,0.2);
+            border-color: rgba(124,58,237,0.45);
+        }
+        .inovasi-card-header {
+            padding: 1.4rem 1.4rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .inovasi-card-icon {
+            width: 52px; height: 52px;
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        .inovasi-card-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.2rem;
+            line-height: 1.3;
+        }
+        .inovasi-card-sub {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+        .inovasi-card-desc {
+            padding: 0 1.4rem;
+            font-size: 0.83rem;
+            color: rgba(255,255,255,0.55);
+            line-height: 1.55;
+            flex: 1;
+        }
+        .inovasi-card-footer {
+            margin: 1rem 1.4rem 1.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(0,0,0,0.2);
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(255,255,255,0.04);
+        }
+        .inovasi-card-file {
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .inovasi-card-filename { font-size: 0.8rem; color: #fff; font-weight: 500; }
+        .inovasi-card-filetype { font-size: 0.7rem; color: var(--text-muted); }
+        .inovasi-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
 
         /* All Courses Overview */
         .overview-grid {
@@ -224,6 +304,326 @@
             .tab-btn { font-size: 0.78rem; padding: 0.5rem 0.8rem; }
             .subject-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
             .seminar-hero { padding: 2.5rem 1.5rem; }
+        }
+
+        /* ---- PDF Viewer Modal ---- */
+        .pdf-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.82);
+            backdrop-filter: blur(8px);
+            z-index: 9000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .pdf-modal-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        .pdf-modal {
+            width: min(1100px, 95vw);
+            height: 90vh;
+            background: #0f172a;
+            border-radius: 20px;
+            border: 1px solid rgba(124,58,237,0.35);
+            box-shadow: 0 40px 100px rgba(0,0,0,0.6), 0 0 0 1px rgba(124,58,237,0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transform: translateY(24px) scale(0.97);
+            transition: all 0.35s cubic-bezier(0.34,1.2,0.64,1);
+        }
+        .pdf-modal-overlay.open .pdf-modal {
+            transform: translateY(0) scale(1);
+        }
+        .pdf-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.4rem;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            flex-shrink: 0;
+            background: rgba(124,58,237,0.1);
+        }
+        .pdf-modal-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .pdf-modal-title i { color: #a78bfa; font-size: 1.1rem; }
+        .pdf-modal-actions { display: flex; align-items: center; gap: 0.6rem; }
+        .pdf-modal-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.45rem 1rem;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+        .pdf-modal-btn.btn-download {
+            background: rgba(124,58,237,0.2);
+            color: #a78bfa;
+            border: 1px solid rgba(124,58,237,0.35);
+        }
+        .pdf-modal-btn.btn-download:hover { background: rgba(124,58,237,0.35); }
+        .pdf-modal-btn.btn-close {
+            background: rgba(255,255,255,0.07);
+            color: rgba(255,255,255,0.6);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .pdf-modal-btn.btn-close:hover { background: rgba(239,68,68,0.2); color: #f87171; border-color: rgba(239,68,68,0.3); }
+        .pdf-modal-body {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
+        .pdf-modal-body iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+        .pdf-modal-loading {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+        .pdf-modal-loading .spinner {
+            width: 40px; height: 40px;
+            border: 3px solid rgba(124,58,237,0.2);
+            border-top-color: #7c3aed;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* Produk preview area in card */
+        .produk-preview-area {
+            margin: 0 1.4rem 1rem;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(124,58,237,0.25);
+            background: rgba(0,0,0,0.3);
+            height: 200px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .produk-preview-area:hover { border-color: rgba(124,58,237,0.6); box-shadow: 0 8px 24px rgba(124,58,237,0.2); }
+        .produk-preview-area iframe {
+            width: 100%; height: 100%;
+            border: none;
+            pointer-events: none;
+        }
+        .produk-preview-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15,23,42,0.9) 0%, rgba(15,23,42,0.2) 60%, transparent 100%);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 1rem;
+        }
+        .produk-preview-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.55rem 1.3rem;
+            background: #7c3aed;
+            color: #fff;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 20px rgba(124,58,237,0.45);
+        }
+        .produk-preview-btn:hover { background: #6d28d9; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(124,58,237,0.5); }
+
+        /* ---- Inovasi Detail Section ---- */
+        .inovasi-concept-wrapper {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .inov-section-card {
+            background: rgba(15, 23, 42, 0.65);
+            border: 1px solid rgba(124, 58, 237, 0.22);
+            border-radius: 18px;
+            padding: 1.8rem;
+            backdrop-filter: blur(12px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .inov-section-card:hover {
+            border-color: rgba(124, 58, 237, 0.45);
+            box-shadow: 0 12px 30px rgba(124, 58, 237, 0.12);
+        }
+        .inov-sec-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.9rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .inov-sec-num {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.05rem;
+            font-weight: 800;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35);
+        }
+        .inov-sec-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: -0.2px;
+        }
+        .inov-item {
+            margin-bottom: 1rem;
+            line-height: 1.68;
+            font-size: 0.94rem;
+            color: rgba(255, 255, 255, 0.78);
+        }
+        .inov-item:last-child { margin-bottom: 0; }
+        .inov-item-label {
+            color: #c4b5fd;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 0.25rem;
+        }
+        .card-level-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+            margin: 1.2rem 0;
+        }
+        .level-card {
+            border-radius: 12px;
+            padding: 1.1rem;
+            border: 1px solid;
+            background: rgba(0,0,0,0.25);
+            transition: transform 0.2s ease;
+        }
+        .level-card:hover { transform: translateY(-3px); }
+        .level-card.hijau {
+            border-color: rgba(34, 197, 94, 0.35);
+            background: linear-gradient(145deg, rgba(34, 197, 94, 0.08), rgba(0,0,0,0.3));
+        }
+        .level-card.kuning {
+            border-color: rgba(234, 179, 8, 0.35);
+            background: linear-gradient(145deg, rgba(234, 179, 8, 0.08), rgba(0,0,0,0.3));
+        }
+        .level-card.merah {
+            border-color: rgba(239, 68, 68, 0.35);
+            background: linear-gradient(145deg, rgba(239, 68, 68, 0.08), rgba(0,0,0,0.3));
+        }
+        .level-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.76rem;
+            font-weight: 700;
+            padding: 0.25rem 0.65rem;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.6rem;
+        }
+        .level-card.hijau .level-badge { background: rgba(34, 197, 94, 0.2); color: #4ade80; }
+        .level-card.kuning .level-badge { background: rgba(234, 179, 8, 0.2); color: #facc15; }
+        .level-card.merah .level-badge { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+        .level-desc { font-size: 0.88rem; color: rgba(255,255,255,0.78); line-height: 1.55; }
+
+        .steps-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-top: 0.8rem;
+        }
+        .step-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.9rem;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 12px;
+            padding: 0.9rem 1.1rem;
+        }
+        .step-num {
+            background: rgba(124, 58, 237, 0.25);
+            color: #a78bfa;
+            border: 1px solid rgba(124, 58, 237, 0.4);
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 0.15rem;
+        }
+        .step-content {
+            font-size: 0.92rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+        .eval-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.1rem;
+            margin-top: 0.8rem;
+        }
+        .eval-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(124, 58, 237, 0.18);
+            border-radius: 14px;
+            padding: 1.2rem;
+        }
+        .eval-box-header {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 0.6rem;
+            color: #c4b5fd;
+            font-weight: 700;
+            font-size: 0.98rem;
+        }
+        .eval-box-body {
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.74);
+            line-height: 1.62;
         }
     </style>
 </head>
@@ -318,31 +718,20 @@
         <div class="seminar-hero">
             <div class="seminar-hero-deco">SEMINAR</div>
             <div style="position: relative; z-index: 1;">
-                <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(129,140,248,0.18); border: 1px solid rgba(129,140,248,0.3); color: var(--primary-light); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.2rem;">
+                <span style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(77, 141, 186, 0.18); border: 1px solid rgba(151, 215, 255, 0.35); color: #97D7FF; padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.2rem;">
                     <i class="fa-solid fa-chalkboard-user"></i> Seminar PPL · Semester 2
                 </span>
                 <h1 style="font-size: 2.8rem; color: #fff; margin-bottom: 0.7rem; line-height: 1.2;">Seminar Praktik<br>Pengalaman Lapangan</h1>
                 <p style="color: rgba(255,255,255,0.6); font-size: 1.05rem; max-width: 650px; line-height: 1.7;">
-                    Kumpulan artefak, analisis mendalam, dan refleksi dari seluruh <strong style="color:#fff;">6 mata kuliah</strong> pada Semester 2 PPG Prajabatan Gelombang 1, disajikan secara terstruktur untuk mendukung pelaksanaan Seminar PPL.
+                    Kumpulan artefak, analisis mendalam, dan refleksi dari seluruh mata kuliah pada PPG Prajabatan Gelombang 1, disajikan secara terstruktur untuk mendukung pelaksanaan Seminar PPL.
                 </p>
-                <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: 0.5rem; background: rgba(0,0,0,0.2); padding: 0.5rem 1rem; border-radius: 50px; color: rgba(255,255,255,0.7); font-size: 0.88rem; border: 1px solid rgba(255,255,255,0.08);">
-                        <i class="fa-solid fa-book" style="color: var(--primary-light);"></i> 6 Mata Kuliah
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 0.5rem; background: rgba(0,0,0,0.2); padding: 0.5rem 1rem; border-radius: 50px; color: rgba(255,255,255,0.7); font-size: 0.88rem; border: 1px solid rgba(255,255,255,0.08);">
-                        <i class="fa-solid fa-file-pdf" style="color: var(--secondary);"></i> 42 Artefak
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 0.5rem; background: rgba(0,0,0,0.2); padding: 0.5rem 1rem; border-radius: 50px; color: rgba(255,255,255,0.7); font-size: 0.88rem; border: 1px solid rgba(255,255,255,0.08);">
-                        <i class="fa-solid fa-school" style="color: #10b981;"></i> SMP Negeri 8 Malang
-                    </div>
-                </div>
             </div>
         </div>
 
         <!-- TAB NAVIGATION -->
         <div class="tab-nav" id="tabNav">
             <button class="tab-btn active" data-tab="all" onclick="switchTab('all', this)">
-                <span class="tab-dot" style="background:#818cf8;"></span> Semua MK
+                <span class="tab-dot" style="background:#97D7FF;"></span> Semua MK
             </button>
             <button class="tab-btn" data-tab="ct" onclick="switchTab('ct', this)">
                 <span class="tab-dot" style="background:#1a7b5d;"></span> Computational Thinking
@@ -354,13 +743,22 @@
                 <span class="tab-dot" style="background:#c0392b;"></span> Pemahaman Peserta Didik
             </button>
             <button class="tab-btn" data-tab="pmbj" onclick="switchTab('pmbj', this)">
-                <span class="tab-dot" style="background:#1a3799;"></span> Pembelajaran Mendalam
+                <span class="tab-dot" style="background:#1a3799;"></span> PMA Dasar
+            </button>
+            <button class="tab-btn" data-tab="pmbj_lanjut" onclick="switchTab('pmbj_lanjut', this)">
+                <span class="tab-dot" style="background:#0284c7;"></span> PMA Lanjutan
             </button>
             <button class="tab-btn" data-tab="growth" onclick="switchTab('growth', this)">
                 <span class="tab-dot" style="background:#0b8004;"></span> Growth Mindset
             </button>
-            <button class="tab-btn" data-tab="slek" onclick="switchTab('slek', this)">
-                <span class="tab-dot" style="background:#d17c14;"></span> MK Selektif
+            <button class="tab-btn" data-tab="etika" onclick="switchTab('etika', this)">
+                <span class="tab-dot" style="background:#b45309;"></span> Etika Guru
+            </button>
+            <button class="tab-btn" data-tab="pse" onclick="switchTab('pse', this)">
+                <span class="tab-dot" style="background:#0d9488;"></span> Sosial Emosional
+            </button>
+            <button class="tab-btn" data-tab="inov" onclick="switchTab('inov', this)">
+                <span class="tab-dot" style="background:#7c3aed;"></span> Inovasi
             </button>
         </div>
 
@@ -414,18 +812,31 @@
                     </div>
                 </div>
 
-                <!-- Pembelajaran Mendalam -->
+                <!-- Pembelajaran Mendalam Dasar -->
                 <div class="ov-card" onclick="switchTab('pmbj', document.querySelector('[data-tab=pmbj]'))">
                     <div class="ov-card-top" style="background: linear-gradient(135deg, #1a3799, #0e246e);">
                         <div>
                             <div style="font-size:0.7rem; font-weight:600; letter-spacing:1px; color:rgba(255,255,255,0.6); text-transform:uppercase; margin-bottom:0.2rem;">MK 4</div>
-                            <div style="font-size:0.95rem; font-weight:700; color:#fff;">Pembelajaran Mendalam</div>
+                            <div style="font-size:0.95rem; font-weight:700; color:#fff;">PMA Dasar</div>
                         </div>
                         <i class="fa-solid fa-layer-group ov-icon" style="color:#fff;"></i>
                     </div>
                     <div class="ov-card-body">
-                        <div class="ov-card-title">Pembelajaran Mendalam dan Asesmen</div>
+                        <div class="ov-card-title">Pembelajaran Mendalam dan Asesmen Dasar</div>
+                    </div>
+                </div>
 
+                <!-- Pembelajaran Mendalam Lanjutan -->
+                <div class="ov-card" onclick="switchTab('pmbj_lanjut', document.querySelector('[data-tab=pmbj_lanjut]'))">
+                    <div class="ov-card-top" style="background: linear-gradient(135deg, #0284c7, #0369a1);">
+                        <div>
+                            <div style="font-size:0.7rem; font-weight:600; letter-spacing:1px; color:rgba(255,255,255,0.6); text-transform:uppercase; margin-bottom:0.2rem;">MK 5</div>
+                            <div style="font-size:0.95rem; font-weight:700; color:#fff;">PMA Lanjutan</div>
+                        </div>
+                        <i class="fa-solid fa-stairs ov-icon" style="color:#fff;"></i>
+                    </div>
+                    <div class="ov-card-body">
+                        <div class="ov-card-title">Pembelajaran Mendalam dan Asesmen Lanjutan</div>
                     </div>
                 </div>
 
@@ -433,29 +844,77 @@
                 <div class="ov-card" onclick="switchTab('growth', document.querySelector('[data-tab=growth]'))">
                     <div class="ov-card-top" style="background: linear-gradient(135deg, #0b8004, #065102);">
                         <div>
-                            <div style="font-size:0.7rem; font-weight:600; letter-spacing:1px; color:rgba(255,255,255,0.6); text-transform:uppercase; margin-bottom:0.2rem;">MK 5</div>
+                            <div style="font-size:0.7rem; font-weight:600; letter-spacing:1px; color:rgba(255,255,255,0.6); text-transform:uppercase; margin-bottom:0.2rem;">MK 6</div>
                             <div style="font-size:0.95rem; font-weight:700; color:#fff;">Growth Mindset</div>
                         </div>
                         <i class="fa-solid fa-seedling ov-icon" style="color:#fff;"></i>
                     </div>
                     <div class="ov-card-body">
-                        <div class="ov-card-title">Dasar Pola Pikir Bertumbuh (Growth Mindset) dalam Pembelajaran</div>
-
+                        <div class="ov-card-title">Dasar Pola Pikir Bertumbuh dalam Pembelajaran</div>
                     </div>
                 </div>
 
-                <!-- Selektif -->
-                <div class="ov-card" onclick="switchTab('slek', document.querySelector('[data-tab=slek]'))">
-                    <div class="ov-card-top" style="background: linear-gradient(135deg, #d17c14, #9e5c09);">
+                <!-- Etika dan Profesionalisme Guru -->
+                <div class="ov-card" onclick="switchTab('etika', document.querySelector('[data-tab=etika]'))">
+                    <div class="ov-card-top" style="background: linear-gradient(135deg, #b45309, #78350f);">
                         <div>
-                            <div style="font-size:0.7rem; font-weight:600; letter-spacing:1px; color:rgba(255,255,255,0.6); text-transform:uppercase; margin-bottom:0.2rem;">MK 6</div>
-                            <div style="font-size:0.95rem; font-weight:700; color:#fff;">MK Selektif / Elektif</div>
+                            <div style="font-size:0.7rem; font-weight:600; letter-spacing:1px; color:rgba(255,255,255,0.6); text-transform:uppercase; margin-bottom:0.2rem;">MK 7</div>
+                            <div style="font-size:0.95rem; font-weight:700; color:#fff;">Etika & Profesi Guru</div>
                         </div>
-                        <i class="fa-solid fa-star ov-icon" style="color:#fff;"></i>
+                        <i class="fa-solid fa-user-tie ov-icon" style="color:#fff;"></i>
                     </div>
                     <div class="ov-card-body">
-                        <div class="ov-card-title">Refleksi Mata Kuliah Selektif / Elektif</div>
+                        <div class="ov-card-title">Etika dan Profesionalisme Guru</div>
+                    </div>
+                </div>
 
+                <!-- Pembelajaran Sosial Emosional -->
+                <div class="ov-card" onclick="switchTab('pse', document.querySelector('[data-tab=pse]'))">
+                    <div class="ov-card-top" style="background: linear-gradient(135deg, #0d9488, #115e59);">
+                        <div>
+                            <div style="font-size:0.7rem; font-weight:600; letter-spacing:1px; color:rgba(255,255,255,0.6); text-transform:uppercase; margin-bottom:0.2rem;">MK 8</div>
+                            <div style="font-size:0.95rem; font-weight:700; color:#fff;">Sosial Emosional</div>
+                        </div>
+                        <i class="fa-solid fa-heart-pulse ov-icon" style="color:#fff;"></i>
+                    </div>
+                    <div class="ov-card-body">
+                        <div class="ov-card-title">Pembelajaran Sosial Emosional (PSE)</div>
+                    </div>
+                </div>
+
+                <!-- Inovasi -->
+                <div class="ov-card" onclick="switchTab('inov', document.querySelector('[data-tab=inov]'))">
+                    <div class="ov-card-top" style="background: linear-gradient(135deg, #7c3aed, #4f1ea3);">
+                        <div>
+                            <div style="font-size:0.7rem; font-weight:600; letter-spacing:1px; color:rgba(255,255,255,0.6); text-transform:uppercase; margin-bottom:0.2rem;">Produk PPL</div>
+                            <div style="font-size:0.95rem; font-weight:700; color:#fff;">Inovasi Pembelajaran</div>
+                        </div>
+                        <i class="fa-solid fa-lightbulb ov-icon" style="color:#fff;"></i>
+                    </div>
+                    <div class="ov-card-body">
+                        <div class="ov-card-title">Dokumentasi, RPM, dan Produk Inovasi</div>
+                        <div class="ov-card-links">
+                            <span class="ov-link-tag"><i class="fa-solid fa-images"></i> Dokumentasi</span>
+                            <span class="ov-link-tag"><i class="fa-solid fa-file-alt"></i> RPM</span>
+                            <span class="ov-link-tag"><i class="fa-solid fa-box"></i> Produk</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Refleksi Program PPG Keseluruhan -->
+                <div class="ov-card" onclick="window.location.href='refleksi-program.html'" style="border-color: rgba(151,215,255,0.25);">
+                    <div class="ov-card-top" style="background: linear-gradient(135deg, #086288, #03425e);">
+                        <div>
+                            <div style="font-size:0.7rem; font-weight:600; letter-spacing:1px; color:rgba(255,255,255,0.6); text-transform:uppercase; margin-bottom:0.2rem;">Sintesis Akhir</div>
+                            <div style="font-size:0.95rem; font-weight:700; color:#FFEFC4;">Refleksi Program PPG</div>
+                        </div>
+                        <i class="fa-solid fa-graduation-cap ov-icon" style="color:#fff;"></i>
+                    </div>
+                    <div class="ov-card-body">
+                        <div class="ov-card-title">Refleksi Program PPG Secara Keseluruhan</div>
+                        <div class="ov-card-links">
+                            <span class="ov-link-tag" style="background:rgba(8,98,136,0.25); color:#97D7FF; border-color:rgba(151,215,255,0.3);"><i class="fa-solid fa-book-open"></i> Baca Refleksi Lengkap <i class="fa-solid fa-arrow-right" style="font-size:0.7rem; margin-left:3px;"></i></span>
+                        </div>
                     </div>
                 </div>
 
@@ -510,7 +969,7 @@
             <div class="artifact-grid" id="artifacts-pem"></div>
         </div>
 
-        <!-- PANEL: Pembelajaran Mendalam -->
+        <!-- PANEL: Pembelajaran Mendalam Dasar -->
         <div id="panel-pmbj" class="subject-panel">
             <div class="subject-header" style="background: linear-gradient(135deg, rgba(26,55,153,0.18), rgba(26,55,153,0.05)); border: 1px solid rgba(26,55,153,0.25);">
                 <div class="header-icon" style="background: rgba(26,55,153,0.18); color: #5b7de8;">
@@ -518,11 +977,26 @@
                 </div>
                 <div>
                     <span style="font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:1px; color: rgba(255,255,255,0.5); display:block; margin-bottom:0.3rem;">Mata Kuliah 4</span>
-                    <h2>Pembelajaran Mendalam dan Asesmen</h2>
-                    <p>Pembelajaran Mendalam &nbsp;·&nbsp; <a href="course-pembelajaran.html" style="color: rgba(255,255,255,0.5); text-decoration:underline; font-size:0.85rem;">Buka Halaman MK <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></a></p>
+                    <h2>Pembelajaran Mendalam dan Asesmen Dasar</h2>
+                    <p>PMA Dasar &nbsp;·&nbsp; <a href="course-pembelajaran.html" style="color: rgba(255,255,255,0.5); text-decoration:underline; font-size:0.85rem;">Buka Halaman MK <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></a></p>
                 </div>
             </div>
             <div class="artifact-grid" id="artifacts-pmbj"></div>
+        </div>
+
+        <!-- PANEL: Pembelajaran Mendalam Lanjutan -->
+        <div id="panel-pmbj_lanjut" class="subject-panel">
+            <div class="subject-header" style="background: linear-gradient(135deg, rgba(2,132,199,0.18), rgba(2,132,199,0.05)); border: 1px solid rgba(2,132,199,0.25);">
+                <div class="header-icon" style="background: rgba(2,132,199,0.18); color: #38bdf8;">
+                    <i class="fa-solid fa-stairs"></i>
+                </div>
+                <div>
+                    <span style="font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:1px; color: rgba(255,255,255,0.5); display:block; margin-bottom:0.3rem;">Mata Kuliah 5</span>
+                    <h2>Pembelajaran Mendalam dan Asesmen Lanjutan</h2>
+                    <p>PMA Lanjutan &nbsp;·&nbsp; <a href="course-pembelajaran-lanjutan.html" style="color: rgba(255,255,255,0.5); text-decoration:underline; font-size:0.85rem;">Buka Halaman MK <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></a></p>
+                </div>
+            </div>
+            <div class="artifact-grid" id="artifacts-pmbj_lanjut"></div>
         </div>
 
         <!-- PANEL: Growth Mindset -->
@@ -532,7 +1006,7 @@
                     <i class="fa-solid fa-seedling"></i>
                 </div>
                 <div>
-                    <span style="font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:1px; color: rgba(255,255,255,0.5); display:block; margin-bottom:0.3rem;">Mata Kuliah 5</span>
+                    <span style="font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:1px; color: rgba(255,255,255,0.5); display:block; margin-bottom:0.3rem;">Mata Kuliah 6</span>
                     <h2>Dasar Pola Pikir Bertumbuh (Growth Mindset)</h2>
                     <p>Growth Mindset dalam Pembelajaran &nbsp;·&nbsp; <a href="course-growth.html" style="color: rgba(255,255,255,0.5); text-decoration:underline; font-size:0.85rem;">Buka Halaman MK <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></a></p>
                 </div>
@@ -540,19 +1014,305 @@
             <div class="artifact-grid" id="artifacts-growth"></div>
         </div>
 
-        <!-- PANEL: Selektif -->
-        <div id="panel-slek" class="subject-panel">
-            <div class="subject-header" style="background: linear-gradient(135deg, rgba(209,124,20,0.15), rgba(209,124,20,0.04)); border: 1px solid rgba(209,124,20,0.22);">
-                <div class="header-icon" style="background: rgba(209,124,20,0.15); color: #f59e0b;">
-                    <i class="fa-solid fa-star"></i>
+        <!-- PANEL: Etika dan Profesionalisme Guru -->
+        <div id="panel-etika" class="subject-panel">
+            <div class="subject-header" style="background: linear-gradient(135deg, rgba(180,83,9,0.18), rgba(180,83,9,0.05)); border: 1px solid rgba(180,83,9,0.25);">
+                <div class="header-icon" style="background: rgba(180,83,9,0.18); color: #f59e0b;">
+                    <i class="fa-solid fa-user-tie"></i>
                 </div>
                 <div>
-                    <span style="font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:1px; color: rgba(255,255,255,0.5); display:block; margin-bottom:0.3rem;">Mata Kuliah 6</span>
-                    <h2>Refleksi Mata Kuliah Selektif / Elektif</h2>
-                    <p>Mata Kuliah Selektif &nbsp;·&nbsp; <a href="course-selektif.html" style="color: rgba(255,255,255,0.5); text-decoration:underline; font-size:0.85rem;">Buka Halaman MK <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></a></p>
+                    <span style="font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:1px; color: rgba(255,255,255,0.5); display:block; margin-bottom:0.3rem;">Mata Kuliah 7</span>
+                    <h2>Etika dan Profesionalisme Guru</h2>
+                    <p>Etika Profesi Keguruan &nbsp;·&nbsp; <a href="course-etika.html" style="color: rgba(255,255,255,0.5); text-decoration:underline; font-size:0.85rem;">Buka Halaman MK <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></a></p>
                 </div>
             </div>
-            <div class="artifact-grid" id="artifacts-slek"></div>
+            <div class="artifact-grid" id="artifacts-etika"></div>
+        </div>
+
+        <!-- PANEL: Pembelajaran Sosial Emosional -->
+        <div id="panel-pse" class="subject-panel">
+            <div class="subject-header" style="background: linear-gradient(135deg, rgba(13,148,136,0.18), rgba(13,148,136,0.05)); border: 1px solid rgba(13,148,136,0.25);">
+                <div class="header-icon" style="background: rgba(13,148,136,0.18); color: #2dd4bf;">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <div>
+                    <span style="font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:1px; color: rgba(255,255,255,0.5); display:block; margin-bottom:0.3rem;">Mata Kuliah 8</span>
+                    <h2>Pembelajaran Sosial Emosional</h2>
+                    <p>Sosial Emosional (PSE) &nbsp;·&nbsp; <a href="course-pse.html" style="color: rgba(255,255,255,0.5); text-decoration:underline; font-size:0.85rem;">Buka Halaman MK <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></a></p>
+                </div>
+            </div>
+            <div class="artifact-grid" id="artifacts-pse"></div>
+        </div>
+
+        <!-- PANEL: Inovasi -->
+        <div id="panel-inov" class="subject-panel">
+            <div class="subject-header c-inov" style="background: linear-gradient(135deg, rgba(124,58,237,0.2), rgba(124,58,237,0.05)); border: 1px solid rgba(124,58,237,0.28);">
+                <div class="header-icon" style="background: rgba(124,58,237,0.2); color: #a78bfa;">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+                <div>
+                    <span style="font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:1px; color: rgba(255,255,255,0.5); display:block; margin-bottom:0.3rem;">Produk PPL</span>
+                    <h2>Inovasi Pembelajaran</h2>
+                    <p>Dokumentasi, Rencana Pelaksanaan Modul (RPM), dan Produk Inovasi yang dikembangkan selama PPL</p>
+                </div>
+            </div>
+
+            <!-- Inovasi Cards -->
+            <div class="inovasi-grid" id="inovasi-cards">
+
+                <!-- Card 1: Dokumentasi -->
+                <div class="inovasi-card">
+                    <div class="inovasi-card-header">
+                        <div class="inovasi-card-icon" style="background: rgba(124,58,237,0.18); color: #a78bfa;">
+                            <i class="fa-solid fa-images"></i>
+                        </div>
+                        <div>
+                            <div class="inovasi-card-title">Dokumentasi Inovasi</div>
+                            <div class="inovasi-card-sub">Foto & Dokumentasi Kegiatan</div>
+                        </div>
+                    </div>
+                    <div class="inovasi-card-desc">
+                        Kumpulan dokumentasi foto dan kegiatan pelaksanaan inovasi pembelajaran selama Praktik Pengalaman Lapangan (PPL) di sekolah mitra.
+                    </div>
+                    <div class="inovasi-card-footer">
+                        <div class="inovasi-card-file">
+                            <i class="fa-solid fa-file-pdf" style="color:#e2574c; font-size:1.1rem;"></i>
+                            <div>
+                                <div class="inovasi-card-filename">Dokumentasi Inovasi.pdf</div>
+                                <div class="inovasi-card-filetype">PDF Document</div>
+                            </div>
+                        </div>
+                        <span class="inovasi-badge" style="background:rgba(124,58,237,0.15); color:#a78bfa; border:1px solid rgba(124,58,237,0.3);">
+                            <i class="fa-solid fa-clock"></i> Segera
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Card 2: RPM -->
+                <div class="inovasi-card">
+                    <div class="inovasi-card-header">
+                        <div class="inovasi-card-icon" style="background: rgba(124,58,237,0.18); color: #a78bfa;">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+                        <div>
+                            <div class="inovasi-card-title">Rencana Pelaksanaan Modul</div>
+                            <div class="inovasi-card-sub">RPM Inovasi Pembelajaran</div>
+                        </div>
+                    </div>
+                    <div class="inovasi-card-desc">
+                        Rencana Pelaksanaan Modul (RPM) yang dirancang sebagai inovasi dalam kegiatan pembelajaran, mencakup tujuan, langkah kegiatan, dan asesmen inovatif.
+                    </div>
+                    <div class="inovasi-card-footer">
+                        <div class="inovasi-card-file">
+                            <i class="fa-solid fa-file-pdf" style="color:#e2574c; font-size:1.1rem;"></i>
+                            <div>
+                                <div class="inovasi-card-filename">RPM Inovasi.pdf</div>
+                                <div class="inovasi-card-filetype">PDF Document</div>
+                            </div>
+                        </div>
+                        <span class="inovasi-badge" style="background:rgba(124,58,237,0.15); color:#a78bfa; border:1px solid rgba(124,58,237,0.3);">
+                            <i class="fa-solid fa-clock"></i> Segera
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Produk -->
+                <div class="inovasi-card">
+                    <div class="inovasi-card-header">
+                        <div class="inovasi-card-icon" style="background: rgba(124,58,237,0.18); color: #a78bfa;">
+                            <i class="fa-solid fa-box-open"></i>
+                        </div>
+                        <div>
+                            <div class="inovasi-card-title">Produk Inovasi</div>
+                            <div class="inovasi-card-sub">Kartu Soal Informatika SMP</div>
+                        </div>
+                    </div>
+                    <div class="inovasi-card-desc">
+                        Kartu Soal Informatika SMP Level A4 yang dirancang sebagai produk inovasi media pembelajaran untuk meningkatkan keterlibatan dan pemahaman peserta didik secara visual dan interaktif.
+                    </div>
+
+                    <!-- PDF Preview Thumbnail -->
+                    <div class="produk-preview-area" onclick="openPdfModal()" title="Klik untuk melihat penuh">
+                        <iframe src="assets/docs/INOVASI/Kartu_Soal_Informatika_SMP_3_Level_A4_Siap_Cetak.pdf#toolbar=0&navpanes=0&scrollbar=0" tabindex="-1" loading="lazy"></iframe>
+                        <div class="produk-preview-overlay">
+                            <button class="produk-preview-btn">
+                                <i class="fa-solid fa-expand"></i> Lihat Penuh
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="inovasi-card-footer">
+                        <div class="inovasi-card-file">
+                            <i class="fa-solid fa-file-pdf" style="color:#e2574c; font-size:1.1rem;"></i>
+                            <div>
+                                <div class="inovasi-card-filename">Kartu_Soal_Informatika_SMP_3_Level_A4_Siap_Cetak.pdf</div>
+                                <div class="inovasi-card-filetype">PDF Document</div>
+                            </div>
+                        </div>
+                        <div style="display:flex; gap:0.5rem; flex-shrink:0;">
+                            <button onclick="openPdfModal()" class="btn-eye" style="background:#7c3aed; color:#fff;" title="Pratinjau PDF">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                            <a href="assets/docs/INOVASI/Kartu_Soal_Informatika_SMP_3_Level_A4_Siap_Cetak.pdf" target="_blank" class="btn-eye" style="background:rgba(124,58,237,0.25); color:#a78bfa; border:1px solid rgba(124,58,237,0.35);" title="Buka di Tab Baru">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- KONSEP INOVASI PEMBELAJARAN: TGT-CodeArena Digital -->
+            <div class="inovasi-concept-wrapper">
+                <div style="display:flex; align-items:center; gap:0.8rem; margin-top:1rem;">
+                    <div style="background:rgba(124,58,237,0.25); border:1px solid rgba(124,58,237,0.4); color:#c4b5fd; padding:0.4rem 0.9rem; border-radius:30px; font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:0.8px;">
+                        <i class="fa-solid fa-cube"></i> Kerangka Konsep Karya Inovasi
+                    </div>
+                    <hr style="flex:1; border:none; border-top:1px solid rgba(124,58,237,0.25);">
+                </div>
+
+                <!-- 1. Identitas Karya -->
+                <div class="inov-section-card">
+                    <div class="inov-sec-header">
+                        <div class="inov-sec-num">1</div>
+                        <div>
+                            <div class="inov-sec-title">Identitas Karya</div>
+                            <div style="font-size:0.82rem; color:var(--text-muted);">Informasi dasar dan target implementasi produk</div>
+                        </div>
+                    </div>
+                    <div class="inov-item">
+                        <span class="inov-item-label"><i class="fa-solid fa-tag"></i> Nama Karya:</span><br>
+                        <strong><em>TGT-CodeArena Digital</em></strong> (Transformasi Pembelajaran Kooperatif Berbasis Peran Industri dan Kartu Pintar Multi-Level untuk Pemrograman Scratch &amp; Python).
+                    </div>
+                    <div class="inov-item">
+                        <span class="inov-item-label"><i class="fa-solid fa-bullseye"></i> Sasaran Inovasi:</span><br>
+                        Peserta didik jenjang Sekolah Menengah Pertama (SMP) Kelas IX pada Fase D, khususnya dalam mata pelajaran Informatika materi Algoritma dan Pemrograman.
+                    </div>
+                </div>
+
+                <!-- 2. Gagasan & Riset -->
+                <div class="inov-section-card">
+                    <div class="inov-sec-header">
+                        <div class="inov-sec-num">2</div>
+                        <div>
+                            <div class="inov-sec-title">Gagasan &amp; Riset</div>
+                            <div style="font-size:0.82rem; color:var(--text-muted);">Latar belakang masalah, landasan teoretis, dan rancangan solusi</div>
+                        </div>
+                    </div>
+                    <div class="inov-item">
+                        <span class="inov-item-label"><i class="fa-solid fa-triangle-exclamation"></i> Tantangan yang Ditemukan:</span><br>
+                        Transisi pembelajaran dari pemrograman visual (<em>Scratch</em>) ke pemrograman tekstual (<em>Python</em>) sering kali memicu kecemasan akademik (<em>coding anxiety</em>) pada siswa SMP. Selain itu, metode kelompok konvensional sering menimbulkan masalah <em>free-rider</em> (hanya satu siswa pintar yang bekerja, sementara yang lain pasif), serta model TGT konvensional belum memfasilitasi diferensiasi tingkat kesulitan berpikir (<em>LOTS</em> hingga <em>HOTS</em>) secara terstruktur.
+                    </div>
+                    <div class="inov-item">
+                        <span class="inov-item-label"><i class="fa-solid fa-lightbulb"></i> Gagasan Solusi:</span><br>
+                        Mengembangkan model <em>Teams-Games-Tournament</em> (TGT) berbasis digital yang mengadopsi sistem pembagian peran ala industri perangkat lunak (<em>software house</em>) serta dek kartu soal digital interaktif berjenjang (3 level kesulitan).
+                    </div>
+                    <div class="inov-item">
+                        <span class="inov-item-label"><i class="fa-solid fa-chart-line"></i> Hasil Riset Sederhana:</span><br>
+                        Berdasarkan studi literatur dan analisis kurikulum, pembelajaran pemrograman memerlukan penguatan konsep modularisasi (fungsi dan prosedur) serta kolaborasi aktif. Pendekatan gamifikasi berbasis tim terbukti mampu meningkatkan keterlibatan kognitif dan motivasi belajar siswa dibandingkan metode ceramah satu arah.
+                    </div>
+                </div>
+
+                <!-- 3. Rancangan & Implementasi -->
+                <div class="inov-section-card">
+                    <div class="inov-sec-header">
+                        <div class="inov-sec-num">3</div>
+                        <div>
+                            <div class="inov-sec-title">Rancangan &amp; Implementasi</div>
+                            <div style="font-size:0.82rem; color:var(--text-muted);">Struktur instrumen prototipe dan tahapan alur di kelas</div>
+                        </div>
+                    </div>
+                    <div class="inov-item">
+                        <span class="inov-item-label"><i class="fa-solid fa-layer-group"></i> Prototipe Karya:</span><br>
+                        Sebuah platform kuis interaktif digital (<em>paperless</em>) yang terintegrasi dengan sistem bank soal 3 level berjenjang:
+                        <div class="card-level-grid">
+                            <div class="level-card hijau">
+                                <span class="level-badge"><i class="fa-solid fa-circle-check"></i> Kartu Hijau · Mudah</span>
+                                <div style="font-weight:700; color:#4ade80; margin-bottom:0.35rem; font-size:0.95rem;">Bobot: 1 Poin</div>
+                                <div class="level-desc">Pengenalan sintaks dasar, variabel, dan blok fungsi sederhana (<em>Scratch &amp; Python</em>).</div>
+                            </div>
+                            <div class="level-card kuning">
+                                <span class="level-badge"><i class="fa-solid fa-circle-exclamation"></i> Kartu Kuning · Sedang</span>
+                                <div style="font-weight:700; color:#facc15; margin-bottom:0.35rem; font-size:0.95rem;">Bobot: 5 Poin</div>
+                                <div class="level-desc">Analisis perbaikan eror kode (<em>debugging</em>), parameter, fungsi dengan <code>return</code>, dan prosedur <em>My Blocks</em>.</div>
+                            </div>
+                            <div class="level-card merah">
+                                <span class="level-badge"><i class="fa-solid fa-fire"></i> Kartu Merah · Sulit</span>
+                                <div style="font-weight:700; color:#f87171; margin-bottom:0.35rem; font-size:0.95rem;">Bobot: 10 Poin</div>
+                                <div class="level-desc">Analisis fungsi rekursif, <em>base case</em>, dan perancangan algoritma mandiri (HOTS).</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="inov-item" style="margin-top:1.2rem;">
+                        <span class="inov-item-label"><i class="fa-solid fa-list-check"></i> Rencana/Proses Implementasi di Kelas:</span>
+                        <div class="steps-container">
+                            <div class="step-row">
+                                <div class="step-num">1</div>
+                                <div class="step-content">
+                                    <strong>Pembentukan Tim &amp; Peran:</strong> Kelas dibagi menjadi kelompok heterogen (<em>Home Team</em>). Setiap anggota memegang peran spesifik: <em>Lead Architect</em> (Ketua), <em>Python Syntax Engineer</em> (Ahli Python), <em>Scratch Visual Designer</em> (Ahli Scratch), dan <em>QA &amp; Bug Hunter</em> (Penguji Eror).
+                                </div>
+                            </div>
+                            <div class="step-row">
+                                <div class="step-num">2</div>
+                                <div class="step-content">
+                                    <strong>Belajar Kelompok (<em>Team Study</em>):</strong> Siswa berkolaborasi melakukan <em>peer teaching</em> (saling mengajari sesuai bidang keahlian perannya).
+                                </div>
+                            </div>
+                            <div class="step-row">
+                                <div class="step-num">3</div>
+                                <div class="step-content">
+                                    <strong>Turnamen Meja Digital (<em>Tournament</em>):</strong> Siswa berotasi ke meja turnamen melawan teman selevel dari kelompok lain untuk bertarung menjawab soal digital dan menggunakan fitur taktis seperti <em>"Debug/Steal"</em> (rebut soal).
+                                </div>
+                            </div>
+                            <div class="step-row">
+                                <div class="step-num">4</div>
+                                <div class="step-content">
+                                    <strong>Rekapitulasi:</strong> Skor individu diakumulasikan secara otomatis ke <em>Live Leaderboard</em> tim.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Evaluasi -->
+                <div class="inov-section-card">
+                    <div class="inov-sec-header">
+                        <div class="inov-sec-num">4</div>
+                        <div>
+                            <div class="inov-sec-title">Evaluasi</div>
+                            <div style="font-size:0.82rem; color:var(--text-muted);">Nilai kebaruan, daya kreasi, dan dampak kemanfaatan praktis</div>
+                        </div>
+                    </div>
+                    <div class="eval-grid">
+                        <div class="eval-box">
+                            <div class="eval-box-header">
+                                <i class="fa-solid fa-sparkles"></i> Kebaruan (<em>Novelty</em>)
+                            </div>
+                            <div class="eval-box-body">
+                                Memperbarui TGT klasik melalui digitalisasi total (<em>paperless</em>), integrasi peran fungsional industri dalam kelompok belajar, serta penyandingan konsep visual (<em>Scratch</em>) dan tekstual (<em>Python</em>) secara berdampingan.
+                            </div>
+                        </div>
+                        <div class="eval-box">
+                            <div class="eval-box-header">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i> Kreativitas
+                            </div>
+                            <div class="eval-box-body">
+                                Penerapan mekanisme <em>risk-reward</em> (pemilihan level kartu berisiko) dan fitur rebut soal (<em>Steal</em>) yang menghidupkan suasana kompetisi yang sehat dan interaktif di dalam kelas.
+                            </div>
+                        </div>
+                        <div class="eval-box">
+                            <div class="eval-box-header">
+                                <i class="fa-solid fa-hand-holding-heart"></i> Kebermanfaatan
+                            </div>
+                            <div class="eval-box-body">
+                                Mampu mengatasi kecemasan siswa terhadap koding, memastikan tidak ada siswa yang pasif (<em>free-rider</em>) berkat akuntabilitas peran, serta memudahkan guru dalam mengukur pemahaman konsep koding secara komprehensif melalui LKPD refleksi dan <em>Live Leaderboard</em>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
     </div><!-- /container -->
@@ -566,63 +1326,205 @@
     </footer>
 
     <script>
-    /* ==================== ARTIFACT DATA ==================== */
+    /* ==================== ARTIFACT DATA (STRUKTUR STANDAR REFLEKSI SEMINAR) ==================== */
     const artifactDefs = [
-        { icon: 'fa-solid fa-file-contract', title: 'Analisis Perencanaan Mengajar', desc: 'Analisis produk rancangan/perencanaan pembelajaran untuk praktik mengajar mandiri', file: 'Dokumen Artefak.pdf', link: '#' },
-        { icon: 'fa-solid fa-book-open',     title: 'Analisis Materi Pembelajaran',  desc: 'Analisis materi pembelajaran yang sudah disusun dan diterapkan dalam praktik mengajar mandiri', file: 'Dokumen Artefak.pdf', link: '#' },
-        { icon: 'fa-solid fa-desktop',       title: 'Analisis Media Pembelajaran',   desc: 'Analisis media pembelajaran yang dipergunakan dalam praktik mengajar mandiri', file: 'Dokumen Artefak.pdf', link: '#' },
-        { icon: 'fa-solid fa-video',         title: 'Analisis Video Praktik Mengajar', desc: 'Analisis video pelaksanaan praktik mengajar mandiri', file: 'Dokumen Artefak.pdf', link: '#' },
-        { icon: 'fa-solid fa-users-gear',    title: 'Analisis Kegiatan Nonmengajar', desc: 'Analisis kegiatan nonmengajar yang dilaksanakan di sekolah mitra', file: 'Dokumen Artefak.pdf', link: '#' },
-        { icon: 'fa-solid fa-clipboard-check', title: 'Instrumen Penilaian & Analisis', desc: 'Instrumen penilaian yang dirancang beserta analisis hasil pelaksanaannya', file: 'Dokumen Artefak.pdf', link: '#' },
-        { icon: 'fa-solid fa-box-archive',   title: 'Kumpulan Artefak',              desc: 'Kumpulan artefak lengkap dengan desain UI/UX yang sederhana dan mudah dibaca', file: 'Dokumen Artefak.pdf', link: '#' },
+        {
+            icon: 'fa-solid fa-rotate',
+            title: 'Refleksi 4C',
+            desc: 'Uraian mengenai connection, challenge, concept, dan change terkait peran Bapak/Ibu sebagai pendidik.',
+            file: 'Lembar Refleksi 4C.pdf',
+            link: '#'
+        },
+        {
+            icon: 'fa-solid fa-magnifying-glass',
+            title: 'Analisis Artefak',
+            desc: 'Identifikasi artefak pembelajaran yang menjadi bukti dukung hasil refleksi Anda beserta alasannya.',
+            file: 'Analisis Artefak Pembelajaran.pdf',
+            link: '#'
+        },
+        {
+            icon: 'fa-solid fa-compass',
+            title: 'Kaitan Praktis',
+            desc: 'Penjelasan mengenai konsep utama yang dipelajari serta perubahan yang ingin dilakukan di masa depan.',
+            file: 'Kaitan Praktis Pembelajaran.pdf',
+            link: '#'
+        }
     ];
 
     const courseColors = {
-        ct:    { accent: '#1a7b5d', light: 'rgba(26,123,93,0.15)',  pageHref: 'course-ct.html' },
-        filos: { accent: '#7ab648', light: 'rgba(74,93,61,0.15)',   pageHref: 'course-filosofi.html' },
-        pem:   { accent: '#e74c3c', light: 'rgba(192,57,43,0.13)',  pageHref: 'course-pemahaman.html' },
-        pmbj:  { accent: '#5b7de8', light: 'rgba(26,55,153,0.15)',  pageHref: 'course-pembelajaran.html' },
-        growth:{ accent: '#22c55e', light: 'rgba(11,128,4,0.14)',   pageHref: 'course-growth.html' },
-        slek:  { accent: '#f59e0b', light: 'rgba(209,124,20,0.13)', pageHref: 'course-selektif.html' },
+        ct:          { accent: '#1a7b5d', light: 'rgba(26,123,93,0.15)',  pageHref: 'course-ct.html' },
+        filos:       { accent: '#7ab648', light: 'rgba(74,93,61,0.15)',   pageHref: 'course-filosofi.html' },
+        pem:         { accent: '#e74c3c', light: 'rgba(192,57,43,0.13)',  pageHref: 'course-pemahaman.html' },
+        pmbj:        { accent: '#5b7de8', light: 'rgba(26,55,153,0.15)',  pageHref: 'course-pembelajaran.html' },
+        pmbj_lanjut: { accent: '#0284c7', light: 'rgba(2,132,199,0.15)',  pageHref: 'course-pembelajaran-lanjutan.html' },
+        growth:      { accent: '#22c55e', light: 'rgba(11,128,4,0.14)',   pageHref: 'course-growth.html' },
+        etika:       { accent: '#b45309', light: 'rgba(180,83,9,0.15)',   pageHref: 'course-etika.html' },
+        pse:         { accent: '#0d9488', light: 'rgba(13,148,136,0.15)', pageHref: 'course-pse.html' },
+        slek:        { accent: '#f59e0b', light: 'rgba(209,124,20,0.13)', pageHref: 'course-selektif.html' },
+        inov:        { accent: '#7c3aed', light: 'rgba(124,58,237,0.15)', pageHref: '#' },
     };
+
+    /* ==================== REFLEKSI PER MATA KULIAH ==================== */
+    const refleksiDocs = {
+        ct: [
+            {
+                icon: 'fa-solid fa-pen-to-square',
+                title: 'Refleksi Computational Thinking',
+                desc: 'Refleksi mendalam mata kuliah Computational Thinking – proses berpikir komputasional dalam konteks pembelajaran',
+                file: 'Refleksi COMPUTATIONAL THINKING.pdf',
+                link: 'assets/docs/Refleksi Mata Kuliah/Refleksi COMPUTATIONAL THINKING.pdf'
+            }
+        ],
+        filos: [
+            {
+                icon: 'fa-solid fa-pen-to-square',
+                title: 'Refleksi Filosofi Pendidikan & Pendidikan Nilai',
+                desc: 'Refleksi mendalam mata kuliah Filosofi Pendidikan dan Pendidikan Nilai – landasan filosofis dan nilai dalam pendidikan',
+                file: 'Refleksi FILOSOFI PENDIDIKAN DAN PENDIDIKAN NILAI.pdf',
+                link: 'assets/docs/Refleksi Mata Kuliah/Refleksi FILOSOFI PENDIDIKAN DAN PENDIDIKAN NILAI.pdf'
+            }
+        ],
+        pem: [
+            {
+                icon: 'fa-solid fa-pen-to-square',
+                title: 'Refleksi Pemahaman Tentang Peserta Didik dan Pembelajaran',
+                desc: 'Refleksi mendalam mata kuliah Pemahaman Tentang Peserta Didik dan Pembelajaran – analisis karakteristik dan kebutuhan belajar peserta didik',
+                file: 'Refleksi PEMAHAMAN TENTANG PESERTA DIDIK DAN PEMBELAJARAN.pdf',
+                link: 'assets/docs/Refleksi Mata Kuliah/Refleksi PEMAHAMAN TENTANG PESERTA DIDIK DAN PEMBELAJARAN.pdf'
+            }
+        ],
+        pmbj: [
+            {
+                icon: 'fa-solid fa-pen-to-square',
+                title: 'Refleksi Pembelajaran Mendalam & Asesmen Dasar',
+                desc: 'Refleksi mata kuliah Pembelajaran Mendalam dan Asesmen – bagian Dasar, mencakup prinsip-prinsip dasar asesmen pembelajaran mendalam',
+                file: 'Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN DASAR.pdf',
+                link: 'assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN DASAR.pdf'
+            }
+        ],
+        pmbj_lanjut: [
+            {
+                icon: 'fa-solid fa-pen-to-square',
+                title: 'Refleksi Pembelajaran Mendalam & Asesmen Lanjutan',
+                desc: 'Refleksi mata kuliah Pembelajaran Mendalam dan Asesmen – bagian Lanjutan, mencakup strategi asesmen autentik dan tindak lanjut pembelajaran',
+                file: 'Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf',
+                link: 'assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf'
+            }
+        ],
+        growth: [
+            {
+                icon: 'fa-solid fa-pen-to-square',
+                title: 'Refleksi Growth Mindset',
+                desc: 'Refleksi mendalam mata kuliah Dasar Pola Pikir Bertumbuh (Growth Mindset) – membangun pola pikir berkembang dalam pembelajaran',
+                file: 'Refleksi GROWTH MINSET.pdf',
+                link: 'assets/docs/Refleksi Mata Kuliah/Refleksi GROWTH MINSET.pdf'
+            }
+        ],
+        etika: [
+            {
+                icon: 'fa-solid fa-pen-to-square',
+                title: 'Refleksi Etika dan Profesionalisme Guru',
+                desc: 'Refleksi mata kuliah Etika dan Profesionalisme Guru – nilai-nilai etis dan standar profesionalisme dalam profesi keguruan',
+                file: 'Refleksi ETIKA DAN PROFESIONALISME GURU.pdf',
+                link: 'assets/docs/Refleksi Mata Kuliah/Refleksi ETIKA DAN PROFESIONALISME GURU.pdf'
+            }
+        ],
+        pse: [
+            {
+                icon: 'fa-solid fa-pen-to-square',
+                title: 'Refleksi Pembelajaran Sosial Emosional',
+                desc: 'Refleksi mata kuliah Pembelajaran Sosial Emosional – pengembangan kompetensi sosial-emosional dalam praktik mengajar',
+                file: 'Refleksi PEMBELAJARAN SOSIAL EMOSIONAL.pdf',
+                link: 'assets/docs/Refleksi Mata Kuliah/Refleksi PEMBELAJARAN SOSIAL EMOSIONAL.pdf'
+            }
+        ],
+    };
+
+    /* Build one artifact card element */
+    function buildCard(a, col) {
+        const card = document.createElement('div');
+        card.className = 'artifact-card';
+        const isDisabled = !a.link || a.link === '#';
+        const btnHtml = isDisabled
+            ? `<span class="btn-eye" style="background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.3); cursor:not-allowed;" title="Belum tersedia"><i class="fa-solid fa-eye-slash"></i></span>`
+            : `<a href="${a.link}" target="_blank" class="btn-eye" style="background:${col.accent}; color:#fff;" title="Lihat PDF"><i class="fa-solid fa-eye"></i></a>`;
+        card.innerHTML = `
+            <div>
+                <div class="ac-top">
+                    <div class="ac-icon" style="background:${col.light}; color:${col.accent};">
+                        <i class="${a.icon}"></i>
+                    </div>
+                    <div>
+                        <div class="ac-title">${a.title}</div>
+                        <div class="ac-desc">${a.desc}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ac-footer">
+                <div class="ac-file">
+                    <i class="fa-solid fa-file-pdf" style="color:#e2574c; font-size:1.15rem;"></i>
+                    <div>
+                        <div class="ac-filename">${a.file}</div>
+                        <div class="ac-filetype">PDF Document</div>
+                    </div>
+                </div>
+                ${btnHtml}
+            </div>`;
+        return card;
+    }
 
     /* Render artifact cards */
     function renderArtifacts(containerId, courseKey) {
         const container = document.getElementById(containerId);
         if (!container || container.children.length > 0) return;
         const col = courseColors[courseKey];
-        artifactDefs.forEach(a => {
-            const card = document.createElement('div');
-            card.className = 'artifact-card';
-            card.innerHTML = `
-                <div>
-                    <div class="ac-top">
-                        <div class="ac-icon" style="background:${col.light}; color:${col.accent};">
-                            <i class="${a.icon}"></i>
-                        </div>
-                        <div>
-                            <div class="ac-title">${a.title}</div>
-                            <div class="ac-desc">${a.desc}</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="ac-footer">
-                    <div class="ac-file">
-                        <i class="fa-solid fa-file-pdf" style="color:#e2574c; font-size:1.15rem;"></i>
-                        <div>
-                            <div class="ac-filename">${a.file}</div>
-                            <div class="ac-filetype">PDF Document</div>
-                        </div>
-                    </div>
-                    <a href="${a.link}" target="_blank" class="btn-eye" style="background:${col.accent}; color:#fff;" title="Lihat PDF">
-                        <i class="fa-solid fa-eye"></i>
-                    </a>
-                </div>`;
-            container.appendChild(card);
-        });
+
+        /* --- Section divider: Komponen Refleksi Seminar --- */
+        const divArtefak = document.createElement('div');
+        divArtefak.style.cssText = 'grid-column:1/-1; display:flex; align-items:center; gap:1rem; margin-bottom:0.5rem;';
+        divArtefak.innerHTML = `<span style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);white-space:nowrap;"><i class="fa-solid fa-list-check" style="margin-right:0.4rem;color:${col.accent};"></i>Komponen Refleksi Seminar</span><hr style="flex:1;border:none;border-top:1px solid var(--glass-border);opacity:0.5;">`;
+        container.appendChild(divArtefak);
+
+        // Menghubungkan kartu ke halaman detail course dan dokumen asli
+        const customDefs = [
+            {
+                icon: 'fa-solid fa-rotate',
+                title: 'Refleksi 4C',
+                desc: 'Uraian mengenai connection, challenge, concept, dan change terkait peran Bapak/Ibu sebagai pendidik.',
+                file: 'Halaman Refleksi 4C',
+                link: col.pageHref ? col.pageHref + '#tab-4c' : '#'
+            },
+            {
+                icon: 'fa-solid fa-magnifying-glass',
+                title: 'Analisis Artefak',
+                desc: 'Identifikasi artefak pembelajaran yang menjadi bukti dukung hasil refleksi Anda beserta alasannya.',
+                file: 'Halaman Analisis Artefak',
+                link: col.pageHref ? col.pageHref + '#tab-artefak' : '#'
+            },
+            {
+                icon: 'fa-solid fa-compass',
+                title: 'Kaitan Praktis',
+                desc: 'Penjelasan mengenai konsep utama yang dipelajari serta perubahan yang ingin dilakukan di masa depan.',
+                file: 'Halaman Kaitan Praktis',
+                link: col.pageHref ? col.pageHref + '#tab-hasil' : '#'
+            }
+        ];
+
+        customDefs.forEach(a => container.appendChild(buildCard(a, col)));
+
+        /* --- Section divider: Dokumen LK 2 Asli --- */
+        const docs = refleksiDocs[courseKey];
+        if (docs && docs.length > 0) {
+            const divRefleksi = document.createElement('div');
+            divRefleksi.style.cssText = 'grid-column:1/-1; display:flex; align-items:center; gap:1rem; margin-top:1rem; margin-bottom:0.5rem;';
+            divRefleksi.innerHTML = `<span style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);white-space:nowrap;"><i class="fa-solid fa-file-pdf" style="margin-right:0.4rem;color:${col.accent};"></i>Dokumen Asli LK 2</span><hr style="flex:1;border:none;border-top:1px solid var(--glass-border);opacity:0.5;">`;
+            container.appendChild(divRefleksi);
+            docs.forEach(a => container.appendChild(buildCard(a, col)));
+        }
     }
 
     /* ==================== TAB SWITCH ==================== */
+
     function switchTab(tabId, btnEl) {
         // Update buttons
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -635,8 +1537,8 @@
         document.querySelectorAll('.subject-panel').forEach(p => p.classList.remove('active'));
         const panel = document.getElementById('panel-' + tabId);
         if (panel) panel.classList.add('active');
-        // Lazy render artifacts
-        if (tabId !== 'all') renderArtifacts('artifacts-' + tabId, tabId);
+        // Lazy render artifacts (skip for inov panel – uses static HTML)
+        if (tabId !== 'all' && tabId !== 'inov') renderArtifacts('artifacts-' + tabId, tabId);
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
