@@ -1123,24 +1123,32 @@ def generate_page_html(c):
             color: #086288;
         }}
         .course-main-title {{
-            font-family: 'Lora', Georgia, serif;
-            font-size: clamp(2rem, 4.5vw, 3.1rem);
-            font-weight: 700;
+            font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+            font-size: clamp(2.1rem, 4.8vw, 3.2rem);
+            font-weight: 800;
             line-height: 1.25;
             margin-bottom: 1rem;
-            background: {c['theme_gradient']};
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #ffffff 40%, #97D7FF 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+        }}
+        html[data-theme="light"] .course-main-title {{
+            background: linear-gradient(135deg, #086288 0%, #03425e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
         }}
         .course-main-subtitle {{
             max-width: 780px;
             margin: 0 auto;
             font-size: 1rem;
             line-height: 1.7;
-            color: rgba(255, 255, 255, 0.65);
+            color: #e2e8f0;
         }}
         html[data-theme="light"] .course-main-subtitle {{
-            color: #64748b;
+            color: #1e293b;
         }}
         .course-hero-line {{
             width: 70px;
@@ -1182,27 +1190,28 @@ def generate_page_html(c):
             gap: 0.55rem;
             padding: 0.65rem 1.35rem;
             border-radius: 14px;
-            font-size: 0.92rem;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.68);
-            background: transparent;
-            border: 1px solid transparent;
+            font-size: 0.94rem;
+            font-weight: 700;
+            color: #cbd5e1;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(151, 215, 255, 0.18);
             cursor: pointer;
             transition: all 0.22s ease;
             white-space: nowrap;
         }}
         .tab-btn-pill:hover {{
-            color: #fff;
-            background: rgba(255, 255, 255, 0.06);
+            color: #ffffff;
+            background: rgba(8, 98, 136, 0.25);
+            border-color: rgba(151, 215, 255, 0.4);
         }}
         .tab-btn-pill.active {{
-            background: rgba(8, 98, 136, 0.35);
-            border-color: rgba(151, 215, 255, 0.5);
-            color: #fff;
-            box-shadow: 0 4px 20px rgba(8, 98, 136, 0.3);
+            background: linear-gradient(135deg, #086288, #4D8DBA);
+            border-color: #97D7FF;
+            color: #ffffff;
+            box-shadow: 0 4px 20px rgba(8, 98, 136, 0.45);
         }}
         html[data-theme="light"] .tab-btn-pill {{
-            color: #475569;
+            color: #0f172a;
         }}
         html[data-theme="light"] .tab-btn-pill:hover {{
             color: #0a1926;
@@ -1287,7 +1296,7 @@ def generate_page_html(c):
             flex-shrink: 0;
         }}
         .card-header-title {{
-            font-family: 'Lora', Georgia, serif;
+            font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
             font-size: 1.55rem;
             font-weight: 600;
             color: #fff;
@@ -1362,10 +1371,10 @@ def generate_page_html(c):
         .c4-text {{
             font-size: 0.92rem;
             line-height: 1.8;
-            color: rgba(255, 255, 255, 0.75);
+            color: #f1f5f9;
             margin: 0;
         }}
-        html[data-theme="light"] .c4-text {{ color: #475569; }}
+        html[data-theme="light"] .c4-text {{ color: #0f172a; }}
 
         /* ─── ARTEFAK LIST & CARDS ─── */
         .artefak-grid {{
@@ -1420,10 +1429,10 @@ def generate_page_html(c):
         .artefak-card-desc {{
             font-size: 0.9rem;
             line-height: 1.7;
-            color: rgba(255, 255, 255, 0.7);
+            color: #e2e8f0;
             margin-bottom: 1.2rem;
         }}
-        html[data-theme="light"] .artefak-card-desc {{ color: #475569; }}
+        html[data-theme="light"] .artefak-card-desc {{ color: #1e293b; }}
 
         .artefak-card-footer {{
             display: flex;
@@ -1501,17 +1510,17 @@ def generate_page_html(c):
         .hasil-refleksi-text {{
             font-size: 0.98rem;
             line-height: 1.95;
-            color: rgba(255, 255, 255, 0.82);
+            color: #f8fafc;
             text-align: justify;
         }}
-        html[data-theme="light"] .hasil-refleksi-text {{ color: #334155; }}
+        html[data-theme="light"] .hasil-refleksi-text {{ color: #0f172a; }}
         .quote-box {{
             margin: 1.5rem 0;
             padding: 1.4rem 1.8rem;
             border-radius: 14px;
             background: rgba(99, 102, 241, 0.08);
             border-left: 4px solid #818cf8;
-            font-family: 'Lora', Georgia, serif;
+            font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
             font-style: italic;
             font-size: 1.05rem;
             color: #e0e7ff;
@@ -1587,7 +1596,7 @@ def generate_page_html(c):
             border-radius: 12px;
             font-size: 0.88rem;
             font-weight: 500;
-            color: rgba(255, 255, 255, 0.65);
+            color: #e2e8f0;
             cursor: pointer;
             transition: all 0.2s ease;
             text-decoration: none;
@@ -1598,13 +1607,14 @@ def generate_page_html(c):
             background: rgba(255, 255, 255, 0.04);
         }}
         .sidebar-item.active {{
-            background: rgba(99, 102, 241, 0.18);
-            border-color: rgba(129, 140, 248, 0.4);
-            color: #fff;
-            font-weight: 600;
+            background: linear-gradient(135deg, rgba(8, 98, 136, 0.5), rgba(77, 141, 186, 0.35));
+            border-color: #97D7FF;
+            color: #ffffff;
+            font-weight: 700;
+            box-shadow: 0 4px 14px rgba(8, 98, 136, 0.25);
         }}
         html[data-theme="light"] .sidebar-item {{
-            color: #64748b;
+            color: #1e293b;
         }}
         html[data-theme="light"] .sidebar-item:hover {{
             background: rgba(0, 0, 0, 0.03);
@@ -1639,13 +1649,14 @@ def generate_page_html(c):
             margin-bottom: 0.35rem;
         }}
         .topic-section-title {{
-            font-family: 'Lora', Georgia, serif;
+            font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
             font-size: 1.35rem;
             font-weight: 600;
             color: #fff;
             margin-bottom: 0.4rem;
         }}
-        html[data-theme="light"] .topic-section-title {{ color: #1e293b; }}
+        html[data-theme="light"] .topic-section-title {{ color: #0f172a; }}
+        html[data-theme="light"] .topic-section-desc {{ color: #334155; }}
         .topic-section-desc {{
             font-size: 0.88rem;
             line-height: 1.6;
@@ -1694,7 +1705,7 @@ def generate_page_html(c):
             margin-bottom: 1rem;
             flex-grow: 1;
         }}
-        html[data-theme="light"] .task-card-title {{ color: #1e293b; }}
+        html[data-theme="light"] .task-card-title {{ color: #0f172a; }}
         .task-card-bottom {{
             display: flex;
             align-items: center;
@@ -1980,25 +1991,25 @@ def generate_page_html(c):
                             <div style="font-weight:700;color:#fff;margin-bottom:0.4rem;font-size:0.95rem;">
                                 <i class="fa-solid fa-circle-question" style="color:#10b981;margin-right:6px;"></i> 1. Mana saja artefak pembelajaran yang dapat saya jadikan bukti dukung hasil refleksi ini?
                             </div>
-                            <p style="font-size:0.9rem;line-height:1.75;color:rgba(255,255,255,0.75);margin:0;">{art_q1}</p>
+                            <p style="font-size:0.9rem;line-height:1.75;color:#f1f5f9;margin:0;">{art_q1}</p>
                         </div>
 
                         <div style="background:rgba(0,0,0,0.2);padding:1.4rem;border-radius:14px;border:1px solid rgba(255,255,255,0.06);">
                             <div style="font-weight:700;color:#fff;margin-bottom:0.4rem;font-size:0.95rem;">
                                 <i class="fa-solid fa-circle-question" style="color:#10b981;margin-right:6px;"></i> 2. Mengapa artefak tersebut yang saya pilih?
                             </div>
-                            <p style="font-size:0.9rem;line-height:1.75;color:rgba(255,255,255,0.75);margin:0;">{art_q2}</p>
+                            <p style="font-size:0.9rem;line-height:1.75;color:#f1f5f9;margin:0;">{art_q2}</p>
                         </div>
 
                         <div style="background:rgba(0,0,0,0.2);padding:1.4rem;border-radius:14px;border:1px solid rgba(255,255,255,0.06);">
                             <div style="font-weight:700;color:#fff;margin-bottom:0.4rem;font-size:0.95rem;">
                                 <i class="fa-solid fa-circle-question" style="color:#10b981;margin-right:6px;"></i> 3. Bagian mana dari artefak ini yang mendukung hasil refleksi saya?
                             </div>
-                            <p style="font-size:0.9rem;line-height:1.75;color:rgba(255,255,255,0.75);margin:0;">{art_q3}</p>
+                            <p style="font-size:0.9rem;line-height:1.75;color:#f1f5f9;margin:0;">{art_q3}</p>
                         </div>
                     </div>
 
-                    <h3 style="font-family:'Lora',serif;font-size:1.25rem;color:#fff;margin-bottom:1rem;">Daftar Berkas Artefak Pembelajaran</h3>
+                    <h3 style="font-family:'Outfit',sans-serif;font-size:1.25rem;color:#fff;margin-bottom:1rem;">Daftar Berkas Artefak Pembelajaran</h3>
                     <div class="artefak-grid">
                         {artefak_cards_html}
                     </div>
@@ -2031,7 +2042,7 @@ def generate_page_html(c):
                         <h4 style="color:#fff;font-size:1.05rem;margin-bottom:0.8rem;display:flex;align-items:center;gap:0.5rem;">
                             <i class="fa-solid fa-lightbulb" style="color:#97D7FF;"></i> Rencana Perubahan &amp; Implementasi Nyata di Masa Depan
                         </h4>
-                        <ul style="color:rgba(255,255,255,0.75);font-size:0.92rem;line-height:1.8;padding-left:1.4rem;margin:0;">
+                        <ul style="color:#f1f5f9;font-size:0.92rem;line-height:1.8;padding-left:1.4rem;margin:0;">
                             <li>Menerapkan paradigma berpusat pada peserta didik di sekolah dengan menghargai keunikan latar belakang dan gaya belajar setiap anak.</li>
                             <li>Mengintegrasikan asesmen diagnostik dan formatif berkelanjutan untuk memandu proses belajar, bukan sekadar vonis nilai akhir.</li>
                             <li>Menumbuhkan iklim kelas aman, terbuka, dan ramah kesalahan melalui pembiasaan pola pikir bertumbuh (Growth Mindset).</li>
@@ -2094,7 +2105,7 @@ def generate_page_html(c):
                             </div>
                         </div>
 
-                        <p style="font-size:0.92rem;line-height:1.75;color:rgba(255,255,255,0.7);margin-bottom:2rem;">
+                        <p style="font-size:0.92rem;line-height:1.75;color:#e2e8f0;margin-bottom:2rem;">
                             Berikut adalah kumpulan berkas tugas yang telah dikerjakan selama mengikuti perkuliahan {c['short_title']}, dikelompokkan berdasarkan topik pembelajaran:
                         </p>
 
