@@ -1813,6 +1813,131 @@ def generate_page_html(c):
             height: 100%;
             border: none;
         }}
+
+        /* ─── COMPREHENSIVE RESPONSIVE STYLES FOR ALL SCREEN SIZES ─── */
+        @media (max-width: 1024px) {{
+            .course-container {{
+                padding: 0 1.25rem;
+            }}
+            .tugas-layout-grid {{
+                grid-template-columns: 240px 1fr;
+                gap: 1.2rem;
+            }}
+        }}
+
+        @media (max-width: 768px) {{
+            .course-hero {{
+                margin-bottom: 1.8rem;
+            }}
+            .course-main-title {{
+                font-size: 1.85rem !important;
+            }}
+            .course-main-subtitle {{
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }}
+            .course-tabs-wrapper {{
+                justify-content: flex-start;
+                margin-bottom: 1.8rem;
+                padding-bottom: 0.6rem;
+            }}
+            .course-tabs-nav {{
+                padding: 0.35rem;
+                gap: 0.4rem;
+            }}
+            .tab-btn-pill {{
+                padding: 0.55rem 0.95rem;
+                font-size: 0.82rem;
+            }}
+            .content-card-box {{
+                padding: 1.3rem;
+                border-radius: 16px;
+                margin-bottom: 1.8rem;
+            }}
+            .card-header-row {{
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+            }}
+            .card-header-title {{
+                font-size: 1.3rem;
+            }}
+            .grid-4c {{
+                grid-template-columns: 1fr !important;
+                gap: 1rem;
+            }}
+            .c4-box {{
+                padding: 1.2rem;
+            }}
+            .artefak-card {{
+                padding: 1.1rem;
+            }}
+            .artefak-card-footer {{
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.8rem;
+            }}
+            .artefak-actions {{
+                width: 100%;
+            }}
+            .artefak-actions button,
+            .artefak-actions a {{
+                flex: 1;
+                justify-content: center;
+                padding: 0.55rem;
+            }}
+            .pdf-viewer-frame {{
+                height: 480px;
+            }}
+            .tugas-layout-grid {{
+                grid-template-columns: 1fr !important;
+                gap: 1.4rem;
+            }}
+            .sidebar-daftar-isi {{
+                position: static;
+                padding: 1.1rem;
+                border-radius: 16px;
+            }}
+            .sidebar-menu {{
+                display: flex;
+                flex-direction: row;
+                overflow-x: auto;
+                padding-bottom: 0.4rem;
+                scrollbar-width: none;
+            }}
+            .sidebar-menu::-webkit-scrollbar {{
+                display: none;
+            }}
+            .sidebar-item {{
+                white-space: nowrap;
+                flex-shrink: 0;
+                padding: 0.5rem 0.85rem;
+                font-size: 0.82rem;
+            }}
+            .tasks-grid {{
+                grid-template-columns: 1fr;
+            }}
+            .pdf-modal-overlay {{
+                padding: 0.75rem;
+            }}
+            .pdf-modal-card {{
+                height: 94vh;
+                border-radius: 14px;
+            }}
+        }}
+
+        @media (max-width: 480px) {{
+            .course-main-title {{
+                font-size: 1.6rem !important;
+            }}
+            .tab-btn-pill {{
+                font-size: 0.78rem;
+                padding: 0.45rem 0.8rem;
+            }}
+            .pdf-viewer-frame {{
+                height: 380px;
+            }}
+        }}
     </style>
 </head>
 <body>

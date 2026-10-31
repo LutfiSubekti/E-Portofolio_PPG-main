@@ -1716,6 +1716,315 @@ html[data-theme="light"] .quote-text {
     color: #0f172a;
 }
 
+/* ═════════════════════════════════════════════════════════════
+   LIGHT THEME: HIGH-CONTRAST DARK TEXT FOR ALL PAGES
+   (UTS, UAS, SEMINAR, REFLEKSI, & MATA KULIAH)
+   ═════════════════════════════════════════════════════════════ */
+html[data-theme="light"] {
+    --text-main: #0a1926;
+    --text-muted: #334155;
+}
+
+html[data-theme="light"] body {
+    color: #0a1926;
+    background-color: #f0f7fb;
+}
+
+html[data-theme="light"] p {
+    color: #1e293b;
+}
+
+html[data-theme="light"] h1,
+html[data-theme="light"] h2,
+html[data-theme="light"] h3,
+html[data-theme="light"] h4,
+html[data-theme="light"] h5,
+html[data-theme="light"] h6 {
+    color: #0a1926 !important;
+}
+
+html[data-theme="light"] .nav-links a {
+    color: #1e293b;
+    font-weight: 600;
+}
+
+html[data-theme="light"] .nav-links a:hover {
+    color: #086288;
+}
+
+/* ── Hero Banners ── */
+html[data-theme="light"] .seminar-hero,
+html[data-theme="light"] .uts-hero,
+html[data-theme="light"] .ppl-hero,
+html[data-theme="light"] .section-hero,
+html[data-theme="light"] .refleksi-hero {
+    background: linear-gradient(135deg, rgba(8,98,136,0.12) 0%, rgba(77,141,186,0.08) 60%, rgba(151,215,255,0.05) 100%) !important;
+    border-color: rgba(8,98,136,0.2) !important;
+}
+
+html[data-theme="light"] .seminar-hero h1,
+html[data-theme="light"] .uts-hero h1,
+html[data-theme="light"] .ppl-hero h1 {
+    color: #086288 !important;
+}
+
+html[data-theme="light"] .seminar-hero p,
+html[data-theme="light"] .uts-hero p,
+html[data-theme="light"] .ppl-hero p {
+    color: #334155 !important;
+}
+
+/* ── Info Banners ── */
+html[data-theme="light"] .info-banner {
+    background: rgba(8,98,136,0.08) !important;
+    border-color: rgba(8,98,136,0.25) !important;
+}
+
+html[data-theme="light"] .info-banner p {
+    color: #1e293b !important;
+}
+
+html[data-theme="light"] .info-banner p strong {
+    color: #086288 !important;
+}
+
+/* ── Siklus Label & Badges ── */
+html[data-theme="light"] .siklus-label {
+    background: linear-gradient(135deg, rgba(8,98,136,0.12), rgba(77,141,186,0.08)) !important;
+    border-color: rgba(8,98,136,0.25) !important;
+}
+
+html[data-theme="light"] .siklus-label .siklus-num {
+    color: #086288 !important;
+}
+
+html[data-theme="light"] .siklus-label .siklus-text {
+    color: #1e293b !important;
+    border-left-color: rgba(8,98,136,0.25) !important;
+}
+
+/* ── Steps / Progress Bar ── */
+html[data-theme="light"] .steps-bar {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-color: rgba(8,98,136,0.18) !important;
+    box-shadow: 0 4px 15px rgba(8,98,136,0.06);
+}
+
+html[data-theme="light"] .step-item {
+    color: #475569 !important;
+}
+
+html[data-theme="light"] .step-item:hover {
+    color: #086288 !important;
+    background: rgba(8,98,136,0.08) !important;
+}
+
+html[data-theme="light"] .step-item.active {
+    background: rgba(8,98,136,0.15) !important;
+    color: #086288 !important;
+    border-color: rgba(8,98,136,0.3) !important;
+}
+
+/* ── Artefak Cards (UTS & UAS PPL) ── */
+html[data-theme="light"] .artefak-card {
+    background: #ffffff !important;
+    border-color: rgba(8,98,136,0.15) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+html[data-theme="light"] .artefak-card:hover {
+    border-color: #086288 !important;
+    box-shadow: 0 8px 30px rgba(8,98,136,0.12) !important;
+}
+
+html[data-theme="light"] .artefak-num {
+    background: linear-gradient(180deg, rgba(8,98,136,0.12), rgba(77,141,186,0.06)) !important;
+    border-right-color: rgba(8,98,136,0.15) !important;
+    color: #086288 !important;
+}
+
+html[data-theme="light"] .artefak-title {
+    color: #0a1926 !important;
+    font-weight: 700 !important;
+}
+
+html[data-theme="light"] .artefak-desc {
+    color: #334155 !important;
+}
+
+html[data-theme="light"] .doc-pill {
+    background: #f8fafc !important;
+    border-color: #cbd5e1 !important;
+}
+
+html[data-theme="light"] .doc-pill .pill-name {
+    color: #0f172a !important;
+    font-weight: 600 !important;
+}
+
+html[data-theme="light"] .doc-pill .pill-ext {
+    color: #475569 !important;
+}
+
+/* ── Refleksi Grids & Items ── */
+html[data-theme="light"] .refleksi-item,
+html[data-theme="light"] .glass-card {
+    background: #ffffff !important;
+    border-color: rgba(8,98,136,0.15) !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.04) !important;
+}
+
+html[data-theme="light"] .refleksi-item p,
+html[data-theme="light"] .glass-card p {
+    color: #1e293b !important;
+}
+
+/* ── Seminar Page Tabs & Cards ── */
+html[data-theme="light"] .tab-nav {
+    background: #ffffff !important;
+    border-color: rgba(8,98,136,0.15) !important;
+}
+
+html[data-theme="light"] .tab-btn {
+    color: #475569 !important;
+}
+
+html[data-theme="light"] .tab-btn:hover {
+    background: rgba(8,98,136,0.08) !important;
+    color: #086288 !important;
+}
+
+html[data-theme="light"] .tab-btn.active {
+    background: #086288 !important;
+    color: #ffffff !important;
+}
+
+html[data-theme="light"] .subject-header {
+    background: linear-gradient(135deg, rgba(8,98,136,0.12), rgba(77,141,186,0.06)) !important;
+    border: 1px solid rgba(8,98,136,0.18) !important;
+}
+
+html[data-theme="light"] .subject-header h2 {
+    color: #086288 !important;
+}
+
+html[data-theme="light"] .subject-header p {
+    color: #334155 !important;
+}
+
+html[data-theme="light"] .artifact-card {
+    background: #ffffff !important;
+    border-color: rgba(8,98,136,0.15) !important;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.04) !important;
+}
+
+html[data-theme="light"] .artifact-card .ac-title {
+    color: #0a1926 !important;
+}
+
+html[data-theme="light"] .artifact-card .ac-desc {
+    color: #334155 !important;
+}
+
+html[data-theme="light"] .artifact-card .ac-footer {
+    background: #f8fafc !important;
+    border-color: #e2e8f0 !important;
+}
+
+html[data-theme="light"] .artifact-card .ac-filename {
+    color: #0f172a !important;
+}
+
+html[data-theme="light"] .artifact-card .ac-filetype {
+    color: #475569 !important;
+}
+
+/* ── Course Tabs & Content Boxes ── */
+html[data-theme="light"] .content-card-box {
+    background: #ffffff !important;
+    border-color: rgba(8,98,136,0.15) !important;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.05) !important;
+}
+
+html[data-theme="light"] .card-header-title {
+    color: #086288 !important;
+}
+
+html[data-theme="light"] .c4-question {
+    color: #0a1926 !important;
+}
+
+html[data-theme="light"] .c4-text {
+    color: #1e293b !important;
+}
+
+html[data-theme="light"] .artefak-card-title {
+    color: #0a1926 !important;
+}
+
+html[data-theme="light"] .artefak-card-desc {
+    color: #334155 !important;
+}
+
+html[data-theme="light"] .artefak-card-filename {
+    color: #0a1926 !important;
+}
+
+html[data-theme="light"] .hasil-refleksi-text {
+    color: #1e293b !important;
+}
+
+html[data-theme="light"] .sidebar-daftar-isi {
+    background: #ffffff !important;
+    border-color: rgba(8,98,136,0.15) !important;
+}
+
+html[data-theme="light"] .sidebar-header {
+    color: #086288 !important;
+}
+
+html[data-theme="light"] .sidebar-item {
+    color: #334155 !important;
+}
+
+html[data-theme="light"] .sidebar-item.active {
+    background: rgba(8,98,136,0.12) !important;
+    border-color: #086288 !important;
+    color: #086288 !important;
+    font-weight: 700 !important;
+}
+
+html[data-theme="light"] .topic-section-title {
+    color: #0a1926 !important;
+}
+
+html[data-theme="light"] .topic-section-desc {
+    color: #334155 !important;
+}
+
+html[data-theme="light"] .task-card {
+    background: #f8fafc !important;
+    border-color: #e2e8f0 !important;
+}
+
+html[data-theme="light"] .task-card-title {
+    color: #0a1926 !important;
+}
+
+html[data-theme="light"] footer {
+    background: #f8fafc !important;
+    color: #475569 !important;
+    border-top: 1px solid rgba(8,98,136,0.12) !important;
+}
+
+html[data-theme="light"] footer h3 {
+    color: #086288 !important;
+}
+
+html[data-theme="light"] footer p {
+    color: #475569 !important;
+}
+
 /* ===============================
    Dropdown Menu Styling
    =============================== */
@@ -2260,4 +2569,232 @@ html[data-theme="light"] .hero p {
     border-color: #bfdbfe;
     color: #2563eb;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+/* ═════════════════════════════════════════════════════════════
+   UNIVERSAL RESPONSIVE ENHANCEMENTS
+   Support for all Mobile Phones, Foldables, Tablets & Laptops
+   ═════════════════════════════════════════════════════════════ */
+
+/* Smooth horizontal scroll for pill menus and steps */
+.course-tabs-wrapper,
+.steps-bar,
+.tab-nav {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+/* Base safety against overflow */
+img, svg, video, iframe {
+    max-width: 100%;
+}
+
+/* ── Tablets & Small Laptops (max-width: 1024px) ── */
+@media (max-width: 1024px) {
+    .container,
+    .course-container {
+        padding: 0 1.25rem !important;
+    }
+    .ppl-hero,
+    .uts-hero,
+    .seminar-hero {
+        padding: 2.2rem 1.8rem !important;
+    }
+    .ppl-hero::before,
+    .uts-hero .hero-deco,
+    .seminar-hero-deco {
+        font-size: 5.5rem !important;
+        opacity: 0.05 !important;
+    }
+}
+
+/* ── Mobile Devices & Phablets (max-width: 768px) ── */
+@media (max-width: 768px) {
+    /* Navbar & Logo */
+    nav {
+        padding: 0.8rem 1rem !important;
+    }
+    .logo > div {
+        padding: 4px 8px !important;
+        gap: 5px !important;
+    }
+    .logo > div img {
+        height: 22px !important;
+    }
+    .logo span {
+        font-size: 1.05rem !important;
+    }
+
+    /* Container margin from fixed navbar */
+    .container {
+        margin-top: 105px !important;
+        margin-bottom: 3.5rem !important;
+    }
+
+    /* Heroes */
+    .ppl-hero,
+    .uts-hero,
+    .seminar-hero {
+        padding: 1.8rem 1.25rem !important;
+        border-radius: 18px !important;
+        margin-bottom: 1.8rem !important;
+    }
+    .ppl-hero h1,
+    .uts-hero h1,
+    .seminar-hero h1 {
+        font-size: 1.85rem !important;
+    }
+    .ppl-hero p,
+    .uts-hero p,
+    .seminar-hero p {
+        font-size: 0.92rem !important;
+        line-height: 1.55 !important;
+    }
+    .ppl-hero::before,
+    .uts-hero .hero-deco,
+    .seminar-hero-deco {
+        display: none !important;
+    }
+
+    /* Steps bar horizontal scrolling */
+    .steps-bar {
+        padding: 0.35rem !important;
+        margin-bottom: 1.8rem !important;
+        gap: 0.2rem !important;
+    }
+    .step-item {
+        padding: 0.45rem 0.85rem !important;
+        font-size: 0.78rem !important;
+    }
+    .step-divider {
+        width: 12px !important;
+    }
+
+    /* Siklus Label */
+    .siklus-label {
+        padding: 0.6rem 1rem !important;
+        border-radius: 12px !important;
+        margin-bottom: 1.2rem !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .siklus-label .siklus-num {
+        font-size: 1.25rem !important;
+    }
+    .siklus-label .siklus-text {
+        font-size: 0.82rem !important;
+        padding-left: 0.6rem !important;
+    }
+
+    /* Artefak Cards (UTS & UAS PPL) */
+    .artefak-card {
+        flex-direction: column !important;
+        border-radius: 16px !important;
+    }
+    .artefak-num {
+        min-width: auto !important;
+        width: 100% !important;
+        height: 42px !important;
+        border-right: none !important;
+        border-bottom: 1px solid rgba(151, 215, 255, 0.2) !important;
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+        padding: 0 1.1rem !important;
+        gap: 0.5rem !important;
+        font-size: 1rem !important;
+    }
+    .artefak-body {
+        padding: 1.1rem !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.85rem !important;
+    }
+    .artefak-title {
+        font-size: 0.98rem !important;
+    }
+    .artefak-desc {
+        font-size: 0.85rem !important;
+    }
+    .artefak-action {
+        padding: 0 1.1rem 1.1rem !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.6rem !important;
+    }
+    .artefak-action > div,
+    .artefak-action a,
+    .artefak-action button {
+        width: 100% !important;
+        text-align: center !important;
+    }
+    .doc-pill {
+        display: none !important;
+    }
+
+    /* Grids & Cards */
+    .refleksi-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0.85rem !important;
+    }
+    .glass-card {
+        padding: 1.3rem !important;
+        border-radius: 16px !important;
+    }
+
+    /* Seminar Page */
+    .tab-nav {
+        overflow-x: auto !important;
+        flex-wrap: nowrap !important;
+        padding: 0.35rem !important;
+        scrollbar-width: none;
+    }
+    .tab-nav::-webkit-scrollbar {
+        display: none;
+    }
+    .tab-btn {
+        font-size: 0.78rem !important;
+        padding: 0.5rem 0.85rem !important;
+        flex-shrink: 0 !important;
+    }
+    .subject-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 1.4rem !important;
+        gap: 1rem !important;
+    }
+    .artifact-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Modals & Iframes */
+    .pdf-viewer-frame {
+        height: 480px !important;
+    }
+    .pdf-modal-card {
+        height: 94vh !important;
+        border-radius: 14px !important;
+    }
+}
+
+/* ── Small Smartphones (max-width: 480px) ── */
+@media (max-width: 480px) {
+    .logo span {
+        display: none !important;
+    }
+    .ppl-hero h1,
+    .uts-hero h1,
+    .seminar-hero h1 {
+        font-size: 1.6rem !important;
+    }
+    .info-banner {
+        padding: 0.9rem 1rem !important;
+        gap: 0.7rem !important;
+    }
+    .info-banner p {
+        font-size: 0.84rem !important;
+    }
+    .pdf-viewer-frame {
+        height: 380px !important;
+    }
 }
