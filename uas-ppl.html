@@ -273,6 +273,120 @@
             .artefak-action { padding: 0 1.2rem 1.2rem; flex-wrap: wrap; }
             .doc-pill { display: none; }
         }
+    
+        /* ---- Video Artefak Embedded Player ---- */
+        .artefak-card-video {
+            display: flex;
+            flex-direction: column;
+            background: rgba(10,25,38,0.65);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(239,68,68,0.25);
+            border-radius: 18px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .artefak-card-video:hover {
+            border-color: rgba(239,68,68,0.45);
+            box-shadow: 0 8px 30px rgba(239,68,68,0.15);
+            transform: translateY(-2px);
+        }
+        html[data-theme="light"] .artefak-card-video {
+            background: #ffffff;
+            border-color: rgba(239,68,68,0.25);
+            box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+        }
+        .video-card-top {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        html[data-theme="light"] .video-card-top {
+            border-bottom-color: rgba(0,0,0,0.06);
+        }
+        .video-player-container {
+            padding: 1.25rem 1.6rem 1.6rem;
+            background: rgba(0,0,0,0.25);
+        }
+        html[data-theme="light"] .video-player-container {
+            background: #f8fafc;
+        }
+        .video-embed-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 14px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: #000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+        }
+        .video-embed-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .video-caption-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1rem;
+            padding: 0.6rem 1rem;
+            background: rgba(255,255,255,0.04);
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        html[data-theme="light"] .video-caption-bar {
+            background: #ffffff;
+            border-color: #e2e8f0;
+        }
+        .video-caption-text {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.85);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        html[data-theme="light"] .video-caption-text {
+            color: #1e293b;
+        }
+        .video-caption-text i {
+            color: #ef4444;
+            font-size: 1.1rem;
+        }
+        .btn-yt-external {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.45rem 1rem;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-decoration: none;
+            background: linear-gradient(135deg, #e11d48, #be123c);
+            color: #fff;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(225,29,72,0.3);
+        }
+        .btn-yt-external:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(225,29,72,0.45);
+            color: #fff;
+        }
+        @media (max-width: 768px) {
+            .video-card-top {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .video-player-container {
+                padding: 1rem;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -444,29 +558,33 @@
                     </div>
                 </div>
 
-                <!-- Artefak 2 -->
-                <div class="artefak-card">
-                    <div class="artefak-num">02</div>
-                    <div class="artefak-body">
-                        <div class="artefak-icon-wrap" style="background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.3); color: #f87171;">
-                            <i class="fa-solid fa-video"></i>
-                        </div>
-                        <div class="artefak-info">
-                            <div class="artefak-title">Produk Video Pelaksanaan Praktik Mengajar Mandiri dari Rancangan atau Perencanaan Pembelajaran yang Dipilih (Siklus 2)</div>
-                            <div class="artefak-desc">Dokumentasi video rekaman utuh dan teredit dari pelaksanaan pembelajaran mandiri Siklus 2 di kelas nyata SMP Negeri 8 Malang — menampilkan implementasi metode diskusi kolaboratif dan perbaikan manajemen waktu dari evaluasi siklus sebelumnya.</div>
-                        </div>
-                    </div>
-                    <div class="artefak-action">
-                        <div class="doc-pill">
-                            <i class="fa-brands fa-youtube" style="color: #ff0000; font-size: 1.25rem;"></i>
-                            <div>
-                                <div class="pill-name">Video Praktik Siklus 2</div>
-                                <div class="pill-ext">Dokumentasi Video Pembelajaran</div>
+                <!-- Artefak 2: Video Pelaksanaan Siklus 2 -->
+                <div class="artefak-card-video">
+                    <div class="video-card-top">
+                        <div class="artefak-num" style="background: linear-gradient(180deg, rgba(239,68,68,0.25), rgba(225,29,72,0.15)); color:#f87171;">02</div>
+                        <div class="artefak-body">
+                            <div class="artefak-icon-wrap" style="background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.3); color: #f87171;">
+                                <i class="fa-solid fa-video"></i>
+                            </div>
+                            <div class="artefak-info">
+                                <div class="artefak-title">Produk Video Pelaksanaan Praktik Mengajar Mandiri dari Rancangan atau Perencanaan Pembelajaran yang Dipilih (Siklus 2)</div>
+                                <div class="artefak-desc">Dokumentasi video rekaman utuh dan teredit dari pelaksanaan pembelajaran mandiri Siklus 2 di kelas nyata SMP Negeri 8 Malang — menampilkan implementasi metode diskusi kolaboratif dan perbaikan manajemen waktu dari evaluasi siklus sebelumnya.</div>
                             </div>
                         </div>
-                        <a href="https://youtu.be/p60a3X5d2lE" target="_blank" class="btn-lihat video-btn">
-                            <i class="fa-solid fa-play"></i> Putar Video
-                        </a>
+                    </div>
+                    <div class="video-player-container">
+                        <div class="video-embed-wrapper">
+                            <iframe src="https://www.youtube.com/embed/p60a3X5d2lE?rel=0" title="Video Praktik Mengajar Mandiri Siklus 2 - UAS PPL" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="video-caption-bar">
+                            <div class="video-caption-text">
+                                <i class="fa-brands fa-youtube"></i>
+                                <span><strong>YouTube Video:</strong> Rekaman Pelaksanaan Pembelajaran Mandiri Siklus 2 · SMPN 8 Malang</span>
+                            </div>
+                            <a href="https://youtu.be/p60a3X5d2lE" target="_blank" class="btn-yt-external">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Buka di YouTube
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -532,29 +650,33 @@
                     </div>
                 </div>
 
-                <!-- Artefak 2 -->
-                <div class="artefak-card">
-                    <div class="artefak-num">02</div>
-                    <div class="artefak-body">
-                        <div class="artefak-icon-wrap" style="background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.3); color: #f87171;">
-                            <i class="fa-solid fa-video"></i>
-                        </div>
-                        <div class="artefak-info">
-                            <div class="artefak-title">Produk Video Pelaksanaan Praktik Mengajar Mandiri dari Rancangan atau Perencanaan Pembelajaran yang Dipilih (Siklus 3)</div>
-                            <div class="artefak-desc">Dokumentasi video rekaman pelaksanaan pembelajaran mandiri Siklus 3 di SMP Negeri 8 Malang — memperlihatkan interaksi aktif peserta didik dalam pemecahan masalah algoritma, penggunaan media interaktif, dan asesmen formatif berkelanjutan.</div>
-                        </div>
-                    </div>
-                    <div class="artefak-action">
-                        <div class="doc-pill">
-                            <i class="fa-brands fa-youtube" style="color: #ff0000; font-size: 1.25rem;"></i>
-                            <div>
-                                <div class="pill-name">Video Praktik Siklus 3</div>
-                                <div class="pill-ext">Dokumentasi Video Pembelajaran</div>
+                <!-- Artefak 2: Video Pelaksanaan Siklus 3 -->
+                <div class="artefak-card-video">
+                    <div class="video-card-top">
+                        <div class="artefak-num" style="background: linear-gradient(180deg, rgba(239,68,68,0.25), rgba(225,29,72,0.15)); color:#f87171;">02</div>
+                        <div class="artefak-body">
+                            <div class="artefak-icon-wrap" style="background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.3); color: #f87171;">
+                                <i class="fa-solid fa-video"></i>
+                            </div>
+                            <div class="artefak-info">
+                                <div class="artefak-title">Produk Video Pelaksanaan Praktik Mengajar Mandiri dari Rancangan atau Perencanaan Pembelajaran yang Dipilih (Siklus 3)</div>
+                                <div class="artefak-desc">Dokumentasi video rekaman pelaksanaan pembelajaran mandiri Siklus 3 di SMP Negeri 8 Malang — memperlihatkan interaksi aktif peserta didik dalam pemecahan masalah algoritma, penggunaan media interaktif, dan asesmen formatif berkelanjutan.</div>
                             </div>
                         </div>
-                        <a href="https://youtu.be/p60a3X5d2lE" target="_blank" class="btn-lihat video-btn">
-                            <i class="fa-solid fa-play"></i> Putar Video
-                        </a>
+                    </div>
+                    <div class="video-player-container">
+                        <div class="video-embed-wrapper">
+                            <iframe src="https://www.youtube.com/embed/p60a3X5d2lE?rel=0" title="Video Praktik Mengajar Mandiri Siklus 3 - UAS PPL" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="video-caption-bar">
+                            <div class="video-caption-text">
+                                <i class="fa-brands fa-youtube"></i>
+                                <span><strong>YouTube Video:</strong> Rekaman Pelaksanaan Pembelajaran Mandiri Siklus 3 · SMPN 8 Malang</span>
+                            </div>
+                            <a href="https://youtu.be/p60a3X5d2lE" target="_blank" class="btn-yt-external">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Buka di YouTube
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -620,29 +742,33 @@
                     </div>
                 </div>
 
-                <!-- Artefak 2 -->
-                <div class="artefak-card">
-                    <div class="artefak-num">02</div>
-                    <div class="artefak-body">
-                        <div class="artefak-icon-wrap" style="background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.3); color: #f87171;">
-                            <i class="fa-solid fa-video"></i>
-                        </div>
-                        <div class="artefak-info">
-                            <div class="artefak-title">Produk Video Pelaksanaan Praktik Mengajar Mandiri dari Rancangan atau Perencanaan Pembelajaran yang Dipilih (Siklus 4)</div>
-                            <div class="artefak-desc">Dokumentasi video rekaman puncak pelaksanaan praktik mengajar mandiri Siklus 4 di kelas nyata SMP Negeri 8 Malang — merekam interaksi kelas dinamis, penerapan pembelajaran diferensiasi tuntas, asesmen formatif real-time, serta antusiasme tinggi siswa pada penyelesaian tantangan algoritma.</div>
-                        </div>
-                    </div>
-                    <div class="artefak-action">
-                        <div class="doc-pill">
-                            <i class="fa-brands fa-youtube" style="color: #ff0000; font-size: 1.25rem;"></i>
-                            <div>
-                                <div class="pill-name">Video Praktik Siklus 4 UAS</div>
-                                <div class="pill-ext">Dokumentasi Video Pembelajaran</div>
+                <!-- Artefak 2: Video Pelaksanaan Siklus 4 -->
+                <div class="artefak-card-video">
+                    <div class="video-card-top">
+                        <div class="artefak-num" style="background: linear-gradient(180deg, rgba(239,68,68,0.25), rgba(225,29,72,0.15)); color:#f87171;">02</div>
+                        <div class="artefak-body">
+                            <div class="artefak-icon-wrap" style="background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.3); color: #f87171;">
+                                <i class="fa-solid fa-video"></i>
+                            </div>
+                            <div class="artefak-info">
+                                <div class="artefak-title">Produk Video Pelaksanaan Praktik Mengajar Mandiri dari Rancangan atau Perencanaan Pembelajaran yang Dipilih (Siklus 4)</div>
+                                <div class="artefak-desc">Dokumentasi video rekaman puncak pelaksanaan praktik mengajar mandiri Siklus 4 di kelas nyata SMP Negeri 8 Malang — merekam interaksi kelas dinamis, penerapan pembelajaran diferensiasi tuntas, asesmen formatif real-time, serta antusiasme tinggi siswa pada penyelesaian tantangan algoritma.</div>
                             </div>
                         </div>
-                        <a href="https://youtu.be/p60a3X5d2lE" target="_blank" class="btn-lihat video-btn">
-                            <i class="fa-solid fa-play"></i> Putar Video
-                        </a>
+                    </div>
+                    <div class="video-player-container">
+                        <div class="video-embed-wrapper">
+                            <iframe src="https://www.youtube.com/embed/p60a3X5d2lE?rel=0" title="Video Praktik Mengajar Mandiri Siklus 4 - UAS PPL" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="video-caption-bar">
+                            <div class="video-caption-text">
+                                <i class="fa-brands fa-youtube"></i>
+                                <span><strong>YouTube Video:</strong> Rekaman Pelaksanaan Pembelajaran Mandiri Siklus 4 · SMPN 8 Malang</span>
+                            </div>
+                            <a href="https://youtu.be/p60a3X5d2lE" target="_blank" class="btn-yt-external">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Buka di YouTube
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

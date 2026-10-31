@@ -106,7 +106,7 @@
             border-color: rgba(8, 98, 136, 0.2);
         }
         .refleksi-title {
-            font-family: 'Lora', Georgia, serif;
+            font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
             font-size: clamp(2.2rem, 4.8vw, 3.4rem);
             font-weight: 700;
             line-height: 1.25;
@@ -224,7 +224,7 @@
             color: #086288;
         }
         .section-heading {
-            font-family: 'Lora', Georgia, serif;
+            font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
             font-size: 1.65rem;
             font-weight: 700;
             color: #fff;
@@ -242,7 +242,7 @@
             border-left: 4px solid #4D8DBA;
             background: rgba(8, 98, 136, 0.12);
             border-radius: 0 14px 14px 0;
-            font-family: 'Lora', Georgia, serif;
+            font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
             font-style: italic;
             font-size: 1.05rem;
             line-height: 1.8;
@@ -370,6 +370,297 @@
         html[data-theme="light"] .plan-text { color: #334155; }
         .plan-text strong { color: #FFEFC4; }
         html[data-theme="light"] .plan-text strong { color: #086288; }
+    
+        /* ─── Evidence & Artifact Showcase Grid ─── */
+        .evidence-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.8rem;
+        }
+        .evidence-card {
+            background: rgba(15, 23, 42, 0.65);
+            border: 1px solid rgba(151, 215, 255, 0.18);
+            border-radius: 16px;
+            padding: 1.35rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.28s ease;
+        }
+        .evidence-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(151, 215, 255, 0.45);
+            box-shadow: 0 12px 30px rgba(8, 98, 136, 0.22);
+            background: rgba(8, 98, 136, 0.15);
+        }
+        html[data-theme="light"] .evidence-card {
+            background: #ffffff;
+            border-color: rgba(8, 98, 136, 0.16);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+        }
+        html[data-theme="light"] .evidence-card:hover {
+            border-color: #086288;
+            box-shadow: 0 8px 25px rgba(8, 98, 136, 0.15);
+        }
+        .evidence-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.9rem;
+            margin-bottom: 0.9rem;
+        }
+        .evidence-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            background: rgba(8, 98, 136, 0.25);
+            color: #97D7FF;
+            border: 1px solid rgba(151, 215, 255, 0.3);
+        }
+        html[data-theme="light"] .evidence-icon {
+            background: rgba(8, 98, 136, 0.1);
+            color: #086288;
+            border-color: rgba(8, 98, 136, 0.2);
+        }
+        .evidence-tag {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #97D7FF;
+            margin-bottom: 0.2rem;
+        }
+        html[data-theme="light"] .evidence-tag {
+            color: #086288;
+        }
+        .evidence-title {
+            font-size: 0.96rem;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.35;
+        }
+        html[data-theme="light"] .evidence-title {
+            color: #0a1926;
+        }
+        .evidence-desc {
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            line-height: 1.5;
+            margin-bottom: 1.1rem;
+            flex-grow: 1;
+        }
+        html[data-theme="light"] .evidence-desc {
+            color: #334155;
+        }
+        .evidence-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            gap: 0.6rem;
+        }
+        html[data-theme="light"] .evidence-footer {
+            border-top-color: rgba(0, 0, 0, 0.08);
+        }
+        .evidence-file-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            overflow: hidden;
+        }
+        .evidence-file-info i {
+            color: #e2574c;
+            font-size: 1.15rem;
+            flex-shrink: 0;
+        }
+        .evidence-filename {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 140px;
+        }
+        html[data-theme="light"] .evidence-filename {
+            color: #0f172a;
+        }
+        .evidence-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            flex-shrink: 0;
+        }
+        .btn-artefak-view,
+        .btn-artefak-dl {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+            padding: 0.42rem 0.85rem;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.22s ease;
+        }
+        .btn-artefak-view {
+            background: linear-gradient(135deg, #086288, #4D8DBA);
+            color: #fff;
+            border: none;
+            box-shadow: 0 4px 12px rgba(8, 98, 136, 0.3);
+        }
+        .btn-artefak-view:hover {
+            background: linear-gradient(135deg, #03425e, #086288);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(8, 98, 136, 0.45);
+            color: #fff;
+        }
+        .btn-artefak-dl {
+            background: rgba(151, 215, 255, 0.12);
+            color: #97D7FF;
+            border: 1px solid rgba(151, 215, 255, 0.3);
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            border-radius: 50%;
+        }
+        .btn-artefak-dl:hover {
+            background: rgba(151, 215, 255, 0.25);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        html[data-theme="light"] .btn-artefak-dl {
+            background: rgba(8, 98, 136, 0.08);
+            color: #086288;
+            border-color: rgba(8, 98, 136, 0.2);
+        }
+
+        /* ─── PDF Modal Lightbox ─── */
+        .pdf-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(10px);
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .pdf-modal-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        .pdf-modal-card {
+            width: 100%;
+            max-width: 1050px;
+            height: 90vh;
+            background: #0f172a;
+            border: 1px solid rgba(151, 215, 255, 0.25);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.7);
+            transform: translateY(20px) scale(0.97);
+            transition: all 0.35s cubic-bezier(0.34,1.2,0.64,1);
+        }
+        .pdf-modal-overlay.open .pdf-modal-card {
+            transform: translateY(0) scale(1);
+        }
+        html[data-theme="light"] .pdf-modal-card {
+            background: #ffffff;
+            border-color: rgba(8, 98, 136, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+        .pdf-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            background: rgba(8, 98, 136, 0.25);
+            border-bottom: 1px solid rgba(151, 215, 255, 0.18);
+        }
+        html[data-theme="light"] .pdf-modal-header {
+            background: rgba(8, 98, 136, 0.08);
+            border-bottom-color: rgba(8, 98, 136, 0.15);
+        }
+        .pdf-modal-title {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        html[data-theme="light"] .pdf-modal-title {
+            color: #086288;
+        }
+        .pdf-modal-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .btn-modal-dl {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.45rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            background: #10b981;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .btn-modal-dl:hover {
+            filter: brightness(1.15);
+        }
+        .btn-modal-close {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #fff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+        .btn-modal-close:hover {
+            background: rgba(239, 68, 68, 0.25);
+            color: #f87171;
+            border-color: rgba(239, 68, 68, 0.4);
+        }
+        html[data-theme="light"] .btn-modal-close {
+            background: rgba(0, 0, 0, 0.06);
+            border-color: rgba(0, 0, 0, 0.1);
+            color: #334155;
+        }
+        .pdf-modal-body {
+            flex: 1;
+            position: relative;
+        }
+        .pdf-modal-body iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
     </style>
 </head>
 <body>
@@ -628,6 +919,444 @@
             </div>
         </section>
 
+        
+        <!-- Section 5: Bukti Artefak Pembelajaran Program PPG -->
+        <section class="refleksi-section" id="bukti-artefak" style="scroll-margin-top: 130px;">
+            <div class="section-header-pill">
+                <i class="fa-solid fa-file-shield"></i> Bagian 5 · Bukti Dukung Artefak Portofolio
+            </div>
+            <h2 class="section-heading">
+                <i class="fa-solid fa-folder-open"></i> Bukti Artefak PDF Pengalaman Belajar PPG
+            </h2>
+            <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.7; margin-bottom:1.5rem;">
+                Berikut adalah kumpulan berkas dokumen artefak asli hasil tugas refleksi terstruktur (LK 2), modul ajar praktik mengajar mandiri (RPM), perangkat asesmen autentik, serta instrumen penilaian supervisi Guru Pamong selama menempuh Program PPG Prajabatan:
+            </p>
+
+            <div class="evidence-grid">
+
+                <!-- 1. Filosofi Pendidikan -->
+                <div class="evidence-card">
+                    <div>
+                        <div class="evidence-header">
+                            <div class="evidence-icon"><i class="fa-solid fa-feather-pointed"></i></div>
+                            <div>
+                                <div class="evidence-tag">Mata Kuliah Inti</div>
+                                <div class="evidence-title">Refleksi Filosofi Pendidikan &amp; Nilai</div>
+                            </div>
+                        </div>
+                        <div class="evidence-desc">
+                            Dokumen refleksi sistematis konsep sistem Among KHD, kodrat alam-zaman, studi kasus Sokola Rimba, dan komitmen guru humanis.
+                        </div>
+                    </div>
+                    <div class="evidence-footer">
+                        <div class="evidence-file-info">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span class="evidence-filename" title="Refleksi FILOSOFI PENDIDIKAN DAN PENDIDIKAN NILAI.pdf">Refleksi Filosofi Pendidikan.pdf</span>
+                        </div>
+                        <div class="evidence-actions">
+                            <button class="btn-artefak-view" onclick="openEvidenceModal('assets/docs/Refleksi%20Mata%20Kuliah/Refleksi%20FILOSOFI%20PENDIDIKAN%20DAN%20PENDIDIKAN%20NILAI.pdf', 'Refleksi Filosofi Pendidikan dan Nilai')">
+                                <i class="fa-solid fa-eye"></i> Lihat
+                            </button>
+                            <a class="btn-artefak-dl" href="assets/docs/Refleksi%20Mata%20Kuliah/Refleksi%20FILOSOFI%20PENDIDIKAN%20DAN%20PENDIDIKAN%20NILAI.pdf" download title="Unduh PDF">
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Computational Thinking -->
+                <div class="evidence-card">
+                    <div>
+                        <div class="evidence-header">
+                            <div class="evidence-icon"><i class="fa-solid fa-microchip"></i></div>
+                            <div>
+                                <div class="evidence-tag">Mata Kuliah Inti</div>
+                                <div class="evidence-title">Refleksi Computational Thinking</div>
+                            </div>
+                        </div>
+                        <div class="evidence-desc">
+                            Integrasi 4 pilar CT (dekomposisi, pola, abstraksi, algoritma) ke dalam pemecahan masalah nyata dan proyek coding siswa SMP.
+                        </div>
+                    </div>
+                    <div class="evidence-footer">
+                        <div class="evidence-file-info">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span class="evidence-filename" title="Refleksi COMPUTATIONAL THINKING.pdf">Refleksi CT.pdf</span>
+                        </div>
+                        <div class="evidence-actions">
+                            <button class="btn-artefak-view" onclick="openEvidenceModal('assets/docs/Refleksi%20Mata%20Kuliah/Refleksi%20COMPUTATIONAL%20THINKING.pdf', 'Refleksi Computational Thinking')">
+                                <i class="fa-solid fa-eye"></i> Lihat
+                            </button>
+                            <a class="btn-artefak-dl" href="assets/docs/Refleksi%20Mata%20Kuliah/Refleksi%20COMPUTATIONAL%20THINKING.pdf" download title="Unduh PDF">
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Pemahaman Peserta Didik -->
+                <div class="evidence-card">
+                    <div>
+                        <div class="evidence-header">
+                            <div class="evidence-icon"><i class="fa-solid fa-users-viewfinder"></i></div>
+                            <div>
+                                <div class="evidence-tag">Mata Kuliah Inti</div>
+                                <div class="evidence-title">Refleksi Pemahaman Peserta Didik</div>
+                            </div>
+                        </div>
+                        <div class="evidence-desc">
+                            Studi profiling peserta didik, pemetaan kesiapan belajar kognitif dan non-kognitif, serta implementasi TaRL di ruang kelas.
+                        </div>
+                    </div>
+                    <div class="evidence-footer">
+                        <div class="evidence-file-info">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span class="evidence-filename" title="Refleksi PEMAHAMAN TENTANG PESERTA DIDIK DAN PEMBELAJARANNYA.pdf">Refleksi Pemahaman Siswa.pdf</span>
+                        </div>
+                        <div class="evidence-actions">
+                            <button class="btn-artefak-view" onclick="openEvidenceModal('assets/docs/Refleksi%20Mata%20Kuliah/Refleksi%20PEMAHAMAN%20TENTANG%20PESERTA%20DIDIK%20DAN%20PEMBELAJARANNYA.pdf', 'Refleksi Pemahaman Tentang Peserta Didik')">
+                                <i class="fa-solid fa-eye"></i> Lihat
+                            </button>
+                            <a class="btn-artefak-dl" href="assets/docs/Refleksi%20Mata%20Kuliah/Refleksi%20PEMAHAMAN%20TENTANG%20PESERTA%20DIDIK%20DAN%20PEMBELAJARANNYA.pdf" download title="Unduh PDF">
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Pembelajaran Mendalam & Asesmen Dasar -->
+                <div class="evidence-card">
+                    <div>
+                        <div class="evidence-header">
+                            <div class="evidence-icon"><i class="fa-solid fa-chart-line"></i></div>
+                            <div>
+                                <div class="evidence-tag">Mata Kuliah Inti</div>
+                                <div class="evidence-title">Pembelajaran &amp; Asesmen Dasar</div>
+                            </div>
+                        </div>
+                        <div class="evidence-desc">
+                            Rancangan rubrik penilaian autentik, asesmen diagnostik, formatif, dan sumatif yang mengukur pemahaman konsep secara mendalam.
+                        </div>
+                    </div>
+                    <div class="evidence-footer">
+                        <div class="evidence-file-info">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span class="evidence-filename" title="Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN DASAR.pdf">Asesmen Dasar.pdf</span>
+                        </div>
+                        <div class="evidence-actions">
+                            <button class="btn-artefak-view" onclick="openEvidenceModal('assets/docs/Refleksi%20Mata%20Kuliah/Refleksi%20PEMBELAJARAN%20MENDALAM%20DAN%20ASESMEN%20DASAR.pdf', 'Pembelajaran Mendalam dan Asesmen Dasar')">
+                                <i class="fa-solid fa-eye"></i> Lihat
+                            </button>
+                            <a class="btn-artefak-dl" href="assets/docs/Refleksi%20Mata%20Kuliah/Refleksi%20PEMBELAJARAN%20MENDALAM%20DAN%20ASESMEN%20DASAR.pdf" download title="Unduh PDF">
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Pembelajaran Mendalam & Asesmen Lanjutan -->
+                <div class="evidence-card">
+                    <div>
+                        <div class="evidence-header">
+                            <div class="evidence-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                            <div>
+                                <div class="evidence-tag">Mata Kuliah Lanjutan</div>
+                                <div class="evidence-title">Pembelajaran &amp; Asesmen Lanjutan</div>
+                            </div>
+                        </div>
+                        <div class="evidence-desc">
+                            Evaluasi efektivitas asesmen berbasis portofolio digital, feedback deskriptif, dan tindak lanjut remedial-pengayaan berbasis data.
+                        </div>
+                    </div>
+                    <div class="evidence-footer">
+                        <div class="evidence-file-info">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span class="evidence-filename" title="Refleksi PEMBELAJARAN MENDALAM DAN ASESMEN LANJUTAN.pdf">Asesmen Lanjutan.pdf</span>
+                        </div>
+                        <div class="evidence-actions">
+                            <button class="btn-artefak-view" onclick="openEvidenceModal('assets/docs/Refleksi%20Mata%20Kuliah/Refleksi%20PEMBELAJARAN%20MENDALAM%20DAN%20ASESMEN%20LANJUTAN.pdf', 'Pembelajaran Mendalam dan Asesmen Lanjutan')">
+                                <i class="fa-solid fa-eye"></i> Lihat
+                            </button>
+                            <a class="btn-artefak-dl" href="assets/docs/Refleksi%20Mata%20Kuliah/Refleksi%20PEMBELAJARAN%20MENDALAM%20DAN%20ASESMEN%20LANJUTAN.pdf" download title="Unduh PDF">
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Dasar Pola Pikir Bertumbuh (Growth Mindset) -->
+                <div class="evidence-card">
+                    <div>
+                        <div class="evidence-header">
+                            <div class="evidence-icon"><i class="fa-solid fa-brain"></i></div>
+                            <div>
+                                <div class="evidence-tag">Mata Kuliah Elektif</div>
+                                <div class="evidence-title">Refleksi Growth Mindset</div>
+                            </div>
+                        </div>
+                        <div class="evidence-desc">
+                            Strategi menumbuhkan budaya belajar dari kesalahan (The Power of Yet), mereduksi coding anxiety, dan menata iklim kelas yang suportif.
+                        </div>
+                    </div>
+                    <div class="evidence-footer">
+                        <div class="evidence-file-info">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span class="evidence-filename" title="Refleksi GROWTH MINSET.pdf">Refleksi Growth Mindset.pdf</span>
+                        </div>
+                        <div class="evidence-actions">
+                            <button class="btn-artefak-view" onclick="openEvidenceModal('assets/docs/Refleksi%20Mata%20Kuliah/Refleksi%20GROWTH%20MINSET.pdf', 'Refleksi Dasar Pola Pikir Bertumbuh')">
+                                <i class="fa-solid fa-eye"></i> Lihat
+                            </button>
+                            <a class="btn-artefak-dl" href="assets/docs/Refleksi%20Mata%20Kuliah/Refleksi%20GROWTH%20MINSET.pdf" download title="Unduh PDF">
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Etika dan Profesionalisme Guru -->
+                <div class="evidence-card">
+                    <div>
+                        <div class="evidence-header">
+                            <div class="evidence-icon"><i class="fa-solid fa-user-shield"></i></div>
+                            <div>
+                                <div class="evidence-tag">Mata Kuliah Inti</div>
+                                <div class="evidence-title">Etika &amp; Profesionalisme Guru</div>
+                            </div>
+                        </div>
+                        <div class="evidence-desc">
+                            Kajian studi kasus dilema etika pendidikan, 9 langkah pengujian keputusan etis, serta peta jalan pengembangan keprofesian berkelanjutan.
+                        </div>
+                    </div>
+                    <div class="evidence-footer">
+                        <div class="evidence-file-info">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span class="evidence-filename" title="Refleksi ETIKA DAN PROFESIONALISME GURU.pdf">Refleksi Etika Guru.pdf</span>
+                        </div>
+                        <div class="evidence-actions">
+                            <button class="btn-artefak-view" onclick="openEvidenceModal('assets/docs/Refleksi%20Mata%20Kuliah/Refleksi%20ETIKA%20DAN%20PROFESIONALISME%20GURU.pdf', 'Refleksi Etika dan Profesionalisme Guru')">
+                                <i class="fa-solid fa-eye"></i> Lihat
+                            </button>
+                            <a class="btn-artefak-dl" href="assets/docs/Refleksi%20Mata%20Kuliah/Refleksi%20ETIKA%20DAN%20PROFESIONALISME%20GURU.pdf" download title="Unduh PDF">
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Pembelajaran Sosial Emosional -->
+                <div class="evidence-card">
+                    <div>
+                        <div class="evidence-header">
+                            <div class="evidence-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                            <div>
+                                <div class="evidence-tag">Mata Kuliah Inti</div>
+                                <div class="evidence-title">Pembelajaran Sosial Emosional</div>
+                            </div>
+                        </div>
+                        <div class="evidence-desc">
+                            Integrasi 5 kompetensi CASEL (kesadaran diri, manajemen diri, relasi, keputusan bertanggung jawab) dan teknik mindfulness di kelas.
+                        </div>
+                    </div>
+                    <div class="evidence-footer">
+                        <div class="evidence-file-info">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span class="evidence-filename" title="Refleksi PEMBELAJARAN SOSIAL EMOSIONAL.pdf">Refleksi PSE CASEL.pdf</span>
+                        </div>
+                        <div class="evidence-actions">
+                            <button class="btn-artefak-view" onclick="openEvidenceModal('assets/docs/Refleksi%20Mata%20Kuliah/Refleksi%20PEMBELAJARAN%20SOSIAL%20EMOSIONAL.pdf', 'Refleksi Pembelajaran Sosial Emosional')">
+                                <i class="fa-solid fa-eye"></i> Lihat
+                            </button>
+                            <a class="btn-artefak-dl" href="assets/docs/Refleksi%20Mata%20Kuliah/Refleksi%20PEMBELAJARAN%20SOSIAL%20EMOSIONAL.pdf" download title="Unduh PDF">
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Modul Ajar Siklus 1 PPLM (UTS) -->
+                <div class="evidence-card">
+                    <div>
+                        <div class="evidence-header">
+                            <div class="evidence-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+                            <div>
+                                <div class="evidence-tag">Praktik Mengajar (UTS)</div>
+                                <div class="evidence-title">Modul Ajar Siklus 1 (PPLM)</div>
+                            </div>
+                        </div>
+                        <div class="evidence-desc">
+                            Rancangan Pembelajaran Modul Ajar (RPM) Siklus 1 mengajar mandiri di SMP Negeri 8 Malang materi dasar Analisis Data &amp; Pemrograman.
+                        </div>
+                    </div>
+                    <div class="evidence-footer">
+                        <div class="evidence-file-info">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span class="evidence-filename" title="RPM_Siklus 1_PPLM_Lutfi Subekti.pdf">RPM Siklus 1.pdf</span>
+                        </div>
+                        <div class="evidence-actions">
+                            <button class="btn-artefak-view" onclick="openEvidenceModal('assets/docs/modu%20ajar/RPM_Siklus%201_PPLM_Lutfi%20Subekti.pdf', 'Rancangan Pembelajaran Siklus 1 (UTS PPL)')">
+                                <i class="fa-solid fa-eye"></i> Lihat
+                            </button>
+                            <a class="btn-artefak-dl" href="assets/docs/modu%20ajar/RPM_Siklus%201_PPLM_Lutfi%20Subekti.pdf" download title="Unduh PDF">
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Modul Ajar Siklus 2 PPLM (UAS) -->
+                <div class="evidence-card">
+                    <div>
+                        <div class="evidence-header">
+                            <div class="evidence-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+                            <div>
+                                <div class="evidence-tag">Praktik Mengajar (UAS)</div>
+                                <div class="evidence-title">Modul Ajar Siklus 2 (PPLM)</div>
+                            </div>
+                        </div>
+                        <div class="evidence-desc">
+                            Perangkat pembelajaran mandiri Siklus 2 dengan diferensiasi proses dan penguatan scaffolding kolaboratif kelompok belajar.
+                        </div>
+                    </div>
+                    <div class="evidence-footer">
+                        <div class="evidence-file-info">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span class="evidence-filename" title="RPM_Siklus 2_PPLM_Lutfi Subekti.pdf">RPM Siklus 2.pdf</span>
+                        </div>
+                        <div class="evidence-actions">
+                            <button class="btn-artefak-view" onclick="openEvidenceModal('assets/docs/modu%20ajar/RPM_Siklus%202_PPLM_Lutfi%20Subekti.pdf', 'Rancangan Pembelajaran Siklus 2')">
+                                <i class="fa-solid fa-eye"></i> Lihat
+                            </button>
+                            <a class="btn-artefak-dl" href="assets/docs/modu%20ajar/RPM_Siklus%202_PPLM_Lutfi%20Subekti.pdf" download title="Unduh PDF">
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11. Modul Ajar Siklus 3 PPLM (UAS) -->
+                <div class="evidence-card">
+                    <div>
+                        <div class="evidence-header">
+                            <div class="evidence-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+                            <div>
+                                <div class="evidence-tag">Praktik Mengajar (UAS)</div>
+                                <div class="evidence-title">Modul Ajar Siklus 3 (PPLM)</div>
+                            </div>
+                        </div>
+                        <div class="evidence-desc">
+                            Rancangan modul ajar berbasis penugasan berjenjang, instrumen penilaian autentik, serta fail-safe konektivitas laboratorium komputasi.
+                        </div>
+                    </div>
+                    <div class="evidence-footer">
+                        <div class="evidence-file-info">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span class="evidence-filename" title="RPM_Siklus 3_PPLM_Lutfi Subekti.pdf">RPM Siklus 3.pdf</span>
+                        </div>
+                        <div class="evidence-actions">
+                            <button class="btn-artefak-view" onclick="openEvidenceModal('assets/docs/modu%20ajar/RPM_Siklus%203_PPLM_Lutfi%20Subekti.pdf', 'Rancangan Pembelajaran Siklus 3')">
+                                <i class="fa-solid fa-eye"></i> Lihat
+                            </button>
+                            <a class="btn-artefak-dl" href="assets/docs/modu%20ajar/RPM_Siklus%203_PPLM_Lutfi%20Subekti.pdf" download title="Unduh PDF">
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12. Modul Ajar Siklus 4 PPLM (Siklus Puncak) -->
+                <div class="evidence-card">
+                    <div>
+                        <div class="evidence-header">
+                            <div class="evidence-icon"><i class="fa-solid fa-award"></i></div>
+                            <div>
+                                <div class="evidence-tag">Siklus Puncak (UAS)</div>
+                                <div class="evidence-title">Modul Ajar Siklus 4 (Final)</div>
+                            </div>
+                        </div>
+                        <div class="evidence-desc">
+                            Master modul ajar terintegrasi puncak Siklus 4 memadukan gamifikasi digital TGT-CodeArena dan instrumen asesmen komprehensif bersama Guru Pamong.
+                        </div>
+                    </div>
+                    <div class="evidence-footer">
+                        <div class="evidence-file-info">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span class="evidence-filename" title="RPM_Siklus 4_PPLM_Lutfi Subekti.pdf">RPM Siklus 4 Final.pdf</span>
+                        </div>
+                        <div class="evidence-actions">
+                            <button class="btn-artefak-view" onclick="openEvidenceModal('assets/docs/modu%20ajar/RPM_Siklus%204_PPLM_Lutfi%20Subekti.pdf', 'Rancangan Pembelajaran Siklus 4 (Siklus Puncak)')">
+                                <i class="fa-solid fa-eye"></i> Lihat
+                            </button>
+                            <a class="btn-artefak-dl" href="assets/docs/modu%20ajar/RPM_Siklus%204_PPLM_Lutfi%20Subekti.pdf" download title="Unduh PDF">
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 13. Kartu Soal Inovasi Digital TGT-CodeArena -->
+                <div class="evidence-card">
+                    <div>
+                        <div class="evidence-header">
+                            <div class="evidence-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                            <div>
+                                <div class="evidence-tag">Inovasi Pembelajaran</div>
+                                <div class="evidence-title">Kartu Soal Inovasi 3 Level A4</div>
+                            </div>
+                        </div>
+                        <div class="evidence-desc">
+                            Dek kartu soal bertingkat (Hijau: Mudah, Kuning: Sedang, Merah: Sulit) untuk turnamen koding TGT-CodeArena Scratch &amp; Python.
+                        </div>
+                    </div>
+                    <div class="evidence-footer">
+                        <div class="evidence-file-info">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span class="evidence-filename" title="Kartu_Soal_Informatika_SMP_3_Level_A4_Siap_Cetak.pdf">Kartu Soal TGT.pdf</span>
+                        </div>
+                        <div class="evidence-actions">
+                            <button class="btn-artefak-view" onclick="openEvidenceModal('assets/docs/inovasi/Kartu_Soal_Informatika_SMP_3_Level_A4_Siap_Cetak.pdf', 'Kartu Soal Inovasi TGT-CodeArena Digital')">
+                                <i class="fa-solid fa-eye"></i> Lihat
+                            </button>
+                            <a class="btn-artefak-dl" href="assets/docs/inovasi/Kartu_Soal_Informatika_SMP_3_Level_A4_Siap_Cetak.pdf" download title="Unduh PDF">
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 14. Instrumen Penilaian Guru Pamong -->
+                <div class="evidence-card">
+                    <div>
+                        <div class="evidence-header">
+                            <div class="evidence-icon"><i class="fa-solid fa-signature"></i></div>
+                            <div>
+                                <div class="evidence-tag">Instrumen Supervisi</div>
+                                <div class="evidence-title">Instrumen Penilaian Guru Pamong</div>
+                            </div>
+                        </div>
+                        <div class="evidence-desc">
+                            Berkas instrumen penilaian autentik supervisi praktik mengajar mandiri di kelas oleh Guru Pamong SMP Negeri 8 Malang.
+                        </div>
+                    </div>
+                    <div class="evidence-footer">
+                        <div class="evidence-file-info">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span class="evidence-filename" title="INSTRUMEN_PENILAIAN_GURU PAMONG pdf.pdf">Penilaian Pamong.pdf</span>
+                        </div>
+                        <div class="evidence-actions">
+                            <button class="btn-artefak-view" onclick="openEvidenceModal('assets/docs/INSTRUMEN_PENILAIAN_GURU%20PAMONG%20pdf.pdf', 'Instrumen Penilaian Guru Pamong SMPN 8 Malang')">
+                                <i class="fa-solid fa-eye"></i> Lihat
+                            </button>
+                            <a class="btn-artefak-dl" href="assets/docs/INSTRUMEN_PENILAIAN_GURU%20PAMONG%20pdf.pdf" download title="Unduh PDF">
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
         <!-- Navigation Footnote -->
         <div style="text-align:center; margin-top:3.5rem;">
             <a href="seminar.html" class="btn-primary" style="display:inline-flex; align-items:center; gap:0.6rem; padding:0.8rem 1.8rem; border-radius:50px; text-decoration:none; font-weight:700; font-size:0.95rem; background:linear-gradient(135deg, #086288, #4D8DBA); color:#fff; box-shadow:0 6px 25px rgba(8,98,136,0.35);">
@@ -689,8 +1418,106 @@
             mobileIcon.classList.toggle('fa-moon', isDark); mobileIcon.classList.toggle('fa-sun', !isDark);
         });
     }
+    
+    /* ==================== PDF LIGHTBOX MODAL HANDLERS ==================== */
+    function openEvidenceModal(pdfUrl, title) {
+        const modal = document.getElementById('evidenceModal');
+        const iframe = document.getElementById('evidenceModalIframe');
+        const titleEl = document.getElementById('evidenceModalTitle');
+        const dlBtn = document.getElementById('evidenceModalDownload');
+
+        titleEl.textContent = title || 'Pratinjau Dokumen Artefak';
+        dlBtn.href = pdfUrl;
+        iframe.src = pdfUrl + '#toolbar=1&navpanes=1&scrollbar=1';
+
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeEvidenceModalDirect() {
+        const modal = document.getElementById('evidenceModal');
+        const iframe = document.getElementById('evidenceModalIframe');
+
+        modal.classList.remove('open');
+        iframe.src = '';
+        document.body.style.overflow = '';
+    }
+
+    function closeEvidenceModal(e) {
+        if (e.target.id === 'evidenceModal') {
+            closeEvidenceModalDirect();
+        }
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeEvidenceModalDirect();
+        }
+    });
+
     </script>
-    <script src="dropdown.js"></script>
+    <script src="dropdown.js">
+    /* ==================== PDF LIGHTBOX MODAL HANDLERS ==================== */
+    function openEvidenceModal(pdfUrl, title) {
+        const modal = document.getElementById('evidenceModal');
+        const iframe = document.getElementById('evidenceModalIframe');
+        const titleEl = document.getElementById('evidenceModalTitle');
+        const dlBtn = document.getElementById('evidenceModalDownload');
+
+        titleEl.textContent = title || 'Pratinjau Dokumen Artefak';
+        dlBtn.href = pdfUrl;
+        iframe.src = pdfUrl + '#toolbar=1&navpanes=1&scrollbar=1';
+
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeEvidenceModalDirect() {
+        const modal = document.getElementById('evidenceModal');
+        const iframe = document.getElementById('evidenceModalIframe');
+
+        modal.classList.remove('open');
+        iframe.src = '';
+        document.body.style.overflow = '';
+    }
+
+    function closeEvidenceModal(e) {
+        if (e.target.id === 'evidenceModal') {
+            closeEvidenceModalDirect();
+        }
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeEvidenceModalDirect();
+        }
+    });
+
+    </script>
+
+    <!-- ==================== PDF LIGHTBOX MODAL ==================== -->
+    <div class="pdf-modal-overlay" id="evidenceModal" onclick="closeEvidenceModal(event)">
+        <div class="pdf-modal-card" onclick="event.stopPropagation()">
+            <div class="pdf-modal-header">
+                <div class="pdf-modal-title">
+                    <i class="fa-solid fa-file-pdf" style="color:#ef4444; font-size:1.25rem;"></i>
+                    <span id="evidenceModalTitle">Pratinjau Dokumen Artefak</span>
+                </div>
+                <div class="pdf-modal-actions">
+                    <a id="evidenceModalDownload" href="#" download class="btn-modal-dl">
+                        <i class="fa-solid fa-download"></i> <span>Unduh PDF</span>
+                    </a>
+                    <button class="btn-modal-close" onclick="closeEvidenceModalDirect()" title="Tutup Pratinjau">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="pdf-modal-body">
+                <iframe id="evidenceModalIframe" src="" title="Pratinjau Dokumen PDF"></iframe>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
 
